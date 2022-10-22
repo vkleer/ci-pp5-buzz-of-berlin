@@ -10,10 +10,19 @@ const NavBar = () => {
             <Navbar.Brand>Buzz of Berlin</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link>Home</Nav.Link>
-                    <Nav.Link>Log in</Nav.Link>
-                    <Nav.Link>Create account</Nav.Link>
+                <Nav className="ml-auto text-left">
+                    <Nav.Link>
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </Nav.Link>
+                    <Nav.Link>
+                        <i class="fa-solid fa-key"></i>
+                        Log in
+                    </Nav.Link>
+                    <Nav.Link>
+                        <i class="fa-solid fa-user-plus"></i>
+                        Create account
+                    </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>
