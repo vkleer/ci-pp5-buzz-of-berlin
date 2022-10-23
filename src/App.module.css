@@ -35,3 +35,7 @@ i:hover {
     min-height: 100vh;
     background-color: #fffed0;
 }
+
+.Main {
+    padding-top: 100px;
+}
