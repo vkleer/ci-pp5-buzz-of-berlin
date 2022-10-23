@@ -44,3 +44,15 @@ h1 {
 .Main {
     padding-top: 100px;
 }
+
+.FlatBoxBorder {
+    border-top: 1px solid #f8f8f8;
+    border-left: 1px solid #f1f1f1;
+    border-right: 5px solid #c9c9c9;
+    border-bottom: 5px solid #e9e9e9;
+}
+
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+}
