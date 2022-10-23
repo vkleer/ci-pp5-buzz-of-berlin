@@ -1,0 +1,21 @@
+.Input {
+    box-sizing: border-box;
+    border-radius: 0;
+    color: #414141;
+    padding: 10px;
+}
+
+.Header {
+    text-align: center;
+    color: #414141;
+}
+
+.Link {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.Link span {
+    color: #fa9434;
+}
