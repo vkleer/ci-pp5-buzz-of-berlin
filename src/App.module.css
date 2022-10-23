@@ -1,35 +1,37 @@
 * {
     box-sizing: border-box;
 }
-  
+
 a {
-    color: #555555;
-    transition: color ease-in-out 0.5s;
+    color: #414141;
 }
   
 a:hover {
+    color: #d1d1d1 !important;
+    transition: color ease-in-out 0.25s;
     text-decoration: none;
 }
   
 a:hover i {
-    color: #414141;
-    transition: color ease-in-out 0.5s;
+    color: #d1d1d1;
+    transition: color ease-in-out 0.25s;
 }
   
 i {
     font-size: 1.1rem;
-    color: #b4b4b4;
+    color: #414141;
     padding-right: 5px;
     vertical-align: middle;
 }
   
 i:hover {
-    color: #414141;
+    color: #d1d1d1;
     cursor: pointer;
-    transition: color ease-in-out 0.5s;
+    transition: color ease-in-out 0.25s;
 }
 
 .App {
     font-family: 'Jost', sans-serif;
     min-height: 100vh;
+    background-color: #fffed0;
 }
