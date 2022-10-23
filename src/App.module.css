@@ -1,33 +1,38 @@
 * {
     box-sizing: border-box;
+    color: #414141;
 }
 
 a {
-    color: #414141;
+    color: #414141 !important;
 }
   
 a:hover {
-    color: #d1d1d1 !important;
+    color: #f0cf36 !important;
     transition: color ease-in-out 0.25s;
-    text-decoration: none;
+    text-decoration: none !important;
 }
   
 a:hover i {
-    color: #d1d1d1;
+    color: #f0cf36;
     transition: color ease-in-out 0.25s;
 }
   
 i {
-    font-size: 1.1rem;
-    color: #414141;
-    padding-right: 5px;
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    padding: 0 5px;
     vertical-align: middle;
 }
   
 i:hover {
-    color: #d1d1d1;
+    color: #f0cf36;
     cursor: pointer;
     transition: color ease-in-out 0.25s;
+}
+
+h1 {
+    font-weight: 600!important;
 }
 
 .App {
