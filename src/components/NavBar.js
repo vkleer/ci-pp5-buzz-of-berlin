@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/NavBar.module.css';
 import {Navbar} from 'react-bootstrap';
 import {Container} from 'react-bootstrap';
 import {Nav} from 'react-bootstrap';
@@ -10,7 +11,7 @@ const NavBar = () => {
         <Container>
             <Navbar.Brand>
                 <img src={logo} alt="Logo" height="40" />
-                Buzz of Berlin
+                <span className={styles.LogoText}>Buzz of Berlin</span>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
