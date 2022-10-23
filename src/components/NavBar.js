@@ -2,12 +2,16 @@ import React from 'react';
 import {Navbar} from 'react-bootstrap';
 import {Container} from 'react-bootstrap';
 import {Nav} from 'react-bootstrap';
+import logo from '../assets/logo.png';
 
 const NavBar = () => {
   return (
     <Navbar expand="md" fixed="top">
         <Container>
-            <Navbar.Brand>Buzz of Berlin</Navbar.Brand>
+            <Navbar.Brand>
+                <img src={logo} alt="Logo" height="40" />
+                Buzz of Berlin
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto text-left">
