@@ -1,3 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+  
+a {
+    color: #555555;
+    transition: color ease-in-out 0.5s;
+}
+  
+a:hover {
+    text-decoration: none;
+}
+  
+a:hover i {
+    color: #414141;
+    transition: color ease-in-out 0.5s;
+}
+  
+i {
+    font-size: 1.1rem;
+    color: #b4b4b4;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+  
+i:hover {
+    color: #414141;
+    cursor: pointer;
+    transition: color ease-in-out 0.5s;
+}
+
 .App {
     font-family: 'Jost', sans-serif;
     min-height: 100vh;
