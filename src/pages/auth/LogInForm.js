@@ -1,25 +1,28 @@
-import React, { useState } from "react";
-
-import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
-import styles from "../../styles/LogInSignUpForm.module.css";
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
+import styles from '../../styles/LogInSignUpForm.module.css';
+import btnStyles from '../../styles/Button.module.css';
+import appStyles from '../../App.module.css';
+
+import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+
+import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
 
 function LogInForm() {
     /**
      * Renders the LogIn form.
-     * The variables and logic has been created using the Moments walkthrough
+     * The variables and logic have been created using the Moments walkthrough
      * and has been built upon/customised.
      */
+    const setCurrentUser = useSetCurrentUser();
+
     const [logInData, setLogInData] = useState({
         username: '',
         password: '',
