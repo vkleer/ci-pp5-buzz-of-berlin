@@ -14,7 +14,7 @@ const SignUpForm = () => {
      * The variables and logic has been created using the Moments walkthrough
      * and has been built upon/customised.
      */
-    
+
     const [signUpData, setSignUpData] = useState({
         username: '',
         password1: '',
@@ -37,7 +37,7 @@ const SignUpForm = () => {
         event.preventDefault();
         try {
             await axios.post('/dj-rest-auth/registration/', signUpData);
-            history.push('/signin');
+            history.push('/login');
         } catch(err) {
             setErrors(err.response?.data)
         }
@@ -45,9 +45,9 @@ const SignUpForm = () => {
 
     return (
         <Row>
-            <Col className="my-auto offset-3" md={6}>
+            <Col className="my-auto offset-md-3" md={6}>
                 <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} p-4`}>
-                    <h1 className={styles.Header}>Sign up</h1>
+                    <h1 className={`pb-4 ${styles.Header}`}>Sign up</h1>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
                             <Form.Label className="d-none">Username</Form.Label>
@@ -79,7 +79,7 @@ const SignUpForm = () => {
                         {errors.password2?.map((message, idx) => 
                         <Alert variant="warning" key={idx}>{message}</Alert>
                         )}
-                        <Button className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`} 
+                        <Button className={`${btnStyles.Button} ${btnStyles.Wide}`} 
                             type="submit">
                             Sign up
                         </Button>
