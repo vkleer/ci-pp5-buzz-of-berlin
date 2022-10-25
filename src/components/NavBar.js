@@ -46,7 +46,7 @@ const NavBar = () => {
     const loggedInAccIcons = (
         <> 
             <NavLink className={styles.NavLink} to={`/profiles/${currentUser?.profile_id}`}>
-                <Avatar src={currentUser?.profile_image} text='Profile' height={40} />
+                <Avatar src={currentUser?.profile_image} text='Profile' height={30} />
             </NavLink>
             <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
                 <i className="fas fa-sign-out-alt"></i>Sign out
