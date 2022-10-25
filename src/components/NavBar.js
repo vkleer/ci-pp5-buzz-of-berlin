@@ -13,12 +13,17 @@ import logo from '../assets/logo.png';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import { Avatar } from './Avatar';
 
+
+/**
+ * Returns the navigation bar.
+ * Some of the code was taken from the Moments walkthrough, but most of it was written manually.
+ */
 const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
     const handleSignOut = async () => {
-        // L
+        // 
         try {
           await axios.post('dj-rest-auth/logout/');
           setCurrentUser(null);
@@ -32,10 +37,17 @@ const NavBar = () => {
             <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 100, hide: 100 }}
-                overlay={ <Tooltip id="posts-tooltip">Posts</Tooltip> }
+                overlay={ 
+                    <Tooltip 
+                        className={styles.ToolTip} 
+                        id="posts-tooltip"
+                    >
+                        Posts
+                    </Tooltip> 
+                }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={styles.NavLinkMain} 
                     activeClassName={styles.Active} 
                     to="/posts"
                 >
@@ -45,10 +57,17 @@ const NavBar = () => {
             <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 100, hide: 100 }}
-                overlay={ <Tooltip id="recommendations-tooltip">Recommendations</Tooltip> }
+                overlay={ 
+                    <Tooltip 
+                        className={styles.ToolTip} 
+                        id="recommendations-tooltip"
+                    >
+                        Recommendations
+                    </Tooltip> 
+                }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={styles.NavLinkMain} 
                     activeClassName={styles.Active} 
                     to="/recommendations"
                 >
@@ -58,10 +77,17 @@ const NavBar = () => {
             <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 100, hide: 100 }}
-                overlay={ <Tooltip id="events-tooltip">Events</Tooltip> }
+                overlay={ 
+                    <Tooltip 
+                        className={styles.ToolTip} 
+                        id="events-tooltip"
+                    >
+                        Events
+                    </Tooltip> 
+                }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={styles.NavLinkMain} 
                     activeClassName={styles.Active} 
                     to="/events"
                 >
@@ -71,10 +97,17 @@ const NavBar = () => {
             <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 100, hide: 100 }}
-                overlay={ <Tooltip id="liked-tooltip">Liked</Tooltip> }
+                overlay={ 
+                    <Tooltip 
+                        className={styles.ToolTip} 
+                        id="liked-tooltip"
+                    >
+                        Liked
+                    </Tooltip> 
+                }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={styles.NavLinkMain} 
                     activeClassName={styles.Active} 
                     to="/liked"
                 >
@@ -103,19 +136,45 @@ const NavBar = () => {
     );
     const loggedInAccIcons = (
         <> 
-            <NavLink 
-                className={styles.NavLink} 
-                to={`/profiles/${currentUser?.profile_id}`}
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={styles.ToolTip} 
+                        id="profile-tooltip"
+                    >
+                        Profile
+                    </Tooltip> 
+                }
             >
-                <Avatar src={currentUser?.profile_image} text='Profile' height={30} />
-            </NavLink>
-            <NavLink 
-                className={styles.NavLink} 
-                to="/" 
-                onClick={handleSignOut}
+                <NavLink 
+                    className={styles.NavLink} 
+                    to={`/profiles/${currentUser?.profile_id}`}
+                >
+                    <Avatar src={currentUser?.profile_image} text='' height={30} />
+                </NavLink>
+            </OverlayTrigger>
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={styles.ToolTip} 
+                        id="sign-out-tooltip"
+                    >
+                        Sign out
+                    </Tooltip> 
+                }
             >
-                <i className="fas fa-sign-out-alt"></i>Sign out
-            </NavLink>
+                <NavLink 
+                    className={styles.NavLink} 
+                    to="/" 
+                    onClick={handleSignOut}
+                >
+                    <i className="fas fa-sign-out-alt"></i>
+                </NavLink>
+            </OverlayTrigger>
         </>
     );
     const loggedOutAccIcons = (
@@ -160,11 +219,18 @@ return (
                     <OverlayTrigger
                         placement="bottom"
                         delay={{ show: 100, hide: 100 }}
-                        overlay={ <Tooltip id="home-tooltip">Home</Tooltip> }
+                        overlay={ 
+                            <Tooltip 
+                                className={styles.ToolTip} 
+                                id="home-tooltip"
+                            >
+                                Home
+                            </Tooltip> 
+                        }
                     >
                         <NavLink 
                             exact 
-                            className={styles.NavLink} 
+                            className={styles.NavLinkMain} 
                             activeClassName={styles.Active} 
                             to ="/"
                         >
