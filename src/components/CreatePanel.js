@@ -19,7 +19,7 @@ const CreatePanel = () => {
     const loggedInIcons = (
         <>
             <NavLink 
-                className={`d-block ${styles.PanelLink}`} 
+                className={`py-1 py-md-0 d-block ${styles.PanelLink}`} 
                 activeClassName={styles.Active} 
                 to="/posts/create"
             >
@@ -27,7 +27,7 @@ const CreatePanel = () => {
                 Create post
             </NavLink>
             <NavLink 
-                className={`d-block ${styles.PanelLink}`} 
+                className={`py-1 py-md-0 d-block ${styles.PanelLink}`} 
                 activeClassName={styles.Active} 
                 to="/posts/create"
             >
@@ -35,7 +35,7 @@ const CreatePanel = () => {
                 Create recommendation
             </NavLink>
             <NavLink 
-                className={`d-block ${styles.PanelLink}`} 
+                className={`py-1 py-md-0 d-block ${styles.PanelLink}`} 
                 activeClassName={styles.Active} 
                 to="/posts/create"
             >
