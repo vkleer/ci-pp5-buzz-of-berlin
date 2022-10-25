@@ -8,12 +8,12 @@ import axios from 'axios'
 
 import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 
+/**
+ * Renders the SignUp form.
+ * The variables and logic have been created using the Moments walkthrough
+ * and has been built upon/customised.
+ */
 const SignUpForm = () => {
-    /**
-     * Renders the SignUp form.
-     * The variables and logic have been created using the Moments walkthrough
-     * and has been built upon/customised.
-     */
     const [signUpData, setSignUpData] = useState({
         username: '',
         password1: '',

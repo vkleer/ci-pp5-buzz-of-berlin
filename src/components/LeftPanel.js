@@ -9,6 +9,9 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import { useCurrentUser } from '../contexts/CurrentUserContext';
 
+/**
+ * Panel that is displayed on the left of the page next to the main content
+ */
 const LeftPanel = () => {
     const currentUser = useCurrentUser();
 

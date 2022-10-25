@@ -15,12 +15,12 @@ import Container from 'react-bootstrap/Container';
 
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
 
+/**
+ * Renders the LogIn form.
+ * The variables and logic have been created using the Moments walkthrough
+ * and has been built upon/customised.
+ */
 function LogInForm() {
-    /**
-     * Renders the LogIn form.
-     * The variables and logic have been created using the Moments walkthrough
-     * and has been built upon/customised.
-     */
     const setCurrentUser = useSetCurrentUser();
 
     const [logInData, setLogInData] = useState({
