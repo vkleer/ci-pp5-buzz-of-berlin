@@ -6,7 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import './api/axiosDefaults';
 
 import NavBar from './components/NavBar';
-import LeftPanel from './components/LeftPanel';
+import CreatePanel from './components/CreatePanel';
 
 import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
@@ -16,13 +16,17 @@ function App() {
     <div className={styles.App}>
       {/* NavBar */}
       <NavBar />
-      <Row className={`px-0 mx-0 ${styles.Main}`}>
-        {/* LeftPanel */}
-        <Col className={`px-0 ${styles.LeftPanel}`} md={3}>
-          <LeftPanel />
+      <Row className="px-0 pt-md-4 mx-0">
+        {/* Left CreatePanel */}
+        <Col className={`px-0 d-sm-none d-md-block ${styles.LeftPanel}`} md={3}>
+          <CreatePanel />
+        </Col>
+        {/* Middle CreatePanel */}
+        <Col className={`px-0 py-3 d-sm-block d-md-none`} md={12}>
+          <CreatePanel />
         </Col>
         {/* Main content */}
-        <Col className="px-0 offset-3" md={9}>
+        <Col className="px-0 offset-md-3" sm={12} md={9}>
           <Switch>
             <Route exact path="/" render={()=> <h1>Home</h1>} />
             <Route exact path="/login" render={()=> <LogInForm />} />

@@ -11,9 +11,12 @@ a:hover {
     color: #f0cf36 !important;
     transition: color ease-out 0.25s;
     text-decoration: none !important;
-}
-  
+} 
 a:hover i {
+    color: #f0cf36;
+    transition: color ease-out 0.25s;
+}
+a:hover span {
     color: #f0cf36;
     transition: color ease-out 0.25s;
 }
@@ -39,10 +42,6 @@ h1 {
     font-family: 'Jost', sans-serif;
     min-height: 100vh;
     background-color: #fffed0;
-}
-
-.Main {
-    padding-top: 25px;
 }
 
 .LeftPanel {
