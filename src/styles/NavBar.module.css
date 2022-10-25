@@ -4,11 +4,7 @@
 }
 
 .NavLink {
-    padding: 0 5px;
     font-size: 1.1rem;
-}
-.NavLinkMain {
-    padding: 0 15px;
 }
 
 .Active i {
@@ -20,8 +16,4 @@
     font-weight: 700;
     color: #414141;
     font-size: 1.75rem;
-}
-
-.ToolTip {
-    margin-top: 7px;
 }
