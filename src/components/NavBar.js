@@ -23,12 +23,12 @@ const NavBar = () => {
     const setCurrentUser = useSetCurrentUser();
 
     const handleSignOut = async () => {
-        // 
+        // Signs out the current user
         try {
-          await axios.post('dj-rest-auth/logout/');
-          setCurrentUser(null);
+            await axios.post('dj-rest-auth/logout/');
+            setCurrentUser(null);
         } catch(err) {
-          console.log(err);
+            console.log(err);
         }
       };
 
@@ -39,7 +39,7 @@ const NavBar = () => {
                 delay={{ show: 100, hide: 100 }}
                 overlay={ 
                     <Tooltip 
-                        className={styles.ToolTip} 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="posts-tooltip"
                     >
                         Posts
@@ -47,11 +47,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLinkMain} 
+                    className={styles.NavLink} 
                     activeClassName={styles.Active} 
                     to="/posts"
                 >
-                    <i className="fa-solid fa-image"></i>
+                    <i className="fa-solid fa-fw fa-image"></i>
+                    <span className="d-sm-inline d-md-none pl-2" >Posts</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -59,7 +60,7 @@ const NavBar = () => {
                 delay={{ show: 100, hide: 100 }}
                 overlay={ 
                     <Tooltip 
-                        className={styles.ToolTip} 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="recommendations-tooltip"
                     >
                         Recommendations
@@ -67,11 +68,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLinkMain} 
+                    className={styles.NavLink} 
                     activeClassName={styles.Active} 
                     to="/recommendations"
                 >
-                    <i className="fa-solid fa-thumbs-up"></i> 
+                    <i className="fa-solid fa-fw fa-thumbs-up"></i>
+                    <span className="d-sm-inline d-md-none pl-2" >Recommendations</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -79,7 +81,7 @@ const NavBar = () => {
                 delay={{ show: 100, hide: 100 }}
                 overlay={ 
                     <Tooltip 
-                        className={styles.ToolTip} 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="events-tooltip"
                     >
                         Events
@@ -87,11 +89,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLinkMain} 
+                    className={styles.NavLink} 
                     activeClassName={styles.Active} 
                     to="/events"
                 >
-                    <i className="fa-solid fa-calendar-days"></i>
+                    <i className="fa-solid fa-fw fa-calendar-days"></i>
+                    <span className="d-sm-inline d-md-none pl-2" >Events</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -99,7 +102,7 @@ const NavBar = () => {
                 delay={{ show: 100, hide: 100 }}
                 overlay={ 
                     <Tooltip 
-                        className={styles.ToolTip} 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="liked-tooltip"
                     >
                         Liked
@@ -107,11 +110,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLinkMain} 
+                    className={styles.NavLink} 
                     activeClassName={styles.Active} 
                     to="/liked"
                 >
-                    <i className="fas fa-heart"></i>
+                    <i className="fas fa-fw fa-heart"></i>
+                    <span className="d-sm-inline d-md-none pl-2" >Liked</span>
                 </NavLink>
             </OverlayTrigger>
         </>
@@ -123,25 +127,26 @@ const NavBar = () => {
                 activeClassName={styles.Active} 
                 to="/posts"
             >
-                <i className="fa-solid fa-image"></i>
+                <i className="fa-solid fa-fw fa-image"></i>
             </NavLink>
             <NavLink 
                 className={styles.NavLink} 
                 activeClassName={styles.Active} 
                 to="/events"
             >
-                <i className="fa-solid fa-calendar-days"></i>
+                <i className="fa-solid fa-fw fa-calendar-days"></i>
+                <span className="d-sm-inline d-md-none pl-2" >Events</span>
             </NavLink>
         </>
     );
     const loggedInAccIcons = (
-        <> 
+        <>
             <OverlayTrigger
                 placement="bottom"
                 delay={{ show: 100, hide: 100 }}
                 overlay={ 
                     <Tooltip 
-                        className={styles.ToolTip} 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`} 
                         id="profile-tooltip"
                     >
                         Profile
@@ -153,6 +158,7 @@ const NavBar = () => {
                     to={`/profiles/${currentUser?.profile_id}`}
                 >
                     <Avatar src={currentUser?.profile_image} text='' height={30} />
+                    <span className="d-sm-inline d-md-none pl-2" >Profile</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -160,7 +166,7 @@ const NavBar = () => {
                 delay={{ show: 100, hide: 100 }}
                 overlay={ 
                     <Tooltip 
-                        className={styles.ToolTip} 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="sign-out-tooltip"
                     >
                         Sign out
@@ -172,7 +178,8 @@ const NavBar = () => {
                     to="/" 
                     onClick={handleSignOut}
                 >
-                    <i className="fas fa-sign-out-alt"></i>
+                    <i className="fas fa-fw fa-sign-out-alt"></i>
+                    <span className="d-sm-inline d-md-none pl-2" >Sign out</span>
                 </NavLink>
             </OverlayTrigger>
         </>
@@ -184,7 +191,7 @@ const NavBar = () => {
                 activeClassName={styles.Active} 
                 to="/login"
             >
-                <i className="fa-solid fa-key"></i>
+                <i className="fa-solid fa-fw fa-key"></i>
                 Log in
             </NavLink>
             <NavLink 
@@ -192,17 +199,17 @@ const NavBar = () => {
                 activeClassName={styles.Active} 
                 to="/signup"
             >
-                <i className="fa-solid fa-user-plus"></i>
+                <i className="fa-solid fa-fw fa-user-plus"></i>
                 Sign up
             </NavLink>
         </>
     );
 
-return (
-    <Navbar 
-        className={styles.NavBar} 
-        expand="md" 
-    >
+    return (
+        <Navbar 
+            className={styles.NavBar} 
+            expand="md" 
+        >
             <NavLink to="/">
                 <Navbar.Brand>
                     <img 
@@ -215,13 +222,13 @@ return (
             </NavLink>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="m-md-auto ml-sm-0 text-md-center text-sm-left">
+                <Nav className="m-md-auto ml-sm-0 text-sm-left">
                     <OverlayTrigger
                         placement="bottom"
                         delay={{ show: 100, hide: 100 }}
                         overlay={ 
                             <Tooltip 
-                                className={styles.ToolTip} 
+                                className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                                 id="home-tooltip"
                             >
                                 Home
@@ -230,21 +237,22 @@ return (
                     >
                         <NavLink 
                             exact 
-                            className={styles.NavLinkMain} 
+                            className={styles.NavLink} 
                             activeClassName={styles.Active} 
                             to ="/"
                         >
-                            <i className="fa-solid fa-house"></i>
+                            <i className="fa-solid fa-fw fa-house"></i>
+                            <span className="d-sm-inline d-md-none pl-2" >Home</span>
                         </NavLink>
                     </OverlayTrigger>
                     {currentUser ? loggedInMainIcons : loggedOutMainIcons}
                 </Nav>
-                <Nav className="ml-sm-0 text-left">
+                <Nav className="ml-sm-0 text-sm-left">
                     {currentUser ? loggedInAccIcons : loggedOutAccIcons}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-  )
+    )
 }
 
 export default NavBar
