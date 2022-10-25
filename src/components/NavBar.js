@@ -47,12 +47,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={`px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/posts"
                 >
                     <i className="fa-solid fa-fw fa-image"></i>
-                    <span className="d-sm-inline d-md-none pl-2" >Posts</span>
+                    <span className="d-sm-inline d-md-none pl-2">Posts</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -68,12 +68,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLink} 
-                    activeClassName={styles.Active} 
+                    className={`px-md-3 ${styles.NavLink}`} 
+                    activeClassName={styles.Active}
                     to="/recommendations"
                 >
                     <i className="fa-solid fa-fw fa-thumbs-up"></i>
-                    <span className="d-sm-inline d-md-none pl-2" >Recommendations</span>
+                    <span className="d-sm-inline d-md-none pl-2">Recommendations</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -89,12 +89,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={`px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/events"
                 >
                     <i className="fa-solid fa-fw fa-calendar-days"></i>
-                    <span className="d-sm-inline d-md-none pl-2" >Events</span>
+                    <span className="d-sm-inline d-md-none pl-2">Events</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -110,12 +110,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={`px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/liked"
                 >
                     <i className="fas fa-fw fa-heart"></i>
-                    <span className="d-sm-inline d-md-none pl-2" >Liked</span>
+                    <span className="d-sm-inline d-md-none pl-2">Liked</span>
                 </NavLink>
             </OverlayTrigger>
         </>
@@ -135,7 +135,7 @@ const NavBar = () => {
                 to="/events"
             >
                 <i className="fa-solid fa-fw fa-calendar-days"></i>
-                <span className="d-sm-inline d-md-none pl-2" >Events</span>
+                <span className="d-sm-inline d-md-none pl-2">Events</span>
             </NavLink>
         </>
     );
@@ -154,11 +154,11 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={`px-md-3 ${styles.NavLink}`} 
                     to={`/profiles/${currentUser?.profile_id}`}
                 >
                     <Avatar src={currentUser?.profile_image} text='' height={30} />
-                    <span className="d-sm-inline d-md-none pl-2" >Profile</span>
+                    <span className="d-sm-inline d-md-none pl-2">Profile</span>
                 </NavLink>
             </OverlayTrigger>
             <OverlayTrigger
@@ -174,12 +174,12 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={styles.NavLink} 
+                    className={`pl-md-3 pr-md-2 ${styles.NavLink}`} 
                     to="/" 
                     onClick={handleSignOut}
                 >
                     <i className="fas fa-fw fa-sign-out-alt"></i>
-                    <span className="d-sm-inline d-md-none pl-2" >Sign out</span>
+                    <span className="d-sm-inline d-md-none pl-2">Sign out</span>
                 </NavLink>
             </OverlayTrigger>
         </>
@@ -237,12 +237,12 @@ const NavBar = () => {
                     >
                         <NavLink 
                             exact 
-                            className={styles.NavLink} 
+                            className={`px-md-3 ${styles.NavLink}`} 
                             activeClassName={styles.Active} 
                             to ="/"
                         >
                             <i className="fa-solid fa-fw fa-house"></i>
-                            <span className="d-sm-inline d-md-none pl-2" >Home</span>
+                            <span className="d-sm-inline d-md-none pl-2">Home</span>
                         </NavLink>
                     </OverlayTrigger>
                     {currentUser ? loggedInMainIcons : loggedOutMainIcons}
@@ -255,4 +255,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavBar;
