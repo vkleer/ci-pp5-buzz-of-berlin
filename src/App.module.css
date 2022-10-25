@@ -9,13 +9,13 @@ a {
   
 a:hover {
     color: #f0cf36 !important;
-    transition: color ease-in-out 0.25s;
+    transition: color ease-out 0.25s;
     text-decoration: none !important;
 }
   
 a:hover i {
     color: #f0cf36;
-    transition: color ease-in-out 0.25s;
+    transition: color ease-out 0.25s;
 }
   
 i {
@@ -28,7 +28,7 @@ i {
 i:hover {
     color: #f0cf36;
     cursor: pointer;
-    transition: color ease-in-out 0.25s;
+    transition: color ease-out 0.25s;
 }
 
 h1 {
@@ -42,7 +42,7 @@ h1 {
 }
 
 .Main {
-    padding-top: 75px;
+    padding-top: 25px;
 }
 
 .LeftPanel {
