@@ -47,7 +47,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/posts"
                 >
@@ -68,7 +68,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active}
                     to="/recommendations"
                 >
@@ -89,7 +89,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/events"
                 >
@@ -110,7 +110,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/liked"
                 >
@@ -154,7 +154,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
                     to={`/profiles/${currentUser?.profile_id}`}
                 >
                     <Avatar src={currentUser?.profile_image} text='' height={30} />
@@ -174,7 +174,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`pl-md-3 pr-md-2 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 pl-md-3 pr-md-2 ${styles.NavLink}`} 
                     to="/" 
                     onClick={handleSignOut}
                 >
@@ -237,7 +237,7 @@ const NavBar = () => {
                     >
                         <NavLink 
                             exact 
-                            className={`px-md-3 ${styles.NavLink}`} 
+                            className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
                             activeClassName={styles.Active} 
                             to ="/"
                         >
