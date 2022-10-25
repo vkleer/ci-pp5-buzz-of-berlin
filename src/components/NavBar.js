@@ -14,25 +14,13 @@ const NavBar = () => {
 
     const loggedInMainIcons = (
         <>
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/posts"
-            >
+            <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/posts">
                 <i class="fa-solid fa-image"></i>Posts
             </NavLink>
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/recommendations"
-            >
+            <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/recommendations">
                 <i class="fa-solid fa-thumbs-up"></i>Recommendations
             </NavLink>
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/events"
-            >
+            <NavLink className={styles.NavLink} activeClassName={styles.Active} to="/events">
                 <i class="fa-solid fa-calendar-days"></i>Events
             </NavLink>
             <NavLink 
@@ -49,6 +37,10 @@ const NavBar = () => {
             >
                 <i className="fas fa-sign-out-alt"></i>Sign out
             </NavLink>
+            {/* <NavLink className={styles.NavLink} to={`/profiles/${currentUser?.profile_id}`}
+            >
+                <Avatar src={currentUser?.profile_image} text='Profile' height={40} />
+            </NavLink> */}
         </>
     );
     const loggedOutAccIcons = (
