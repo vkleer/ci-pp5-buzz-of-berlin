@@ -42,7 +42,12 @@ h1 {
 }
 
 .Main {
-    padding-top: 100px;
+    padding-top: 75px;
+}
+
+.LeftPanel {
+    position: fixed !important;
+    height: 1000px;
 }
 
 .FlatBoxBorder {
