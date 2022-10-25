@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 
-import styles from '../styles/LeftPanel.module.css';
+import styles from '../styles/CreatePanel.module.css';
 
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -12,7 +12,7 @@ import { useCurrentUser } from '../contexts/CurrentUserContext';
 /**
  * Panel that is displayed on the left of the page next to the main content
  */
-const LeftPanel = () => {
+const CreatePanel = () => {
     const currentUser = useCurrentUser();
 
     const loggedInIcons = (
@@ -30,7 +30,7 @@ const LeftPanel = () => {
     );
 
 return (
-    <Container className="px-0">
+    <Container className="px-0 d-sm-none d-md-flex">
         <Navbar className={styles.NavBar} expand="md" fixed="left">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -43,4 +43,4 @@ return (
   )
 }
 
-export default LeftPanel
+export default CreatePanel;
