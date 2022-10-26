@@ -52,48 +52,48 @@ function LogInForm() {
     }
 
     return (
-        <Row >
-        <Col className="my-auto offset-md-2"md={8}>
-            <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} p-4`}>
-            <h1 className={styles.Header}>Log in</h1>
-            <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="username">
-                <Form.Label className="d-none">Enter username</Form.Label>
-                <Form.Control className={styles.Input} type="text" 
-                    placeholder="Enter username" name="username" value={username}
-                    onChange={handleChange} 
-                />
-                </Form.Group>
-                {errors.username?.map((message, idx) => 
-                    <Alert variant="warning" key={idx}>{message}</Alert>
-                )}
-                <Form.Group controlId="password">
-                <Form.Label className="d-none">Password</Form.Label>
-                <Form.Control className={styles.Input} type="password" 
-                    placeholder="Password" name="password" value={password} 
-                    onChange={handleChange}
-                />
-                </Form.Group>
-                {errors.password?.map((message, idx) => 
-                    <Alert variant="warning" key={idx}>{message}</Alert>
-                )}
-                <Button 
-                    className={`${btnStyles.Button} ${btnStyles.Wide}`} 
-                    type="submit"
-                >
-                    Log in
-                </Button>
-                {errors.non_field_errors?.map((message, idx) => 
-                <Alert variant="warning" key={idx} className="mt-3">{message}</Alert>
-                )}
-            </Form>
-            </Container>
-            <Container className={`mt-3 ${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
-            <Link className={styles.Link} to="/signup">
-                Don't have an account? <span>Sign up here!</span>
-            </Link>
-            </Container>
-        </Col>
+        <Row className="m-0">
+            <Col md={8}>
+                <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} p-4`}>
+                    <h1 className={styles.Header}>Log in</h1>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group controlId="username">
+                        <Form.Label className="d-none">Enter username</Form.Label>
+                        <Form.Control className={styles.Input} type="text" 
+                            placeholder="Enter username" name="username" value={username}
+                            onChange={handleChange} 
+                        />
+                        </Form.Group>
+                        {errors.username?.map((message, idx) => 
+                            <Alert variant="warning" key={idx}>{message}</Alert>
+                        )}
+                        <Form.Group controlId="password">
+                        <Form.Label className="d-none">Password</Form.Label>
+                        <Form.Control className={styles.Input} type="password" 
+                            placeholder="Password" name="password" value={password} 
+                            onChange={handleChange}
+                        />
+                        </Form.Group>
+                        {errors.password?.map((message, idx) => 
+                            <Alert variant="warning" key={idx}>{message}</Alert>
+                        )}
+                        <Button 
+                            className={`${btnStyles.Button} ${btnStyles.Wide}`} 
+                            type="submit"
+                        >
+                            Log in
+                        </Button>
+                        {errors.non_field_errors?.map((message, idx) => 
+                            <Alert variant="warning" key={idx} className="mt-3">{message}</Alert>
+                        )}
+                    </Form>
+                </Container>
+                <Container className={`mt-3 ${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
+                    <Link className={styles.Link} to="/signup">
+                        Don't have an account? <span>Sign up here!</span>
+                    </Link>
+                </Container>
+            </Col>
         </Row>
     );
 }

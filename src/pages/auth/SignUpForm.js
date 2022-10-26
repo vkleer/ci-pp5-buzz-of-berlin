@@ -43,8 +43,8 @@ const SignUpForm = () => {
     }
 
     return (
-        <Row>
-            <Col className="my-auto offset-md-2" md={8}>
+        <Row className="m-0">
+            <Col md={8}>
                 <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} p-4`}>
                     <h1 className={`pb-4 ${styles.Header}`}>Sign up</h1>
                     <Form onSubmit={handleSubmit}>
