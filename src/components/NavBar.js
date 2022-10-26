@@ -122,21 +122,48 @@ const NavBar = () => {
     );
     const loggedOutMainIcons = (
         <>
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/posts"
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
+                        id="posts-tooltip"
+                    >
+                        Posts
+                    </Tooltip> 
+                }
             >
-                <i className="fa-solid fa-fw fa-image"></i>
-            </NavLink>
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/events"
+                <NavLink 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    activeClassName={styles.Active} 
+                    to="/posts"
+                >
+                    <i className="fa-solid fa-fw fa-image"></i>
+                    <span className="d-sm-inline d-md-none pl-2">Posts</span>
+                </NavLink>
+            </OverlayTrigger>
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
+                        id="events-tooltip"
+                    >
+                        Events
+                    </Tooltip> 
+                }
             >
-                <i className="fa-solid fa-fw fa-calendar-days"></i>
-                <span className="d-sm-inline d-md-none pl-2">Events</span>
-            </NavLink>
+                <NavLink 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    activeClassName={styles.Active} 
+                    to="/events"
+                >
+                    <i className="fa-solid fa-fw fa-calendar-days"></i>
+                    <span className="d-sm-inline d-md-none pl-2">Events</span>
+                </NavLink>
+            </OverlayTrigger>
         </>
     );
     const loggedInAccIcons = (
@@ -186,22 +213,48 @@ const NavBar = () => {
     );
     const loggedOutAccIcons = (
         <> 
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/login"
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
+                        id="log-in-tooltip"
+                    >
+                        Log in
+                    </Tooltip> 
+                }
             >
-                <i className="fa-solid fa-fw fa-key"></i>
-                Log in
-            </NavLink>
-            <NavLink 
-                className={styles.NavLink} 
-                activeClassName={styles.Active} 
-                to="/signup"
+                <NavLink 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    activeClassName={styles.Active} 
+                    to="/login"
+                >
+                    <i className="fa-solid fa-fw fa-key"></i>
+                    <span className="d-sm-inline d-md-none pl-2">Log in</span>
+                </NavLink>
+            </OverlayTrigger>
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
+                        id="sign-up-tooltip"
+                    >
+                        Sign up
+                    </Tooltip> 
+                }
             >
-                <i className="fa-solid fa-fw fa-user-plus"></i>
-                Sign up
-            </NavLink>
+                <NavLink 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    activeClassName={styles.Active} 
+                    to="/signup"
+                >
+                    <i className="fa-solid fa-fw fa-user-plus"></i>
+                    <span className="d-sm-inline d-md-none pl-2">Sign up</span>
+                </NavLink>
+            </OverlayTrigger>
         </>
     );
 
@@ -210,7 +263,7 @@ const NavBar = () => {
             className={styles.NavBar} 
             expand="md" 
         >
-            <NavLink to="/">
+            <NavLink to="/" className={styles.LeftRightNavWidth}>
                 <Navbar.Brand>
                     <img 
                         src={logo} 
@@ -247,7 +300,7 @@ const NavBar = () => {
                     </OverlayTrigger>
                     {currentUser ? loggedInMainIcons : loggedOutMainIcons}
                 </Nav>
-                <Nav className="ml-sm-0 text-sm-left">
+                <Nav className={`ml-sm-0 text-sm-left justify-content-end ${styles.LeftRightNavWidth}`}>
                     {currentUser ? loggedInAccIcons : loggedOutAccIcons}
                 </Nav>
             </Navbar.Collapse>
