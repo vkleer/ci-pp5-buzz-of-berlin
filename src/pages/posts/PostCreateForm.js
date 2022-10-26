@@ -18,7 +18,7 @@ import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
 
 /**
- * Renders the SignUp form.
+ * Renders the PostCreate form.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */
