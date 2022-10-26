@@ -3,9 +3,21 @@
     font-size: 1.1rem;
     color: #ffffff;
 }
+.PanelLink i {
+    color: #bbbbbb;
+}
 
 .DropDownMenu {
     width: 250px;
+}
+.DropDownMenu a {
+    color: #414141;
+}
+.DropDownMenu i {
+    color: #808080;
+}
+.DropdownBtn i {
+    color: #414141;
 }
 
 .Active i {

@@ -53,8 +53,8 @@ return (
             </Nav>
             {currentUser && (
                 <Dropdown className="d-flex mx-auto d-md-none">
-                <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                    <i className="fa-solid fa-square-plus text-white"></i> Create
+                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                    <i className="fa-solid fa-square-plus"></i> Create
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles.DropDownMenu}>

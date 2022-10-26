@@ -1,6 +1,8 @@
 .Button {
-    background-color: #fa9434;
+    background-color: #f0cf36;
+    color: #414141;
     font-size: 1rem;
+    font-weight: 600;
     align-self: center;
     padding: 0 10px;
     margin: 0 2px;
@@ -12,16 +14,17 @@
 .Button:hover {
     opacity: 0.8;
     cursor: pointer;
-    background-color: #eb7b12 !important;
+    background-color: #ffd104 !important;
+    color: #292828;
     border-color: transparent;
 }
 
 .Button:hover:active {
-    background-color: #eb7b12 !important;
+    background-color: #d1af15 !important;
 }
 
 .Button:active {
-    background-color: #eb7b12 !important;
+    background-color: #d1af15 !important;
 }
 
 .Button:focus {

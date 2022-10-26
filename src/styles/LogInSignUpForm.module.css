@@ -15,9 +15,10 @@
     text-align: center;
     display: block;
     margin: auto;
+    color: #414141;
 }
 .Link span {
-    color: #fa9434;
+    font-weight: 600;
 }
 
 .MaxFormWidth {
