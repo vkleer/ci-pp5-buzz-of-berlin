@@ -42,6 +42,7 @@ h1 {
     font-family: 'Jost', sans-serif;
     min-height: 100vh;
     background-color: #414141;
+    padding-top: 75px;
 }
 
 .LeftPanel {

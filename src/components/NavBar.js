@@ -54,7 +54,7 @@ const NavBar = () => {
                     activeClassName={styles.Active} 
                     to="/explore"
                 >
-                    <i className="fa-solid fa-fw fa-magnifying-glass"></i>
+                    <i className="fa-solid fa-compass"></i>
                     <span className="d-sm-inline d-md-none pl-2">Explore</span>
                 </NavLink>
             </OverlayTrigger>
@@ -266,6 +266,7 @@ const NavBar = () => {
             expanded={expanded}
             className={styles.NavBar} 
             expand="md" 
+            fixed="top"
         >
             <NavLink to="/" className={styles.LeftRightNavWidth}>
                 <Navbar.Brand>
