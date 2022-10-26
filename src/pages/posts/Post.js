@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import styles from '../../styles/Post.module.css';
 import appStyles from '../../App.module.css';
@@ -12,6 +12,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosRes } from '../../api/axiosDefaults';
+import { DotsDropdown } from '../../components/DotsDropdown';
 
 /**
  * Renders an individual Post object from the API.
@@ -32,12 +33,25 @@ const Post = (props) => {
         caption,
         image,
         updated_date,
-        postPage,
         setPosts,
     } = props;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
+    const history = useHistory();
+
+    const handleEdit = () => {
+        history.push(`/posts/${id}/edit`);
+    };
+
+    const handleDelete = async () => {
+        try {
+            await axiosRes.delete(`/posts/${id}/`);
+            history.goBack();
+        } catch(err) {
+            // console.log(err);
+        }
+    };
 
     const handleLike = async () => {
         try {
@@ -81,7 +95,12 @@ const Post = (props) => {
                 </Link>
                 <div className="d-flex align-items-center">
                     <span>{updated_date}</span>
-                    {is_owner && postPage && "..."}
+                    {is_owner && setPosts && (
+                        <DotsDropdown 
+                            handleEdit={handleEdit} 
+                            handleDelete={handleDelete} 
+                        />
+                    )}
                 </div>
                 </Media>
             </Card.Body>

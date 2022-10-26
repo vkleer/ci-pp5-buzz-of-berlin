@@ -41,8 +41,7 @@ function PostPage() {
         <p className="text-white">Random profiles mobile</p>
         <Post 
           {...post.results[0]} 
-          setPosts={setPost} 
-          postPage 
+          setPosts={setPost}
         />
         <Container className={appStyles.Content}>
           Comments
