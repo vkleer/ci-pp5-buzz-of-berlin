@@ -60,3 +60,9 @@ h1 {
     background-color: #ffffff;
     padding: 10px;
 }
+
+.Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+}
