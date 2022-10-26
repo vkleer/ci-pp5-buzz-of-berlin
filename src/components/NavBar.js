@@ -43,6 +43,27 @@ const NavBar = () => {
                 overlay={ 
                     <Tooltip 
                         className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
+                        id="liked-tooltip"
+                    >
+                        Explore
+                    </Tooltip> 
+                }
+            >
+                <NavLink 
+                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    activeClassName={styles.Active} 
+                    to="/explore"
+                >
+                    <i class="fa-solid fa-fw fa-magnifying-glass"></i>
+                    <span className="d-sm-inline d-md-none pl-2">Explore</span>
+                </NavLink>
+            </OverlayTrigger>
+            <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 100, hide: 100 }}
+                overlay={ 
+                    <Tooltip 
+                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="posts-tooltip"
                     >
                         Posts
@@ -98,27 +119,6 @@ const NavBar = () => {
                 >
                     <i className="fa-solid fa-fw fa-calendar-days"></i>
                     <span className="d-sm-inline d-md-none pl-2">Events</span>
-                </NavLink>
-            </OverlayTrigger>
-            <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 100, hide: 100 }}
-                overlay={ 
-                    <Tooltip 
-                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
-                        id="liked-tooltip"
-                    >
-                        Liked
-                    </Tooltip> 
-                }
-            >
-                <NavLink 
-                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
-                    activeClassName={styles.Active} 
-                    to="/liked"
-                >
-                    <i className="fas fa-fw fa-heart"></i>
-                    <span className="d-sm-inline d-md-none pl-2">Liked</span>
                 </NavLink>
             </OverlayTrigger>
         </>
