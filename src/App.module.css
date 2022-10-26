@@ -4,7 +4,7 @@
 }
 
 a {
-    color: #414141 !important;
+    color: #414141;
 }
   
 a:hover {
@@ -41,7 +41,7 @@ h1 {
 .App {
     font-family: 'Jost', sans-serif;
     min-height: 100vh;
-    background-color: #fffed0;
+    background-color: #414141;
 }
 
 .LeftPanel {

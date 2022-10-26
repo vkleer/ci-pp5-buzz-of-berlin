@@ -4,6 +4,9 @@
     margin-bottom: 16px;
     text-align: center;
 }
+.Post a {
+    color: #414141;
+}
 
 .CardBody {
     border: none;

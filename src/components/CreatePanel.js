@@ -48,7 +48,7 @@ const CreatePanel = () => {
 return (
     <Container className="px-0">
         <Navbar className={styles.NavBar} expand="md" fixed="left">
-            <Nav className="flex-column text-left d-none d-md-flex">
+            <Nav className="flex-column text-left d-none d-md-flex text-white">
                 {currentUser && loggedInIcons}
             </Nav>
             {currentUser && (
