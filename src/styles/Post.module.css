@@ -1,0 +1,27 @@
+.Post {
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.CardBody {
+    border: none;
+}
+
+.Post figure,
+h5 {
+    margin: 0 0;
+}
+
+.Heart {
+    color: #e63e20;
+}
+
+.Heart:hover {
+    color: #414141;
+}
+
+.HeartOutline:hover {
+    color: #e63e20;
+}
