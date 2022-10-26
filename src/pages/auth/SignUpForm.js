@@ -45,7 +45,7 @@ const SignUpForm = () => {
     return (
         <Row className="m-0">
             <Col md={8}>
-                <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} p-4`}>
+                <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} ${styles.MaxFormWidth} p-4`}>
                     <h1 className={`pb-4 ${styles.Header}`}>Sign up</h1>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
@@ -87,7 +87,7 @@ const SignUpForm = () => {
                         )}
                     </Form>
                 </Container>
-                <Container className={`mt-3 ${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
+                <Container className={`mt-3 ${appStyles.Content} ${appStyles.FlatBoxBorder} ${styles.MaxFormWidth}`}>
                     <Link className={styles.Link} to="/login">
                         Already have an account? <span>Log in</span>
                     </Link>
