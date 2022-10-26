@@ -25,10 +25,11 @@ import { axiosReq } from '../../api/axiosDefaults';
 function PostCreateForm() {
     const [postData, setPostData] = useState({
         title: '',
-        content: '',
+        district: '',
+        caption: '',
         image: '',
     });
-    const {title, content, image} = postData;
+    const {title, district, caption, image} = postData;
 
     const imageInput = useRef(null);
     const history = useHistory();
@@ -57,7 +58,8 @@ function PostCreateForm() {
         const formData = new FormData();
     
         formData.append('title', title);
-        formData.append('content', content);
+        formData.append('district', district);
+        formData.append('caption', caption);
         formData.append('image', imageInput.current.files[0]);
     
         try {
@@ -77,29 +79,63 @@ function PostCreateForm() {
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <Form.Control 
-                    type="text" name="title" value={title} 
+                    type="text" 
+                    name="title" 
+                    value={title} 
                     onChange={handleChange} 
+                    aria-label="title"
                 /> 
             </Form.Group>
             {errors.title?.map((message, idx) => 
               <Alert variant="warning" key={idx}>{message}</Alert>
             )}
             <Form.Group>
-                <Form.Label>Content</Form.Label>
+                <Form.Label>District</Form.Label>
+                <Form.Control
+                    as="select"
+                    name="district"
+                    className="form-select"
+                    value={district}
+                    onChange={handleChange}
+                    aria-label="district"
+                >
+                    <option value="">Select district</option>
+                    <option value="Friedrichshain-Kreuzberg">Friedrichshain-Kreuzberg</option>
+                    <option value="Lichtenberg">Lichtenberg</option>
+                    <option value="Marzahn-Hellersdorf">Marzahn-Hellersdorf</option>
+                    <option value="Mitte">Mitte</option>
+                    <option value="Neukölln">Neukölln</option>
+                    <option value="Pankow">Pankow</option>
+                    <option value="Reinickendorf">Reinickendorf</option>
+                    <option value="Spandau">Spandau</option>
+                    <option value="Steglitz-Zehlendorf">Steglitz-Zehlendorf</option>
+                    <option value="Tempelhof-Schöneberg">Tempelhof-Schöneberg</option>
+                    <option value="Treptow-Köpenick">Treptow-Köpenick</option>
+                </Form.Control>
+            </Form.Group>
+            {errors.district?.map((message, idx) => 
+              <Alert variant="warning" key={idx}>{message}</Alert>
+            )}
+            <Form.Group>
+                <Form.Label>Caption</Form.Label>
                 <Form.Control 
-                    as="textarea" rows={6} name="content" value={content}
+                    as="textarea" 
+                    rows={6} 
+                    name="caption" 
+                    value={caption}
                     onChange={handleChange}  
+                    aria-label="caption"
                 />
             </Form.Group>
-            {errors.content?.map((message, idx) => 
+            {errors.caption?.map((message, idx) => 
               <Alert variant="warning" key={idx}>{message}</Alert>
             )}
         </Form>
-        <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+        <Button className={`${btnStyles.Button}`} type="submit">
             Post
         </Button>
         <Button
-            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+            className={`${btnStyles.Button}`}
             onClick={() => history.goBack()}
         >
             Cancel
@@ -109,8 +145,8 @@ function PostCreateForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+      <Row className="m-0">
+        <Col className="py-2 p-0 p-md-2" md={11} lg={7}>
           <Container
             className={`${appStyles.Content} ${appStyles.FlatBoxBorder} ${styles.Container} d-flex flex-column justify-content-center`}
           >
@@ -122,7 +158,7 @@ function PostCreateForm() {
                         </figure>
                         <div>
                             <Form.Label
-                                className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                                className={`${btnStyles.Button} text-white btn`}
                                 htmlFor="image-upload"
                             >
                                 Change image
@@ -131,25 +167,31 @@ function PostCreateForm() {
                     </>
                 ) : (
                    <Form.Label
-                    className="d-flex justify-content-center"
-                    htmlFor="image-upload"
+                        className="d-flex justify-content-center"
+                        htmlFor="image-upload"
                     >
-                    <Asset src={Upload} message="Click or tap to upload an image" />
+                        <Asset 
+                            src={Upload} 
+                            message="Click or tap to upload an image" 
+                        />
                     </Form.Label> 
                 )}
                 <Form.File 
-                    id="image-upload" accept="image/*" 
-                    onChange={handleChangeImage} ref={imageInput}
+                    id="image-upload" 
+                    accept="image/*" 
+                    onChange={handleChangeImage} 
+                    ref={imageInput}
+                    style={{ display: 'none' }}
                 />
             </Form.Group>
             {errors.image?.map((message, idx) => 
               <Alert variant="warning" key={idx}>{message}</Alert>
             )}
-            <div className="d-md-none">{textFields}</div>
+            <div className="d-lg-none">{textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={4} className={`${appStyles.FlatBoxBorder}d-none d-md-block p-0 p-md-2`}>
-          <Container className={appStyles.Content}>{textFields}</Container>
+        <Col lg={4} className="d-none d-lg-block p-0 p-md-2">
+          <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder}`}>{textFields}</Container>
         </Col>
       </Row>
     </Form>
