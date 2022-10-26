@@ -18,7 +18,7 @@ import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
 /**
  * Renders the LogIn form.
  * The variables and logic have been created using the Moments walkthrough
- * and has been built upon/customised.
+ * and have been built upon/customised.
  */
 function LogInForm() {
     const setCurrentUser = useSetCurrentUser();

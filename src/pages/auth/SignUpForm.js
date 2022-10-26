@@ -11,7 +11,7 @@ import { Form, Button, Col, Row, Container, Alert } from "react-bootstrap";
 /**
  * Renders the SignUp form.
  * The variables and logic have been created using the Moments walkthrough
- * and has been built upon/customised.
+ * and have been built upon/customised.
  */
 const SignUpForm = () => {
     const [signUpData, setSignUpData] = useState({
