@@ -10,6 +10,7 @@ import CreatePanel from './components/CreatePanel';
 
 import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
+import PostCreateForm from './pages/posts/PostCreateForm';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/" render={()=> <h1>Home</h1>} />
             <Route exact path="/login" render={()=> <LogInForm />} />
             <Route exact path="/signup" render={()=> <SignUpForm />} />
+            <Route exact path="/posts/create" render={()=> <PostCreateForm />} />
             <Route render={()=> <h1>Page not found.</h1>} />
           </Switch>
         </Col>
