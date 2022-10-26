@@ -15,3 +15,5 @@ export const Avatar = ({ src, height = 30, text }) => {
         </span>
     )
 }
+
+export default Avatar;
