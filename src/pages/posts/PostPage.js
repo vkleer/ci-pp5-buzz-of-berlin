@@ -38,20 +38,18 @@ function PostPage() {
   return (
     <Row className="h-100 m-0">
       <Col className="py-2 p-0" md={11} lg={8}>
-        <Container>
-          <p>Random profiles mobile</p>
-          <Post 
-            {...post.results[0]} 
-            setPosts={setPost} 
-            postPage 
-          />
-        </Container>
+        <p className="text-white">Random profiles mobile</p>
+        <Post 
+          {...post.results[0]} 
+          setPosts={setPost} 
+          postPage 
+        />
         <Container className={appStyles.Content}>
           Comments
         </Container>
       </Col>
-      <Col lg={3} className="d-none d-lg-block p-0">
-        Random profiles desktop
+      <Col lg={3} className="d-none d-lg-block p-0 text-white">
+        <p className="text-white">Random profiles desktop</p>
       </Col>
     </Row>
   );

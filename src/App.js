@@ -12,6 +12,7 @@ import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
 import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
+import PostsFeed from './pages/posts/PostsFeed';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         {/* Main content */}
         <Col className="px-0 offset-md-3" sm={12} md={9}>
           <Switch>
-            <Route exact path="/" render={()=> <h1>Home</h1>} />
+            <Route exact path="/" render={() => <PostsFeed />} />
             <Route exact path="/login" render={()=> <LogInForm />} />
             <Route exact path="/signup" render={()=> <SignUpForm />} />
             <Route exact path="/posts/create" render={()=> <PostCreateForm />} />
