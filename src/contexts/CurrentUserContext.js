@@ -10,12 +10,12 @@ export const SetCurrentUserContext = createContext();
 export const useCurrentUser = () => useContext(CurrentUserContext);
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
+/**
+ * Determines the logged-in status of users.
+ * The variables and logic have been created using the Moments walkthrough
+ * and has been built upon/customised.
+ */
 export const CurrentUserProvider = ({ children }) => {
-    /**
-     * Determines the logged-in status of users.
-     * The variables and logic have been created using the Moments walkthrough
-     * and has been built upon/customised.
-     */
     const [currentUser, setCurrentUser] = useState(null);
     const history = useHistory();
 
