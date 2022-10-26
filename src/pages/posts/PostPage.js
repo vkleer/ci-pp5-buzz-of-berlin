@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
 import { axiosReq } from '../../api/axiosDefaults';
+import Post from './Post';
 
 /**
  * Renders the PostPage - which is a detailed page of an individual post.
@@ -39,7 +40,11 @@ function PostPage() {
       <Col className="py-2 p-0" md={11} lg={7}>
         <Container>
           <p>Random profiles mobile</p>
-          <p>Post component</p>
+          <Post 
+            {...post.results[0]} 
+            setPosts={setPost} 
+            postPage 
+          />
         </Container>
         <Container className={appStyles.Content}>
           Comments
