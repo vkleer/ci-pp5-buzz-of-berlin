@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 import appStyles from '../../App.module.css';
 
@@ -9,6 +10,11 @@ import Container from 'react-bootstrap/Container';
 
 import { axiosReq } from '../../api/axiosDefaults';
 import Post from './Post';
+import CommentCreateForm from '../comments/CommentCreateForm';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Asset from '../../components/Asset';
+import { fetchMoreData } from '../../utils/utils';
+import Comment from '../comments/Comment';
 
 /**
  * Renders the PostPage - which is a detailed page of an individual post.
@@ -18,15 +24,19 @@ import Post from './Post';
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
+  const currentUser = useCurrentUser();
+  const profile_image = currentUser?.profile_image;
+  const [comments, setComments] = useState({ results: [] });
 
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }] = await Promise.all([
+        const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/posts/${id}`),
+          axiosReq.get(`/comments/?post=${id}`),
         ]);
         setPost({ results: [post] });
-        console.log(post);
+        setComments(comments);
       } catch (err) {
         console.log(err);
       }
@@ -44,7 +54,36 @@ function PostPage() {
           setPosts={setPost}
         />
         <Container className={appStyles.Content}>
-          Comments
+          {currentUser ? (
+            <CommentCreateForm
+              profile_id={currentUser.profile_id}
+              profileImage={profile_image}
+              post={id}
+              setPost={setPost}
+              setComments={setComments}
+            />
+          ) : comments.results.length ? (
+            "Comments"
+          ) : null}
+          {comments.results.length ? (
+            <InfiniteScroll
+              children={comments.results.map(comment => (
+                <Comment 
+                  key={comment.id} {...comment} 
+                  setPost={setPost} 
+                  setComments={setComments}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
+          ) : currentUser ? (
+            <span>No comments yet - be the first to comment!</span>
+          ) : (
+            <span>No comments yet.</span>
+          )}
         </Container>
       </Col>
       <Col lg={3} className="d-none d-lg-block p-0 py-2 text-white">
