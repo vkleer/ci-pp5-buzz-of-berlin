@@ -1,5 +1,5 @@
 .Button {
-    background-color: #f0cf36;
+    background-color: #ffd104;
     color: #414141;
     font-size: 1rem;
     font-weight: 600;
@@ -14,21 +14,24 @@
 .Button:hover {
     opacity: 0.8;
     cursor: pointer;
-    background-color: #ffd104 !important;
+    background-color: #fdad00 !important;
     color: #292828;
     border-color: transparent;
 }
 
 .Button:hover:active {
-    background-color: #d1af15 !important;
+    background-color: #fdad00 !important;
+    color: #292828;
 }
 
 .Button:active {
-    background-color: #d1af15 !important;
+    background-color: #fdad00 !important;
+    color: #292828 !important;
 }
 
 .Button:focus {
-    background-color: #eb7b12;
+    background-color: #fdad00;
+    color: #292828;
 }
 
 .Wide {
