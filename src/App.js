@@ -13,8 +13,12 @@ import LogInForm from './pages/auth/LogInForm';
 import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
 import PostsFeed from './pages/posts/PostsFeed';
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
+
   return (
     <div className={styles.App}>
       {/* NavBar */}
@@ -31,7 +35,25 @@ function App() {
         {/* Main content */}
         <Col className="px-0 offset-md-3" sm={12} md={9}>
           <Switch>
-            <Route exact path="/" render={() => <PostsFeed />} />
+            <Route 
+              exact 
+              path="/explore" 
+              render={() => (
+                <PostsFeed 
+                  message="Change your search keyword."
+                />
+              )} 
+            />
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <PostsFeed
+                  message="Change your search keyword or follow a user."
+                  filter={`owner__followed__owner__profile=${profile_id}&`}
+                />
+              )}
+            />
             <Route exact path="/login" render={()=> <LogInForm />} />
             <Route exact path="/signup" render={()=> <SignUpForm />} />
             <Route exact path="/posts/create" render={()=> <PostCreateForm />} />
