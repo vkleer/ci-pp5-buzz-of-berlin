@@ -18,7 +18,7 @@ import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
 
 /**
- * Renders the PostCreate form.
+ * Renders the PostCreate form - which is where a post can be created.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */
