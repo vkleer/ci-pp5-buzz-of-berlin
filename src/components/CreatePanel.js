@@ -51,15 +51,17 @@ return (
             <Nav className="flex-column text-left d-none d-md-flex">
                 {currentUser && loggedInIcons}
             </Nav>
-            <Dropdown className="d-flex mx-auto d-md-none">
+            {currentUser && (
+                <Dropdown className="d-flex mx-auto d-md-none">
                 <Dropdown.Toggle variant="secondary" id="dropdown-basic">
                     <i className="fa-solid fa-square-plus text-white"></i> Create
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={styles.DropDownMenu}>
-                    {currentUser && loggedInIcons}
+                    {loggedInIcons}
                 </Dropdown.Menu>
             </Dropdown>
+            )}
         </Navbar>
     </Container>
   )
