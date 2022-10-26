@@ -48,7 +48,7 @@ function PostPage() {
           Comments
         </Container>
       </Col>
-      <Col lg={3} className="d-none d-lg-block p-0 text-white">
+      <Col lg={3} className="d-none d-lg-block p-0 py-2 text-white">
         <p className="text-white">Random profiles desktop</p>
       </Col>
     </Row>

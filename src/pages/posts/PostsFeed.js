@@ -61,7 +61,11 @@ function PostsFeed({ message, filter = "" }) {
                 <>
                     {posts.results.length ? (
                     posts.results.map((post) => (
-                        <Post key={post.id} {...post} setPosts={setPosts} />
+                        <Post 
+                            key={post.id} 
+                            {...post} 
+                            setPosts={setPosts} 
+                        />
                     ))
                     ) : (
                     <Container className={appStyles.Content}>
@@ -76,7 +80,7 @@ function PostsFeed({ message, filter = "" }) {
                 </Container>
                 )}
             </Col>
-            <Col lg={3} className="d-none d-lg-block p-0">
+            <Col lg={3} className="d-none d-lg-block p-0 py-2">
                 <p className="text-white">Random profiles desktop</p>
             </Col>
         </Row>
