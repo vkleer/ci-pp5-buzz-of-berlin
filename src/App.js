@@ -36,15 +36,6 @@ function App() {
         {/* Main content */}
         <Col className="px-0 offset-md-3" sm={12} md={9}>
           <Switch>
-            <Route 
-              exact 
-              path="/explore" 
-              render={() => (
-                <PostsFeed 
-                  message="Change your search keyword."
-                />
-              )} 
-            />
             <Route
               exact
               path="/"
@@ -55,6 +46,25 @@ function App() {
                 />
               )}
             />
+            <Route 
+              exact 
+              path="/explore" 
+              render={() => (
+                <PostsFeed 
+                  message="Change your search keyword."
+                />
+              )} 
+            />
+            <Route 
+              exact 
+              path="/liked" 
+              render={() => (
+              <PostsFeed
+                message="Change search keyword or like a post."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} 
+              />
+            )} 
+          />
             <Route exact path="/login" render={()=> <LogInForm />} />
             <Route exact path="/signup" render={()=> <SignUpForm />} />
             <Route exact path="/posts/create" render={()=> <PostCreateForm />} />
