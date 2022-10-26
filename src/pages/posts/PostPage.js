@@ -36,8 +36,8 @@ function PostPage() {
   }, [id]);
 
   return (
-    <Row className="h-100">
-      <Col className="py-2 p-0" md={11} lg={7}>
+    <Row className="h-100 m-0">
+      <Col className="py-2 p-0" md={11} lg={8}>
         <Container>
           <p>Random profiles mobile</p>
           <Post 
@@ -50,7 +50,7 @@ function PostPage() {
           Comments
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0">
+      <Col lg={3} className="d-none d-lg-block p-0">
         Random profiles desktop
       </Col>
     </Row>
