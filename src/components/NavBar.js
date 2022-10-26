@@ -12,6 +12,7 @@ import Nav from 'react-bootstrap/Nav';
 import logo from '../assets/logo.png';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import { Avatar } from './Avatar';
+import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
 
 /**
@@ -21,6 +22,8 @@ import { Avatar } from './Avatar';
 const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
+
+    const  { expanded, setExpanded, ref } = useClickOutsideToggle();
 
     const handleSignOut = async () => {
         // Signs out the current user
@@ -260,6 +263,7 @@ const NavBar = () => {
 
     return (
         <Navbar 
+            expanded={expanded}
             className={styles.NavBar} 
             expand="md" 
         >
@@ -273,7 +277,11 @@ const NavBar = () => {
                     <span className={styles.LogoText}>Buzz of Berlin</span>
                 </Navbar.Brand>
             </NavLink>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle 
+                ref={ref}
+                onClick={() => setExpanded(!expanded)} 
+                aria-controls="basic-navbar-nav" 
+            />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="m-md-auto ml-sm-0 text-sm-left">
                     <OverlayTrigger
