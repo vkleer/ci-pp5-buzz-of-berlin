@@ -54,7 +54,7 @@ function PostsFeed({ message, filter = "" }) {
 
     return (
         <Row className="h-100 m-0">
-            <Col className="py-2 p-0" lg={11} xl={7}>
+            <Col className="py-2 p-0" md={11} lg={11} xl={7}>
                 <PopularProfiles mobile />
                 {/* SearchBar */}
                 <i className={`fas fa-search ${styles.SearchIcon}`} />
