@@ -15,6 +15,7 @@ import NoResults from '../../assets/no-results.png';
 import Post from './Post';
 import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
+import PopularProfiles from '../../profiles/PopularProfiles';
 
 /**
  * Renders the PostsFeed - which contains multiple posts depending on the
@@ -54,7 +55,7 @@ function PostsFeed({ message, filter = "" }) {
     return (
         <Row className="h-100 m-0">
             <Col className="py-2 p-0" md={11} lg={8}>
-                <p className="text-white">Random profiles mobile</p>
+                <PopularProfiles mobile />
                 {/* SearchBar */}
                 <i className={`fas fa-search ${styles.SearchIcon}`} />
                 <Form 
@@ -97,7 +98,7 @@ function PostsFeed({ message, filter = "" }) {
                 )}
             </Col>
             <Col lg={3} className="d-none d-lg-block p-0 py-2">
-                <p className="text-white">Random profiles desktop</p>
+                <PopularProfiles />
             </Col>
         </Row>
     );
