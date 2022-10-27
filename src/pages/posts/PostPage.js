@@ -15,7 +15,6 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
 import Comment from '../comments/Comment';
-import PopularProfiles from '../../profiles/PopularProfiles';
 
 /**
  * Renders the PostPage - which is a detailed page of an individual post.
@@ -48,13 +47,12 @@ function PostPage() {
 
   return (
     <Row className="h-100 m-0">
-      <Col className="py-2 p-0" md={11} lg={8}>
-        <PopularProfiles mobile />
+      <Col className="py-2 p-0" lg={11}>
         <Post 
           {...post.results[0]} 
           setPosts={setPost}
         />
-        <Container className={`mb-4 ${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
+        <Container fluid className={`mb-4 ${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}
@@ -86,9 +84,6 @@ function PostPage() {
             <span>No comments yet.</span>
           )}
         </Container>
-      </Col>
-      <Col lg={3} className="d-none d-lg-block p-0 py-2 text-white">
-        <PopularProfiles />
       </Col>
     </Row>
   );

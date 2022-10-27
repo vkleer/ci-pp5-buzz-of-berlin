@@ -54,7 +54,7 @@ function PostsFeed({ message, filter = "" }) {
 
     return (
         <Row className="h-100 m-0">
-            <Col className="py-2 p-0" md={11} lg={8}>
+            <Col className="py-2 p-0" lg={11} xl={7}>
                 <PopularProfiles mobile />
                 {/* SearchBar */}
                 <i className={`fas fa-search ${styles.SearchIcon}`} />
@@ -97,7 +97,7 @@ function PostsFeed({ message, filter = "" }) {
                     </Container>
                 )}
             </Col>
-            <Col lg={3} className="d-none d-lg-block p-0 py-2">
+            <Col xl={4} className={`d-none d-xl-block p-0 py-2 `}>
                 <PopularProfiles />
             </Col>
         </Row>
