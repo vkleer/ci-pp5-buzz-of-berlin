@@ -18,3 +18,42 @@ export const fetchMoreData = async (resource, setResource) => {
         }));
     } catch(err) {}
 };
+
+/**
+ * Increments the followers_count and following_count variables for the profile 
+ * that is passed in as props by 1.
+ * The variables and logic have been created using the Moments walkthrough.
+ */
+export const followHelper = (profile, clickedProfile, following_id) => {
+    return profile.id === clickedProfile.id
+    ? {
+        ...profile,
+        followers_count: profile.followers_count + 1,
+        following_id,
+    } : profile.is_owner
+    ? {
+        ...profile,
+        following_count: profile.following_count + 1,
+    } :
+        profile;
+}
+
+/**
+ * Reduces the followers_count and following_count variables for the profile 
+ * that is passed in as props by 1.
+ * The variables and logic have been created using the Moments walkthrough.
+ */
+export const unfollowHelper = (profile, clickedProfile) => {
+    return profile.id === clickedProfile.id
+        ? {
+            ...profile,
+            followers_count: profile.followers_count - 1,
+            following_id: null,
+        } : 
+            profile.is_owner
+        ? { 
+            ...profile, 
+            following_count: profile.following_count - 1 
+        } : 
+            profile;
+}
