@@ -117,7 +117,7 @@ const NavBar = () => {
                     activeClassName={styles.Active} 
                     to="/liked"
                 >
-                    <i class="fa-solid fa-fw fa-heart"></i>
+                    <i className="fa-solid fa-fw fa-heart"></i>
                     <span className="d-sm-inline d-md-none pl-2">Liked</span>
                 </NavLink>
             </OverlayTrigger>

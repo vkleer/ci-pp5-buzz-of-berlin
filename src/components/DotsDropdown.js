@@ -30,7 +30,7 @@ export const DotsDropdown = ({handleEdit, handleDelete}) => {
                     onClick={handleEdit}
                     aria-label="Edit"
                 >
-                    <i class="fa-solid fa-fw fa-pencil"></i>
+                    <i className="fa-solid fa-fw fa-pencil"></i>
                     <span className="pl-1">Edit</span>
                 </Dropdown.Item>
                 <Dropdown.Item
