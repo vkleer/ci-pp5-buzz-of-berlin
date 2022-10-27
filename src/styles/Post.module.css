@@ -18,7 +18,7 @@ h5 {
 }
 
 .Heart {
-    color: #e63e20;
+    color: #f0cf36;
 }
 
 .Heart:hover {
@@ -26,5 +26,5 @@ h5 {
 }
 
 .HeartOutline:hover {
-    color: #e63e20;
+    color: #f0cf36;
 }
