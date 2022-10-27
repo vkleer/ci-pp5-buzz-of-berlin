@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import appStyles from '../../App.module.css'
 import btnStyles from '../../styles/Button.module.css'
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
@@ -56,7 +57,7 @@ function CommentCreateForm(props) {
                     <Avatar src={profileImage} />
                 </Link>
                 <Form.Control
-                    className={styles.Form}
+                    className={`${appStyles.FlatBoxBorderSmall} ${styles.Form}`}
                     placeholder="Add a comment..."
                     as="textarea"
                     value={content}

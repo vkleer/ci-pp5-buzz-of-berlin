@@ -1,4 +1,6 @@
-.Form {
-    border: none;
-    border-bottom: 2px solid #f0cf36;
-  }
+.Form:focus {
+  color: #414141;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #f0ce36ad;
+}

@@ -53,7 +53,7 @@ function PostPage() {
           {...post.results[0]} 
           setPosts={setPost}
         />
-        <Container className={appStyles.Content}>
+        <Container className={`mb-4 ${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
           {currentUser ? (
             <CommentCreateForm
               profile_id={currentUser.profile_id}
