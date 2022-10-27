@@ -138,8 +138,8 @@ function ProfilePage() {
 
     return (
         <Row className="m-0">
-            <Col className="py-2 mb-4 p-0 p-lg-2" lg={11}>
-                <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder} ${styles.ProfileContainer}`}>
+            <Col className="py-2 mb-4 p-0 p-lg-2" md={11}>
+                <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
                     {hasLoaded ? (
                         <>
                         {mainProfile}
