@@ -14,6 +14,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
+import { useRedirect } from '../../hooks/useRedirect';
 
 /**
  * Renders the LogIn form.
@@ -22,6 +23,7 @@ import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
  */
 function LogInForm() {
     const setCurrentUser = useSetCurrentUser();
+    useRedirect('loggedIn');
 
     const [logInData, setLogInData] = useState({
         username: '',
@@ -45,7 +47,7 @@ function LogInForm() {
         try {
             const { data } = await axios.post('/dj-rest-auth/login/', logInData);
             setCurrentUser(data.user);
-            history.push('/');
+            history.goBack();
         } catch(err) {
             setErrors(err.response?.data);
         }

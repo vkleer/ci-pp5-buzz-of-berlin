@@ -13,12 +13,16 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 
+import { useRedirect } from '../../hooks/useRedirect';
+
 /**
  * Renders the SignUp form.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */
 const SignUpForm = () => {
+    useRedirect('loggedIn');
+    
     const [signUpData, setSignUpData] = useState({
         username: '',
         password1: '',

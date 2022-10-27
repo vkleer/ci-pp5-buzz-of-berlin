@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -16,6 +16,7 @@ import Upload from '../../assets/upload.png';
 
 import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
+import { useRedirect } from '../../hooks/useRedirect';
 
 /**
  * Renders the PostCreate form - which is where a post can be created.
@@ -23,6 +24,8 @@ import { axiosReq } from '../../api/axiosDefaults';
  * and have been built upon/customised.
  */
 function PostCreateForm() {
+    useRedirect('loggedIn');
+
     const [postData, setPostData] = useState({
         title: '',
         district: '',
