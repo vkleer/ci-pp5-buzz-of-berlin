@@ -18,7 +18,7 @@ import CommentEditForm from './CommentEditForm';
 const Comment = (props) => {
     const {
         profile_id, profile_image, owner, updated_date, 
-        content, id, setPost, setComments,
+        content, id, setItem, setComments,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -28,16 +28,16 @@ const Comment = (props) => {
     const handleDelete = async () => {
         try {
             await axiosRes.delete(`/comments/${id}/`);
-            setPost(prevPost => ({
+            setItem(prevItem => ({
                 results: [{
-                    ...prevPost.results[0],
-                    comments_count: prevPost.results[0].comments_count -1
+                    ...prevItem.results[0],
+                    comments_count: prevItem.results[0].comments_count -1
                 }]
-            }))
+            }));
             setComments(prevComments => ({
                 ...prevComments,
                 results: prevComments.results.filter(comment => comment.id !== id),
-            }))
+            }));
         } catch(err) {
             console.log(err);
         }

@@ -17,7 +17,7 @@ import { axiosRes } from "../../api/axiosDefaults";
  * and have been built upon/customised.
  */
 function CommentCreateForm(props) {
-    const { post, setPost, setComments, profileImage, profile_id } = props;
+    const { item, setItem, setComments, profileImage, profile_id } = props;
     const [content, setContent] = useState("");
 
     const handleChange = (event) => {
@@ -29,17 +29,17 @@ function CommentCreateForm(props) {
         try {
             const { data } = await axiosRes.post("/comments/", {
                 content,
-                post,
+                item,
             });
             setComments((prevComments) => ({
                 ...prevComments,
                 results: [data, ...prevComments.results],
             }));
-            setPost((prevPost) => ({
+            setItem((prevItem) => ({
                 results: [
                 {
-                    ...prevPost.results[0],
-                    comments_count: prevPost.results[0].comments_count + 1,
+                    ...prevItem.results[0],
+                    comments_count: prevItem.results[0].comments_count + 1,
                 },
                 ],
             }));
