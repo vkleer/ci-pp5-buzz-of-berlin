@@ -33,7 +33,7 @@ const Recommendation = (props) => {
         caption,
         image,
         updated_date,
-        setRecommendation,
+        setRecommendations,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -56,7 +56,7 @@ const Recommendation = (props) => {
     const handleLike = async () => {
         try {
             const {data} = await axiosRes.post('/likes/', {recommendation:id});
-            setRecommendation((prevRecommendations) => ({
+            setRecommendations((prevRecommendations) => ({
                 ...prevRecommendations,
                 results: prevRecommendations.results.map((recommendation) => {
                     return recommendation.id === id
@@ -72,7 +72,7 @@ const Recommendation = (props) => {
     const handleUnlike = async () => {
         try {
             await axiosRes.delete(`/likes/${like_id}`);
-            setRecommendation((prevRecommendations) => ({
+            setRecommendations((prevRecommendations) => ({
                 ...prevRecommendations,
                 results: prevRecommendations.results.map((recommendation) => {
                     return recommendation.id === id
@@ -95,7 +95,7 @@ const Recommendation = (props) => {
                 </Link>
                 <div className="d-flex align-items-center">
                     <span>{updated_date}</span>
-                    {is_owner && setRecommendation && (
+                    {is_owner && setRecommendations && (
                         <DotsDropdown 
                             handleEdit={handleEdit} 
                             handleDelete={handleDelete} 
