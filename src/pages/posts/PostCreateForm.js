@@ -24,8 +24,6 @@ import { useRedirect } from '../../hooks/useRedirect';
  * and have been built upon/customised.
  */
 function PostCreateForm() {
-    useRedirect('loggedIn');
-
     const [postData, setPostData] = useState({
         title: '',
         district: '',
