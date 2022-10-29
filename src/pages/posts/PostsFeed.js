@@ -16,6 +16,7 @@ import Post from './Post';
 import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
 import PopularProfiles from '../../profiles/PopularProfiles';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 /**
  * Renders the PostsFeed - which contains multiple posts depending on the
@@ -28,6 +29,7 @@ function PostsFeed({ message, filter = "" }) {
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
     const [query, setQuery] = useState('');
+    const currentUser = useCurrentUser();
 
     /**
     * Fetches posts from the API.
@@ -50,7 +52,7 @@ function PostsFeed({ message, filter = "" }) {
         return () => {
             clearTimeout(timer);
         }
-    }, [filter, query, pathname]);
+    }, [filter, query, pathname, currentUser]);
 
     return (
         <Row className="h-100 m-0">

@@ -1,10 +1,3 @@
-/**
- * Renders the PopularProfile component - which displays the most followed
- * users on the app.
- * The variables and logic have been created using the Moments walkthrough
- * and have been built upon/customised.
- */
-
  import React from 'react';
  import appStyles from '../App.module.css';
  import { Container } from 'react-bootstrap';
@@ -12,6 +5,12 @@
  import Profile from './Profile';
  import { useProfileData } from '../contexts/ProfileDataContext';
  
+ /**
+ * Renders the PopularProfile component - which displays the most followed
+ * users on the app.
+ * The variables and logic have been created using the Moments walkthrough
+ * and have been built upon/customised.
+ */
  const PopularProfiles = ({ mobile }) => {
      const { popularProfiles } = useProfileData();
  
@@ -49,4 +48,4 @@
      );
  };
  
- export default PopularProfiles
+export default PopularProfiles
