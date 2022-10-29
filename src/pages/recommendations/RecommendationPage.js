@@ -58,7 +58,7 @@ function RecommendationPage() {
               profile_id={currentUser.profile_id}
               profileImage={profile_image}
               recommendation={id}
-              setRecommendation={setRecommendation}
+              setItem={setRecommendation}
               setComments={setComments}
             />
           ) : comments.results.length ? (
@@ -69,7 +69,7 @@ function RecommendationPage() {
               children={comments.results.map(comment => (
                 <Comment 
                   key={comment.id} {...comment} 
-                  setRecommendation={setRecommendation} 
+                  setItem={setRecommendation} 
                   setComments={setComments}
                 />
               ))}

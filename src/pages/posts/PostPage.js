@@ -58,7 +58,7 @@ function PostPage() {
               profile_id={currentUser.profile_id}
               profileImage={profile_image}
               post={id}
-              setPost={setPost}
+              setItem={setPost}
               setComments={setComments}
             />
           ) : comments.results.length ? (
@@ -69,7 +69,7 @@ function PostPage() {
               children={comments.results.map(comment => (
                 <Comment 
                   key={comment.id} {...comment} 
-                  setPost={setPost} 
+                  setItem={setPost} 
                   setComments={setComments}
                 />
               ))}
