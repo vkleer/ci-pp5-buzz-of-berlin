@@ -1,9 +1,10 @@
-import styles from  './App.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Route, Switch } from 'react-router-dom';
 import './api/axiosDefaults';
+
+import styles from  './App.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './components/NavBar';
 import CreatePanel from './components/CreatePanel';
@@ -18,6 +19,7 @@ import RecommendationCreateForm from './pages/recommendations/RecommendationCrea
 import RecommendationEditForm from './pages/recommendations/RecommendationEditForm';
 import RecommendationPage from './pages/recommendations/RecommendationPage';
 import RecommendationsFeed from './pages/recommendations/RecommendationsFeed';
+import EventCreateForm from './pages/events/EventsCreateForm';
 import ProfilePage from './profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
@@ -88,6 +90,7 @@ function App() {
             <Route exact path="/recommendations/create" render={()=> <RecommendationCreateForm />} />
             <Route exact path="/recommendations/:id/edit" render={() => <RecommendationEditForm />} />
             <Route exact path="/recommendations/:id" render={() => <RecommendationPage />} />
+            <Route exact path="/events/create" render={()=> <EventCreateForm />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
             <Route render={()=> <h1>Page not found.</h1>} />
           </Switch>
