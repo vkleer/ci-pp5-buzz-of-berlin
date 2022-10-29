@@ -17,6 +17,7 @@ import PostsFeed from './pages/posts/PostsFeed';
 import RecommendationCreateForm from './pages/recommendations/RecommendationCreateForm';
 import RecommendationEditForm from './pages/recommendations/RecommendationEditForm';
 import RecommendationPage from './pages/recommendations/RecommendationPage';
+import RecommendationsFeed from './pages/recommendations/RecommendationsFeed';
 import ProfilePage from './profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
@@ -74,6 +75,16 @@ function App() {
             <Route exact path="/posts/create" render={()=> <PostCreateForm />} />
             <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
             <Route exact path="/posts/:id" render={() => <PostPage />} />
+            <Route
+              exact
+              path="/recommendations"
+              render={() => (
+                <RecommendationsFeed
+                  message="Change your search keyword or follow a user."
+                  filter={`owner__followed__owner__profile=${profile_id}&`}
+                />
+              )}
+            />
             <Route exact path="/recommendations/create" render={()=> <RecommendationCreateForm />} />
             <Route exact path="/recommendations/:id/edit" render={() => <RecommendationEditForm />} />
             <Route exact path="/recommendations/:id" render={() => <RecommendationPage />} />
