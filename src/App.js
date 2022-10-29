@@ -15,6 +15,7 @@ import PostEditForm from './pages/posts/PostEditForm';
 import PostPage from './pages/posts/PostPage';
 import PostsFeed from './pages/posts/PostsFeed';
 import RecommendationCreateForm from './pages/recommendations/RecommendationCreateForm';
+import RecommendationPage from './pages/recommendations/RecommendationPage';
 import ProfilePage from './profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
@@ -73,6 +74,7 @@ function App() {
             <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
             <Route exact path="/posts/:id" render={() => <PostPage />} />
             <Route exact path="/recommendations/create" render={()=> <RecommendationCreateForm />} />
+            <Route exact path="/recommendations/:id" render={() => <RecommendationPage />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
             <Route render={()=> <h1>Page not found.</h1>} />
           </Switch>
