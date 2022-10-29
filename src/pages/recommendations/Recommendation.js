@@ -30,7 +30,7 @@ const Recommendation = (props) => {
         like_id,
         title,
         district,
-        caption,
+        content,
         image,
         updated_date,
         setRecommendations,
@@ -110,7 +110,7 @@ const Recommendation = (props) => {
             <Card.Body className={styles.CardBody}>
                 {title && <Card.Title className="text-center">{title}</Card.Title>}
                 {district && <Card.Subtitle className="pb-4">District: {district}</Card.Subtitle>}
-                {caption && <Card.Text className="pb-2">{caption}</Card.Text>}
+                {content && <Card.Text className="pb-2">{content}</Card.Text>}
                 <div className={styles.PostBar}>
                     {is_owner ? (
                         <OverlayTrigger

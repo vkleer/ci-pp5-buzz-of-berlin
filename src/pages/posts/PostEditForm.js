@@ -16,7 +16,7 @@ import { Image } from 'react-bootstrap';
 import { axiosReq } from '../../api/axiosDefaults';
 
 /**
- * Renders the PostEditPage - which is where a Post can be edited.
+ * Renders the PostEdit page - which is where a Post can be edited.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */
@@ -173,8 +173,11 @@ function PostEditForm() {
                                 </Form.Label>
                             </div>
                             <Form.File 
-                                id="image-upload" accept="image/*" 
-                                onChange={handleChangeImage} ref={imageInput}
+                                id="image-upload" 
+                                accept="image/*" 
+                                onChange={handleChangeImage} 
+                                ref={imageInput}
+                                style={{ display: 'none' }}
                             />
                         </Form.Group>
                         {errors.image?.map((message, idx) => 
