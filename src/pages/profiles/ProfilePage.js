@@ -18,7 +18,10 @@ import { useProfileData, useSetProfileData } from '../../contexts/ProfileDataCon
 import InfiniteScroll from 'react-infinite-scroll-component';
 import NoResults from '../../assets/no-results.png';
 import Post from '../posts/Post';
+import Recommendation from '../recommendations/Recommendation';
+import Event from '../events/Event';
 import { fetchMoreData } from '../../utils/utils';
+import PopularProfiles from './PopularProfiles';
 
 /**
  * Renders the ProfilePage component - which displays the users' profile, 
@@ -29,6 +32,8 @@ import { fetchMoreData } from '../../utils/utils';
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
     const [profilePosts, setProfilePosts] = useState({results: []});
+    const [profileRecommendations, setProfileRecommendations] = useState({results: []});
+    const [profileEvents, setProfileEvents] = useState({results: []});
 
     const currentUser = useCurrentUser();
     const {id} = useParams();
@@ -42,15 +47,24 @@ function ProfilePage() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [{data: pageProfile}, {data: profilePosts}] = await Promise.all([
+                const [
+                    {data: pageProfile}, 
+                    {data: profilePosts},
+                    {data: profileRecommendations},
+                    {data: profileEvents},
+                ] = await Promise.all([
                     axiosReq.get(`/profiles/${id}`),
                     axiosReq.get(`/posts/?owner__profile=${id}`),
+                    axiosReq.get(`/recommendations/?owner__profile=${id}`),
+                    axiosReq.get(`/events/?owner__profile=${id}`),
                 ]);
                 setProfileData(prevState => ({
                     ...prevState,
                     pageProfile: {results: [pageProfile]}
                 }));
                 setProfilePosts(profilePosts);
+                setProfileRecommendations(profileRecommendations);
+                setProfileEvents(profileEvents);
                 setHasLoaded(true);
             } catch(err) {
                 console.log(err);
@@ -69,18 +83,14 @@ function ProfilePage() {
                         src={profile?.image}
                     />
                 </Col>
-                <Col lg={7}>
+                <Col  className="offset-lg-1" lg={6}>
                     <h3 className="my-2">{profile?.owner}</h3>
                     <Row className='justify-content-center no-gutters'>
-                        <Col xs={3} className='my-2'>
-                            <div className="fw-bold">{profile?.posts_count}</div>
-                            <div>Posts</div>
-                        </Col>
-                        <Col xs={3} className='my-2'>
+                        <Col xs={6} className='my-2'>
                             <div className="fw-bold">{profile?.followers_count}</div>
                             <div>Followers</div>
                         </Col>
-                        <Col xs={3} className='my-2'>
+                        <Col xs={6} className='my-2'>
                             <div className="fw-bold">{profile?.following_count}</div>
                             <div>Following</div>
                         </Col> 
@@ -115,7 +125,8 @@ function ProfilePage() {
     const mainProfilePosts = (
         <>
             <hr />
-            <p className="text-center">{profile?.owner}'s posts, recommendations and events</p>
+            <div className="text-center fw-bold">{profile?.posts_count}</div>
+            <div className="text-center">Posts</div>
             <hr />
             {profilePosts.results.length ? (
                 <InfiniteScroll
@@ -130,7 +141,47 @@ function ProfilePage() {
             ) : (
                 <Asset 
                     src={NoResults}
-                    message={`No results found, ${profile?.owner} hasn't posted anything yet.`}
+                    message={`No results found, ${profile?.owner} hasn't posted any posts yet.`}
+                />
+            )}
+            <hr />
+            <div className="text-center fw-bold">{profile?.recommendations_count}</div>
+            <div className="text-center">Recommendations</div>
+            <hr />
+            {profileRecommendations.results.length ? (
+                <InfiniteScroll
+                    children={profileRecommendations.results.map((recommendation) => (
+                        <Recommendation key={recommendation.id} {...recommendation} setRecommendations={setProfileRecommendations} />
+                    ))}
+                    dataLength={profileRecommendations.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!profileRecommendations.next}
+                    next={() => fetchMoreData(profileRecommendations, setProfileRecommendations)}
+                />
+            ) : (
+                <Asset 
+                    src={NoResults}
+                    message={`No results found, ${profile?.owner} hasn't posted any recommendations yet.`}
+                />
+            )}
+            <hr />
+            <div className="text-center fw-bold">{profile?.events_count}</div>
+            <div className="text-center">Events</div>
+            <hr />
+            {profileEvents.results.length ? (
+                <InfiniteScroll
+                    children={profileEvents.results.map((event) => (
+                        <Event key={event.id} {...event} setEvents={setProfileEvents} />
+                    ))}
+                    dataLength={profileEvents.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!profileEvents.next}
+                    next={() => fetchMoreData(profileEvents, setProfileEvents)}
+                />
+            ) : (
+                <Asset 
+                    src={NoResults}
+                    message={`No results found, ${profile?.owner} hasn't posted any events yet.`}
                 />
             )}
         </>
@@ -138,7 +189,8 @@ function ProfilePage() {
 
     return (
         <Row className="m-0">
-            <Col className="py-2 mb-4 p-0 p-lg-2" md={11}>
+            <Col className="py-2 mb-4 p-0 p-lg-2" md={11} xl={7}>
+                <PopularProfiles mobile />
                 <Container className={`${appStyles.Content} ${appStyles.FlatBoxBorder}`}>
                     {hasLoaded ? (
                         <>
@@ -149,6 +201,9 @@ function ProfilePage() {
                         <Asset spinner />
                     )}
                 </Container>
+            </Col>
+            <Col xl={4} className="d-none d-xl-block pt-2">
+                <PopularProfiles />
             </Col>
         </Row>
     );
