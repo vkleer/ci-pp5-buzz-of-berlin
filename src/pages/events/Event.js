@@ -6,8 +6,6 @@ import appStyles from '../../App.module.css';
 
 import Card from 'react-bootstrap/Card';
 import Media from 'react-bootstrap/Media';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
 
 import Avatar from '../../components/Avatar';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
@@ -25,8 +23,6 @@ const Event = (props) => {
         owner,
         profile_id,
         profile_image,
-        likes_count,
-        like_id,
         title,
         location_name,
         date,
@@ -53,38 +49,6 @@ const Event = (props) => {
             history.goBack();
         } catch(err) {
             // console.log(err);
-        }
-    };
-
-    const handleLike = async () => {
-        try {
-            const {data} = await axiosRes.post('/likes/', {event:id});
-            setEvents((prevPosts) => ({
-                ...prevPosts,
-                results: prevPosts.results.map((post) => {
-                    return post.id === id
-                    ? {...post, likes_count: post.likes_count + 1, like_id: data.id}
-                    : post;
-                }),
-            }));
-        } catch(err) {
-            console.log(err);
-        }
-    };
-
-    const handleUnlike = async () => {
-        try {
-            await axiosRes.delete(`/likes/${like_id}`);
-            setEvents((prevPosts) => ({
-                ...prevPosts,
-                results: prevPosts.results.map((post) => {
-                    return post.id === id
-                    ? {...post, likes_count: post.likes_count - 1, like_id: null}
-                    : post;
-                }),
-            }));
-        } catch(err) {
-            console.log(err);
         }
     };
 
