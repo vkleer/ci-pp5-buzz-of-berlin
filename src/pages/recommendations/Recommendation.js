@@ -29,7 +29,10 @@ const Recommendation = (props) => {
         likes_count,
         like_id,
         title,
+        location_name,
         district,
+        entry_fee,
+        price,
         content,
         image,
         updated_date,
@@ -108,9 +111,26 @@ const Recommendation = (props) => {
                 <Card.Img src={image} alt={title} />
             </Link>
             <Card.Body className={styles.CardBody}>
-                {title && <Card.Title className="text-center">{title}</Card.Title>}
-                {district && <Card.Subtitle className="pb-4">District: {district}</Card.Subtitle>}
-                {content && <Card.Text className="pb-2">{content}</Card.Text>}
+                {title && 
+                    <Card.Title className="text-center">
+                        {title} @ {location_name}
+                    </Card.Title>
+                }
+                {district &&
+                    <Card.Subtitle className="pb-4">
+                        District: {district}
+                    </Card.Subtitle>
+                }
+                {entry_fee && price &&
+                    <Card.Subtitle> 
+                        Entry fee: {entry_fee} | Price category: {price} <br/> 
+                    </Card.Subtitle>
+                }
+                {content && 
+                    <Card.Text className="pt-4 pb-2">
+                        {content}
+                    </Card.Text>
+                }
                 <div className={styles.PostBar}>
                     {is_owner ? (
                         <OverlayTrigger
