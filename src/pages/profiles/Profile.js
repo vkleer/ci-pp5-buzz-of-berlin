@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from '../styles/Profile.module.css';
-import btnStyles from '../styles/Button.module.css';
+import styles from '../../styles/Profile.module.css';
+import btnStyles from '../../styles/Button.module.css';
 
 import Button from 'react-bootstrap/Button';
 
-import { useCurrentUser } from '../contexts/CurrentUserContext';
-import { Avatar } from '../components/Avatar';
-import { useSetProfileData } from '../contexts/ProfileDataContext';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import { Avatar } from '../../components/Avatar';
+import { useSetProfileData } from '../../contexts/ProfileDataContext';
 
 /**
  * Renders the Profile component - which displays the users' profile picture

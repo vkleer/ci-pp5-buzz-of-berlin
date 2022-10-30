@@ -1,13 +1,13 @@
  import React from 'react';
 
- import appStyles from '../App.module.css';
- import styles from '../styles/PopularProfiles.module.css'
+ import appStyles from '../../App.module.css';
+ import styles from '../../styles/PopularProfiles.module.css'
 
  import { Container } from 'react-bootstrap';
 
- import Asset from '../components/Asset';
+ import Asset from '../../components/Asset';
  import Profile from './Profile';
- import { useProfileData } from '../contexts/ProfileDataContext';
+ import { useProfileData } from '../../contexts/ProfileDataContext';
  
  /**
  * Renders the PopularProfile component - which displays the most followed
