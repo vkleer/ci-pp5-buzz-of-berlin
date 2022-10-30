@@ -125,9 +125,9 @@ const Event = (props) => {
                     <Card.Subtitle> 
                         {date} starting at {start_time} <br/> 
                         {ticket_price ? (
-                            `Price: €${ticket_price} per ticket`
+                            `Entry fee: €${ticket_price} per ticket`
                         ) : (
-                            `Price: Free!`
+                            `Entry fee: Free!`
                         )}
                     </Card.Subtitle>
                 }
