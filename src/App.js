@@ -83,8 +83,7 @@ function App() {
               path="/recommendations"
               render={() => (
                 <RecommendationsFeed
-                  message="Change your search keyword or follow a user."
-                  filter={`owner__followed__owner__profile=${profile_id}&`}
+                  message="Change your search keyword."
                 />
               )}
             />
