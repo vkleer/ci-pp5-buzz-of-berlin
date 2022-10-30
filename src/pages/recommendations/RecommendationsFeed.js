@@ -59,33 +59,37 @@ function RecommendationsFeed({ message, filter = "" }) {
             <Col className="py-2 p-0" md={11} xl={7}>
                 <PopularProfiles mobile />
                 {/* SearchBar */}
-                <i className={`fas fa-search ${styles.SearchIcon}`} />
-                <Form 
-                    className={`pb-4 ${styles.SearchBar}`} 
-                    onSubmit={(event) => event.preventDefault()}
-                >
-                    <Form.Control 
-                        type="text" 
-                        className="mr-sm-2" 
-                        placeholder="Search recommendations" 
-                        value={query}
-                        onChange={(event) => setQuery(event.target.value)}
-                    />
-                </Form>
+                <Container className="p-0">
+                    <i className={`fas fa-search ${styles.SearchIcon}`} />
+                    <Form 
+                        className={`pb-4 ${styles.SearchBar}`} 
+                        onSubmit={(event) => event.preventDefault()}
+                    >
+                        <Form.Control 
+                            type="text" 
+                            className="mr-sm-2" 
+                            placeholder="Search posts" 
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
+                        />
+                    </Form>
+                </Container>
                 {hasLoaded ? (
                 <>
                     {recommendations.results.length ? (
-                        <InfiniteScroll 
-                            children={
-                                recommendations.results.map(recommendation => (
-                            <Recommendation key={recommendation.id} {...recommendation} setRecommendations={setRecommendations} />
-                            )) 
-                            }
-                            dataLength={recommendations.results.length}
-                            loader={<Asset spinner />}
-                            hasMore={!!recommendations.next}
-                            next={() => fetchMoreData(recommendations, setRecommendations)}
-                        />
+                        <Container className="p-0">
+                            <InfiniteScroll 
+                                children={
+                                    recommendations.results.map(recommendation => (
+                                <Recommendation key={recommendation.id} {...recommendation} setRecommendations={setRecommendations} />
+                                )) 
+                                }
+                                dataLength={recommendations.results.length}
+                                loader={<Asset spinner />}
+                                hasMore={!!recommendations.next}
+                                next={() => fetchMoreData(recommendations, setRecommendations)}
+                            />
+                        </Container>
                     ) : (
                         <Container className={appStyles.Content}>
                             <h2 className="text-center">No results</h2>

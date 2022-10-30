@@ -59,33 +59,37 @@ function PostsFeed({ message, filter = "" }) {
             <Col className="py-2 p-0" md={11} xl={7}>
                 <PopularProfiles mobile />
                 {/* SearchBar */}
-                <i className={`fas fa-search ${styles.SearchIcon}`} />
-                <Form 
-                    className={`pb-4 ${styles.SearchBar}`} 
-                    onSubmit={(event) => event.preventDefault()}
-                >
-                    <Form.Control 
-                        type="text" 
-                        className="mr-sm-2" 
-                        placeholder="Search posts" 
-                        value={query}
-                        onChange={(event) => setQuery(event.target.value)}
-                    />
-                </Form>
+                <Container className="p-0">
+                    <i className={`fas fa-search ${styles.SearchIcon}`} />
+                    <Form 
+                        className={`pb-4 ${styles.SearchBar}`} 
+                        onSubmit={(event) => event.preventDefault()}
+                    >
+                        <Form.Control 
+                            type="text" 
+                            className="mr-sm-2" 
+                            placeholder="Search posts" 
+                            value={query}
+                            onChange={(event) => setQuery(event.target.value)}
+                        />
+                    </Form>
+                </Container>
                 {hasLoaded ? (
                 <>
                     {posts.results.length ? (
-                        <InfiniteScroll 
-                            children={
-                            posts.results.map(post => (
-                            <Post key={post.id} {...post} setPosts={setPosts} />
-                            )) 
-                            }
-                            dataLength={posts.results.length}
-                            loader={<Asset spinner />}
-                            hasMore={!!posts.next}
-                            next={() => fetchMoreData(posts, setPosts)}
-                        />
+                        <Container className="p-0">
+                            <InfiniteScroll 
+                                children={
+                                posts.results.map(post => (
+                                <Post key={post.id} {...post} setPosts={setPosts} />
+                                )) 
+                                }
+                                dataLength={posts.results.length}
+                                loader={<Asset spinner />}
+                                hasMore={!!posts.next}
+                                next={() => fetchMoreData(posts, setPosts)}
+                            />
+                        </Container> 
                     ) : (
                         <Container className={appStyles.Content}>
                             <h2 className="text-center">No results</h2>
