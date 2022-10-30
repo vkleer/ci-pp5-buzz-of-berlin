@@ -16,7 +16,7 @@
  * and have been built upon/customised.
  */
  const PopularProfiles = ({ mobile }) => {
-     const { popularProfiles } = useProfileData();
+    const { popularProfiles } = useProfileData();
  
    return (
         <Container className={
