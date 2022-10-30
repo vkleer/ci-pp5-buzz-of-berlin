@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import styles from '../../styles/Post.module.css';
+import styles from '../../styles/Event.module.css';
 import appStyles from '../../App.module.css';
 
 import Card from 'react-bootstrap/Card';
@@ -38,6 +38,9 @@ const Event = (props) => {
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
     const history = useHistory();
+
+    const [year, month, day] = date.split('-');
+    const [hour, minute] = start_time.split(':');
 
     const handleEdit = () => {
         history.push(`/events/${id}/edit`);
@@ -86,17 +89,18 @@ const Event = (props) => {
                     </Card.Subtitle>
                 }
                 {date && start_time &&
-                    <Card.Subtitle> 
-                        {date} starting at {start_time} <br/> 
+                    <Card.Text> 
+                        Date: <span className={styles.CardSpan}>{`${day}.${month}.${year}`}</span> <br/> 
+                        Starts at: <span className={styles.CardSpan}>{`${hour}:${minute}`}</span> <br/> 
                         {ticket_price ? (
-                            `Entry fee: €${ticket_price} per ticket`
+                            <div>Entry fee: <span className={styles.CardSpan}>€{ticket_price} per ticket</span></div>
                         ) : (
-                            `Entry fee: Free!`
+                            <div>Entry fee: <span className={styles.CardSpan}>Free!</span></div>
                         )}
-                    </Card.Subtitle>
+                    </Card.Text>
                 }
                 {content && 
-                    <Card.Text className="pt-4 pb-2">
+                    <Card.Text className="pb-2">
                         {content}
                     </Card.Text>
                 }
