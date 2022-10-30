@@ -15,6 +15,7 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
 import Comment from '../comments/Comment';
+import PopularProfiles from '../profiles/PopularProfiles';
 
 /**
  * Renders the PostPage - which is a detailed page of an individual post.
@@ -47,7 +48,8 @@ function PostPage() {
 
   return (
     <Row className="h-100 m-0">
-      <Col className="py-2 p-0" lg={11}>
+      <Col className="py-2 p-0" md={11} xl={7}>
+        <PopularProfiles mobile />
         <Post 
           {...post.results[0]} 
           setPosts={setPost}
@@ -84,6 +86,9 @@ function PostPage() {
             <span>No comments yet.</span>
           )}
         </Container>
+      </Col>
+      <Col xl={4} className="d-none d-xl-block pt-2">
+        <PopularProfiles />
       </Col>
     </Row>
   );

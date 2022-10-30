@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 
 import { axiosReq } from '../../api/axiosDefaults';
 import Event from './Event';
+import PopularProfiles from '../profiles/PopularProfiles';
 
 /**
  * Renders the EventPage - which is a detailed page of an individual Event.
@@ -33,11 +34,15 @@ function EventPage() {
 
   return (
     <Row className="h-100 m-0">
-      <Col className="py-2 p-0" lg={11}>
+      <Col className="py-2 p-0" md={11} xl={7}>
+        <PopularProfiles mobile />
         <Event 
           {...event.results[0]} 
           setEvents={setEvent}
         />
+      </Col>
+      <Col xl={4} className="d-none d-xl-block pt-2">
+        <PopularProfiles />
       </Col>
     </Row>
   );

@@ -15,7 +15,7 @@ import NoResults from '../../assets/no-results.png';
 import Recommendation from './Recommendation';
 import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
-import PopularProfiles from '../../profiles/PopularProfiles';
+import PopularProfiles from '../profiles/PopularProfiles';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 /**
@@ -103,7 +103,7 @@ function RecommendationsFeed({ message, filter = "" }) {
                     </Container>
                 )}
             </Col>
-            <Col xl={4} className={`d-none d-xl-block`}>
+            <Col xl={4} className="d-none d-xl-block pt-2">
                 <PopularProfiles />
             </Col>
         </Row>
