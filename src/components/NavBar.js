@@ -54,7 +54,7 @@ const NavBar = () => {
                     activeClassName={styles.Active} 
                     to="/explore"
                 >
-                    <i className="fa-solid fa-compass"></i>
+                    <i className="fa-solid fa-fw fa-compass"></i>
                     <span className="d-sm-inline d-md-none pl-2">Explore</span>
                 </NavLink>
             </OverlayTrigger>
@@ -284,7 +284,7 @@ const NavBar = () => {
                 aria-controls="basic-navbar-nav" 
             />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className={`m-md-auto ml-sm-0 text-sm-left ${styles.MainIcons}`}>
+                <Nav className="m-md-auto ml-sm-0 text-sm-left">
                     <OverlayTrigger
                         placement="bottom"
                         delay={{ show: 100, hide: 100 }}
