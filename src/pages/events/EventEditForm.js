@@ -82,7 +82,6 @@ function EventEditForm() {
         formData.append('start_time', start_time);
         formData.append('ticket_price', ticket_price);
         formData.append('content', content);
-        formData.append('image', imageInput.current.files[0]);
 
         if (imageInput?.current?.files[0]){
             formData.append('image', imageInput.current.files[0]);
