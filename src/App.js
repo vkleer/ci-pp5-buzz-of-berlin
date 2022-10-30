@@ -22,6 +22,7 @@ import RecommendationsFeed from './pages/recommendations/RecommendationsFeed';
 import EventCreateForm from './pages/events/EventCreateForm';
 import EventEditForm from './pages/events/EventEditForm';
 import EventPage from './pages/events/EventPage';
+import EventsFeed from './pages/events/EventsFeed';
 import ProfilePage from './profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
@@ -45,6 +46,8 @@ function App() {
         {/* Main content */}
         <Col className="px-0 offset-md-3" sm={12} md={9}>
           <Switch>
+            <Route exact path="/login" render={()=> <LogInForm />} />
+            <Route exact path="/signup" render={()=> <SignUpForm />} />
             <Route
               exact
               path="/"
@@ -68,14 +71,12 @@ function App() {
               exact 
               path="/liked" 
               render={() => (
-              <PostsFeed
-                message="Change search keyword or like a post."
-                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} 
-              />
-            )} 
-          />
-            <Route exact path="/login" render={()=> <LogInForm />} />
-            <Route exact path="/signup" render={()=> <SignUpForm />} />
+                <PostsFeed
+                  message="Change search keyword or like a post."
+                  filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} 
+                />
+              )} 
+            />
             <Route exact path="/posts/create" render={()=> <PostCreateForm />} />
             <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
             <Route exact path="/posts/:id" render={() => <PostPage />} />
@@ -91,6 +92,15 @@ function App() {
             <Route exact path="/recommendations/create" render={()=> <RecommendationCreateForm />} />
             <Route exact path="/recommendations/:id/edit" render={() => <RecommendationEditForm />} />
             <Route exact path="/recommendations/:id" render={() => <RecommendationPage />} />
+            <Route
+              exact
+              path="/events"
+              render={() => (
+                <EventsFeed
+                  message="Change your search keyword."
+                />
+              )}
+            />
             <Route exact path="/events/create" render={()=> <EventCreateForm />} />
             <Route exact path="/events/:id/edit" render={() => <EventEditForm />} />
             <Route exact path="/events/:id" render={() => <EventPage />} />
