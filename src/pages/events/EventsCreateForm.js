@@ -17,7 +17,7 @@ import Upload from '../../assets/upload.png';
 
 import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
-import { useRedirect } from '../../hooks/useRedirect';
+// import { useRedirect } from '../../hooks/useRedirect';
 
 /**
  * Renders the EventCreate form - which is where a event can be created.
@@ -71,7 +71,6 @@ function EventCreateForm() {
         formData.append('date', date);
         formData.append('start_time', start_time);
         formData.append('ticket_price', ticket_price);
-        formData.append('price', price);
         formData.append('content', content);
         formData.append('image', imageInput.current.files[0]);
     
@@ -116,19 +115,6 @@ function EventCreateForm() {
                     <Alert variant="warning" key={idx}>{message}</Alert>
                 )}
                 <Form.Group>
-                    <Form.Label>Date</Form.Label>
-                    <Form.Control 
-                        type="date" 
-                        name="date" 
-                        value={date} 
-                        onChange={handleChange} 
-                        aria-label="date"
-                    /> 
-                </Form.Group>
-                {errors.date?.map((message, idx) => 
-                    <Alert variant="warning" key={idx}>{message}</Alert>
-                )}
-                <Form.Group>
                     <Form.Label>District</Form.Label>
                     <Form.Control
                         as="select"
@@ -153,6 +139,19 @@ function EventCreateForm() {
                     </Form.Control>
                 </Form.Group>
                 {errors.district?.map((message, idx) => 
+                    <Alert variant="warning" key={idx}>{message}</Alert>
+                )}
+                <Form.Group>
+                    <Form.Label>Date</Form.Label>
+                    <Form.Control 
+                        type="date" 
+                        name="date" 
+                        value={date} 
+                        onChange={handleChange} 
+                        aria-label="date"
+                    /> 
+                </Form.Group>
+                {errors.date?.map((message, idx) => 
                     <Alert variant="warning" key={idx}>{message}</Alert>
                 )}
                 <Form.Group>

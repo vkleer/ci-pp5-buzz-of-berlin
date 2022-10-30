@@ -16,7 +16,7 @@ import Upload from '../../assets/upload.png';
 
 import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
-import { useRedirect } from '../../hooks/useRedirect';
+// import { useRedirect } from '../../hooks/useRedirect';
 
 /**
  * Renders the PostCreate form - which is where a post can be created.
