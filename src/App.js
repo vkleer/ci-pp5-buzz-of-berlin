@@ -20,6 +20,7 @@ import RecommendationEditForm from './pages/recommendations/RecommendationEditFo
 import RecommendationPage from './pages/recommendations/RecommendationPage';
 import RecommendationsFeed from './pages/recommendations/RecommendationsFeed';
 import EventCreateForm from './pages/events/EventsCreateForm';
+import EventPage from './pages/events/EventPage';
 import ProfilePage from './profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
@@ -91,6 +92,7 @@ function App() {
             <Route exact path="/recommendations/:id/edit" render={() => <RecommendationEditForm />} />
             <Route exact path="/recommendations/:id" render={() => <RecommendationPage />} />
             <Route exact path="/events/create" render={()=> <EventCreateForm />} />
+            <Route exact path="/events/:id" render={() => <EventPage />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
             <Route render={()=> <h1>Page not found.</h1>} />
           </Switch>
