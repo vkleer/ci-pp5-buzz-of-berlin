@@ -20,7 +20,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 // import { useRedirect } from '../../hooks/useRedirect';
 
 /**
- * Renders the EventCreate form - which is where an Event can be created.
+ * Renders the EventCreateForm component - which is where an Event can be created.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */

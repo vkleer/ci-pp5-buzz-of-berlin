@@ -16,7 +16,7 @@ import { Image } from 'react-bootstrap';
 import { axiosReq } from '../../api/axiosDefaults';
 
 /**
- * Renders the RecommendationEdit page - which is where a Recommendation can be edited.
+ * Renders the RecommendationEditForm component - which is where a Recommendation can be edited.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */

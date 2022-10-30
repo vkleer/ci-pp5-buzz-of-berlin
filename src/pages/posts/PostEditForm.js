@@ -16,7 +16,7 @@ import { Image } from 'react-bootstrap';
 import { axiosReq } from '../../api/axiosDefaults';
 
 /**
- * Renders the PostEdit page - which is where a Post can be edited.
+ * Renders the PostEditForm component - which is where a Post can be edited.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */

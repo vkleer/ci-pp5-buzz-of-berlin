@@ -20,7 +20,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 // import { useRedirect } from '../../hooks/useRedirect';
 
 /**
- * Renders the RecommendationCreate form - which is where a recommendation 
+ * Renders the RecommendationCreateForm component - which is where a recommendation 
  * can be created.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.

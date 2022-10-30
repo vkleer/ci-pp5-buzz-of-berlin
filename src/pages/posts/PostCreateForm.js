@@ -19,7 +19,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 // import { useRedirect } from '../../hooks/useRedirect';
 
 /**
- * Renders the PostCreate form - which is where a post can be created.
+ * Renders the PostCreateForm component - which is where a post can be created.
  * The variables and logic have been created using the Moments walkthrough
  * and have been built upon/customised.
  */
