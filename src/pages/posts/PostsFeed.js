@@ -103,7 +103,7 @@ function PostsFeed({ message, filter = "" }) {
                     </Container>
                 )}
             </Col>
-            <Col xl={4} className={`d-none d-xl-block p-0 py-2 `}>
+            <Col xl={4} className="d-none d-xl-block">
                 <PopularProfiles />
             </Col>
         </Row>
