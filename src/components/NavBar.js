@@ -184,7 +184,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-1 ${styles.NavLink}`} 
                     to={`/profiles/${currentUser?.profile_id}`}
                 >
                     <Avatar src={currentUser?.profile_image} text='' height={30} />
@@ -204,7 +204,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`py-2 py-md-0 pl-md-3 pr-md-2 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 pl-md-1 pr-md-2 ${styles.NavLink}`} 
                     to="/" 
                     onClick={handleSignOut}
                 >
@@ -229,7 +229,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-1 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/login"
                 >
@@ -250,7 +250,7 @@ const NavBar = () => {
                 }
             >
                 <NavLink 
-                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
+                    className={`py-2 py-md-0 px-md-1 ${styles.NavLink}`} 
                     activeClassName={styles.Active} 
                     to="/signup"
                 >
@@ -284,7 +284,7 @@ const NavBar = () => {
                 aria-controls="basic-navbar-nav" 
             />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="m-md-auto ml-sm-0 text-sm-left">
+                <Nav className={`m-md-auto ml-sm-0 text-sm-left ${styles.MainIcons}`}>
                     <OverlayTrigger
                         placement="bottom"
                         delay={{ show: 100, hide: 100 }}
@@ -309,7 +309,7 @@ const NavBar = () => {
                     </OverlayTrigger>
                     {currentUser ? loggedInMainIcons : loggedOutMainIcons}
                 </Nav>
-                <Nav className={`ml-sm-0 text-sm-left justify-content-end ${styles.LeftRightNavWidth}`}>
+                <Nav className={`ml-sm-0 text-sm-left justify-content-end ${styles.LeftRightNavWidth} ${styles.ProfileSignOut}`}>
                     {currentUser ? loggedInAccIcons : loggedOutAccIcons}
                 </Nav>
             </Navbar.Collapse>
