@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import styles from '../../styles/Post.module.css';
 import appStyles from '../../App.module.css';
 
 import Card from 'react-bootstrap/Card';
@@ -88,7 +87,7 @@ const Post = (props) => {
 
     return (
         <Card className={`
-        ${styles.Post} 
+        ${appStyles.Component} 
         ${profilePost ? 
             (
                 appStyles.FlatBoxBorderSmall
@@ -116,11 +115,11 @@ const Post = (props) => {
             <Link to={`/posts/${id}`}>
                 <Card.Img src={image} alt={title} />
             </Link>
-            <Card.Body className={styles.CardBody}>
+            <Card.Body className={appStyles.CardBody}>
                 {title && <Card.Title className="text-center">{title}</Card.Title>}
                 {district && <Card.Subtitle className="pb-4">District: {district}</Card.Subtitle>}
                 {caption && <Card.Text className="pb-2">{caption}</Card.Text>}
-                <div className={styles.PostBar}>
+                <div className={appStyles.ComponentBar}>
                     {is_owner ? (
                         <OverlayTrigger
                         placement="top"
@@ -130,11 +129,11 @@ const Post = (props) => {
                         </OverlayTrigger>
                     ) : like_id ? (
                         <span onClick={handleUnlike}>
-                        <i className={`fas fa-heart ${styles.Heart}`} />
+                        <i className={`fas fa-heart ${appStyles.Heart}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleLike}>
-                        <i className={`far fa-heart ${styles.HeartOutline}`} />
+                        <i className={`far fa-heart ${appStyles.HeartOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger

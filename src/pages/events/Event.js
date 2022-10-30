@@ -40,8 +40,8 @@ const Event = (props) => {
     const is_owner = currentUser?.username === owner;
     const history = useHistory();
 
-    const [year, month, day] = date.split('-');
-    const [hour, minute] = start_time.split(':');
+    const [year, month, day] = date?.split('-') ?? [];
+    const [hour, minute] = start_time?.split(':') ?? [];
 
     const handleEdit = () => {
         history.push(`/events/${id}/edit`);
@@ -58,7 +58,7 @@ const Event = (props) => {
 
     return (
         <Card className={
-            `${styles.Post} 
+            `${appStyles.Component} 
             ${profileEvent ? 
                 (
                     appStyles.FlatBoxBorderSmall
@@ -86,7 +86,7 @@ const Event = (props) => {
             <Link to={`/events/${id}`}>
                 <Card.Img src={image} alt={title} />
             </Link>
-            <Card.Body className={styles.CardBody}>
+            <Card.Body className={appStyles.CardBody}>
                 {title && 
                     <Card.Title className="text-center">
                         {title} @ {location_name}
@@ -102,9 +102,9 @@ const Event = (props) => {
                         Date: <span className={styles.CardSpan}>{`${day}.${month}.${year}`}</span> <br/> 
                         Starts at: <span className={styles.CardSpan}>{`${hour}:${minute}`}</span> <br/> 
                         {ticket_price ? (
-                            <div>Entry fee: <span className={styles.CardSpan}>€{ticket_price} per ticket</span></div>
+                            <>Entry fee: <span className={styles.CardSpan}>€{ticket_price} per ticket</span></>
                         ) : (
-                            <div>Entry fee: <span className={styles.CardSpan}>Free!</span></div>
+                            <>Entry fee: <span className={styles.CardSpan}>Free!</span></>
                         )}
                     </Card.Text>
                 }
