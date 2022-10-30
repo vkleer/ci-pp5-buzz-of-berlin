@@ -77,3 +77,37 @@ hr {
     max-width: 100%;
     object-fit: contain;
 }
+
+.Component {
+    background-color: #ffffff;
+    border-radius: 0 !important;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.Component a {
+    color: #414141;
+}
+.Component a img {
+    border-radius: 0;
+}
+
+.CardBody {
+    border: none;
+}
+
+.Component figure,
+h5 {
+    margin: 0 0;
+}
+
+.Heart {
+    color: #f0cf36;
+}
+
+.Heart:hover {
+    color: #414141;
+}
+
+.HeartOutline:hover {
+    color: #f0cf36;
+}

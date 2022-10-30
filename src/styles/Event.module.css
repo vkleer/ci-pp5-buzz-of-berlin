@@ -1,16 +1,3 @@
-.Event {
-    background-color: #ffffff;
-    border-radius: 2px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-.Post a {
-    color: #414141;
-}
-
-.CardBody {
-    border: none;
-}
 .CardSpan {
     font-weight: 600;
 }
