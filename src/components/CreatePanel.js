@@ -37,7 +37,7 @@ const CreatePanel = () => {
             <NavLink 
                 className={`py-1 py-md-0 d-block ${styles.PanelLink}`} 
                 activeClassName={styles.Active} 
-                to="/posts/create"
+                to="/events/create"
             >
                 <i className="fa-solid fa-square-plus"></i>
                 Create event

@@ -23,7 +23,7 @@ import EventCreateForm from './pages/events/EventCreateForm';
 import EventEditForm from './pages/events/EventEditForm';
 import EventPage from './pages/events/EventPage';
 import EventsFeed from './pages/events/EventsFeed';
-import ProfilePage from './profiles/ProfilePage';
+import ProfilePage from './pages/profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
