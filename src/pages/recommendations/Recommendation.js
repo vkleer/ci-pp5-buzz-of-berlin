@@ -134,25 +134,25 @@ const Recommendation = (props) => {
                 <div className={styles.PostBar}>
                     {is_owner ? (
                         <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>You can't like your own recommendation.</Tooltip>}
+                            placement="top"
+                            overlay={<Tooltip>You can't like your own recommendation.</Tooltip>}
                         >
-                        <i className="far fa-heart" />
+                            <i className="far fa-heart" />
                         </OverlayTrigger>
                     ) : like_id ? (
                         <span onClick={handleUnlike}>
-                        <i className={`fas fa-heart ${styles.Heart}`} />
+                            <i className={`fas fa-heart ${styles.Heart}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleLike}>
-                        <i className={`far fa-heart ${styles.HeartOutline}`} />
+                            <i className={`far fa-heart ${styles.HeartOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>Log in to like this recommendation.</Tooltip>}
+                            placement="top"
+                            overlay={<Tooltip>Log in to like this recommendation.</Tooltip>}
                         >
-                        <i className="far fa-heart" />
+                            <i className="far fa-heart" />
                         </OverlayTrigger>
                     )}
                     {likes_count}

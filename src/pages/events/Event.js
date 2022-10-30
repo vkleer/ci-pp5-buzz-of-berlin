@@ -139,25 +139,25 @@ const Event = (props) => {
                 <div className={styles.PostBar}>
                     {is_owner ? (
                         <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>You can't like your own post.</Tooltip>}
+                            placement="top"
+                            overlay={<Tooltip>You can't like your own event.</Tooltip>}
                         >
-                        <i className="far fa-heart" />
+                            <i className="far fa-heart" />
                         </OverlayTrigger>
                     ) : like_id ? (
                         <span onClick={handleUnlike}>
-                        <i className={`fas fa-heart ${styles.Heart}`} />
+                            <i className={`fas fa-heart ${styles.Heart}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleLike}>
-                        <i className={`far fa-heart ${styles.HeartOutline}`} />
+                            <i className={`far fa-heart ${styles.HeartOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>Log in to like this post.</Tooltip>}
+                            placement="top"
+                            overlay={<Tooltip>Log in to like this event.</Tooltip>}
                         >
-                        <i className="far fa-heart" />
+                            <i className="far fa-heart" />
                         </OverlayTrigger>
                     )}
                     {likes_count}
