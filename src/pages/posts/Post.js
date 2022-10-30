@@ -34,6 +34,7 @@ const Post = (props) => {
         image,
         updated_date,
         setPosts,
+        profilePost,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -86,7 +87,15 @@ const Post = (props) => {
     };
 
     return (
-        <Card className={`${styles.Post} ${appStyles.FlatBoxBorder}`}>
+        <Card className={`
+        ${styles.Post} 
+        ${profilePost ? 
+            (
+                appStyles.FlatBoxBorderSmall
+            ) : (
+                appStyles.FlatBoxBorder
+            )
+        }`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                 <Link to={`/profiles/${profile_id}`}>

@@ -131,7 +131,13 @@ function ProfilePage() {
             {profilePosts.results.length ? (
                 <InfiniteScroll
                     children={profilePosts.results.map((post) => (
-                        <Post key={post.id} {...post} setPosts={setProfilePosts} />
+                        <Container className="my-5">
+                            <Post
+                            key={post.id} {...post} 
+                            setPosts={setProfilePosts} 
+                            profilePost 
+                        />
+                        </Container>
                     ))}
                     dataLength={profilePosts.results.length}
                     loader={<Asset spinner />}
@@ -151,7 +157,13 @@ function ProfilePage() {
             {profileRecommendations.results.length ? (
                 <InfiniteScroll
                     children={profileRecommendations.results.map((recommendation) => (
-                        <Recommendation key={recommendation.id} {...recommendation} setRecommendations={setProfileRecommendations} />
+                        <Container className="my-5">
+                           <Recommendation 
+                            key={recommendation.id} {...recommendation} 
+                            setRecommendations={setProfileRecommendations}
+                            profileRecommendation 
+                        /> 
+                        </Container>
                     ))}
                     dataLength={profileRecommendations.results.length}
                     loader={<Asset spinner />}
@@ -171,7 +183,13 @@ function ProfilePage() {
             {profileEvents.results.length ? (
                 <InfiniteScroll
                     children={profileEvents.results.map((event) => (
-                        <Event key={event.id} {...event} setEvents={setProfileEvents} />
+                        <Container className="my-5">
+                            <Event 
+                                key={event.id} {...event} 
+                                setEvents={setProfileEvents} 
+                                profileEvent 
+                            />
+                        </Container>
                     ))}
                     dataLength={profileEvents.results.length}
                     loader={<Asset spinner />}

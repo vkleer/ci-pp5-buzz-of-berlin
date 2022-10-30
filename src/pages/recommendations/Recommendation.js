@@ -37,6 +37,7 @@ const Recommendation = (props) => {
         image,
         updated_date,
         setRecommendations,
+        profileRecommendation,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -89,7 +90,15 @@ const Recommendation = (props) => {
     };
 
     return (
-        <Card className={`${styles.Post} ${appStyles.FlatBoxBorder}`}>
+        <Card className={`
+            ${styles.Post} 
+            ${profileRecommendation ? 
+                (
+                    appStyles.FlatBoxBorderSmall
+                ) : (
+                    appStyles.FlatBoxBorder
+                )
+            }`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                 <Link to={`/profiles/${profile_id}`}>

@@ -33,6 +33,7 @@ const Event = (props) => {
         image,
         updated_date,
         setEvents,
+        profileEvent,
     } = props;
 
     const currentUser = useCurrentUser();
@@ -56,7 +57,15 @@ const Event = (props) => {
     };
 
     return (
-        <Card className={`${styles.Post} ${appStyles.FlatBoxBorder}`}>
+        <Card className={
+            `${styles.Post} 
+            ${profileEvent ? 
+                (
+                    appStyles.FlatBoxBorderSmall
+                ) : (
+                    appStyles.FlatBoxBorder
+                )
+            }`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                 <Link to={`/profiles/${profile_id}`}>

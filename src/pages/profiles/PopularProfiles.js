@@ -22,12 +22,12 @@
         <Container className={
                 `${appStyles.Content} 
                 ${mobile ? 
-                (
-                    "d-xl-none text-center mb-4"
-                ) : (
-                    styles.PopularProfiles
-                )
-            }`
+                    (
+                        "d-xl-none text-center mb-4"
+                    ) : (
+                        styles.PopularProfiles
+                    )
+                }`
         }>
             {popularProfiles.results.length ? (
                 <>
