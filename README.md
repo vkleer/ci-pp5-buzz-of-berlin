@@ -146,7 +146,40 @@ React was used for several reasons:
 - React Bootstrap
     - The first time I used Bootstrap was around 2013/2014 and I have been using it on and off ever since. Being able to use Bootstrap with [React Bootstrap](https://react-bootstrap.github.io/) highly sped up the overall development process by being able to make the application responsive and aesthetic by applying its classes alongside my custom classes.
 
+#### Components
+The following components have been created and reused throughout the application:
+
+- `<Asset />` 
+    - A reusable component that renders differently depending on the props that are passed into it. Can render a spinner when content is still loading, an image with a src and alt attribute and/or a paragraph with a message.
+- `<Avatar />` 
+    - A reusable component that render user profile images. The props that it can take set the image source, image size, image dimensions (depending on where the component is rendered) and text (like the users' username).
+- `<CreatePanel />` 
+    - A reusable component that renders three NavLink components to allow users to create a Post, Recommendation or Event. Changes into a dropdown menu on small screens. When a user is logged out, it displays one NavLink component that links the user to the login page instead.
+- `<DotsDropdown />`   
+    - A reusable component that renders a dropdown menu on posts and comments, allowing users to edit or delete their posts or comments.
+- `<ProfileEditDropdown />` 
+    - A reusable component that renders a dropdown menu on use profile, allowing users to edit their profile information, username or password.
+- `<NavBar />` 
+    - A reusable component that renders a navigation bar, the content of which depends on whether the user is logged in or not.
+    - Logged in users:
+        - NavLink that links to the home page, displaying all posts of the users the logged in user follows
+        - NavLink that links to the explore page, displaying all posts from all users
+        - NavLink that links to the recommendations page, displaying all recommendations from all users
+        - NavLink that links to the events page, displaying all events from all users
+        - NavLink that links to the liked page, displaying only the posts and recommendations a user has liked
+        - NavLink that links to the users' profile page, displaying the users' username, profile image, followers count, following count and all the users' created posts, recommendations and events
+        - NavLink that links to the home page and signs out the user
+    - Logged out users:
+        - NavLink that links to the home page, displaying all posts from all users
+        - NavLink that links to the events page, displaying all events from all users
+        - NavLink that links to the log in page, allowing users to log in
+        - NavLink that links to the sign up page, allowing users to create an account
+- `<NotFound />`
+    - A reusable component that renders the [no-results](link here) image along with a message to inform the user the page doesn't exist.
+
 ## Back end
+## Django REST Framework
+The front end is being supplied with data from the [Buzz of Berlin DRF API](https://buzz-of-berlin-drf-api.herokuapp.com/), which has been created using the Django REST Framework. The repository along with a README file can be found [here](https://github.com/vkleer/Buzz_of_Berlin_DRF_API).
 
 ## Features
 The website has a total of X features:
