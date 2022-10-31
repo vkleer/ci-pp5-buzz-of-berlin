@@ -29,7 +29,8 @@ export const DotsDropdown = ({handleEdit, handleDelete}) => {
                 className="text-left py-0"
                 popperConfig={{ strategy: "fixed" }}
             >
-                <Dropdown.Item className={styles.DropdownItem}
+                <Dropdown.Item 
+                    className={styles.DropdownItem}
                     onClick={handleEdit}
                     aria-label="Edit"
                 >
@@ -56,28 +57,32 @@ export const DotsDropdown = ({handleEdit, handleDelete}) => {
 export function ProfileEditDropdown({ id }) {
     const history = useHistory();
     return (
-      <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+      <Dropdown className={`ml-2 ${styles.Absolute}`} drop="left">
             <Dropdown.Toggle as={ThreeDots} />
-            <Dropdown.Menu>
+            <Dropdown.Menu className="text-left py-0">
                 <Dropdown.Item
+                    className={styles.DropdownItem}
                     onClick={() => history.push(`/profiles/${id}/edit`)}
                     aria-label="edit-profile"
                 >
-                    <i className="fas fa-edit" /> Edit profile
+                    <i class="fa-solid fa-fw fa-pen-to-square"></i>
+                    <span className="pl-1">Edit profile</span>
                 </Dropdown.Item>
                 <Dropdown.Item
+                    className={styles.DropdownItem}
                     onClick={() => history.push(`/profiles/${id}/edit/username`)}
                     aria-label="edit-username"
                 >
-                    <i className="far fa-id-card" />
-                    Change username
+                    <i class="fa-solid fa-fw fa-id-card"></i>
+                    <span className="pl-1">Change username</span>
                 </Dropdown.Item>
                 <Dropdown.Item
+                    className={styles.DropdownItem}
                     onClick={() => history.push(`/profiles/${id}/edit/password`)}
                     aria-label="edit-password"
                 >
-                    <i className="fas fa-key" />
-                    Change password
+                    <i class="fa-solid fa-fw fa-ellipsis"></i>
+                    <span className="pl-1">Change password</span>
                 </Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>

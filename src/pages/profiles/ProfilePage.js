@@ -22,6 +22,7 @@ import Recommendation from '../recommendations/Recommendation';
 import Event from '../events/Event';
 import { fetchMoreData } from '../../utils/utils';
 import PopularProfiles from './PopularProfiles';
+import { ProfileEditDropdown } from '../../components/DotsDropdown';
 
 /**
  * Renders the ProfilePage component - which displays the users' profile, 
@@ -75,8 +76,11 @@ function ProfilePage() {
 
     const mainProfile = (
         <>
+            <div className="d-flex justify-content-end">
+                {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+            </div>
             <Row noGutters className="px-3 text-center">
-                <Col lg={3} className="text-lg-left">
+                <Col lg={3} className="text-lg-left justify-content-between">
                     <Image 
                         className={styles.ProfileImage} 
                         roundedCircle
@@ -84,7 +88,6 @@ function ProfilePage() {
                     />
                 </Col>
                 <Col  className="offset-lg-1" lg={6}>
-                    <h3 className="my-2">{profile?.owner}</h3>
                     <Row className='justify-content-center no-gutters'>
                         <Col xs={6} className='my-2'>
                             <div className="fw-bold">{profile?.followers_count}</div>
@@ -117,7 +120,8 @@ function ProfilePage() {
                         </Button>
                     ))}
                 </Col>
-                {profile?.content && (<Col className="p-3">{profile.content}</Col>)}
+                <h4 className="px-2 pt-3 text-left">{profile?.owner}</h4>
+                {profile?.description && (<Col className="px-2 text-left">{profile.description}</Col>)}
             </Row>
         </>
     );
@@ -131,12 +135,12 @@ function ProfilePage() {
             {profilePosts.results.length ? (
                 <InfiniteScroll
                     children={profilePosts.results.map((post) => (
-                        <Container className="my-5">
+                        <Container className="my-5" key={post.id}>
                             <Post
-                            key={post.id} {...post} 
-                            setPosts={setProfilePosts} 
-                            profilePost 
-                        />
+                                key={post.id} {...post} 
+                                setPosts={setProfilePosts} 
+                                profilePost 
+                            />
                         </Container>
                     ))}
                     dataLength={profilePosts.results.length}
@@ -157,12 +161,12 @@ function ProfilePage() {
             {profileRecommendations.results.length ? (
                 <InfiniteScroll
                     children={profileRecommendations.results.map((recommendation) => (
-                        <Container className="my-5">
+                        <Container className="my-5" key={recommendation.id}>
                            <Recommendation 
-                            key={recommendation.id} {...recommendation} 
-                            setRecommendations={setProfileRecommendations}
-                            profileRecommendation 
-                        /> 
+                                key={recommendation.id} {...recommendation} 
+                                setRecommendations={setProfileRecommendations}
+                                profileRecommendation 
+                            /> 
                         </Container>
                     ))}
                     dataLength={profileRecommendations.results.length}
@@ -183,7 +187,7 @@ function ProfilePage() {
             {profileEvents.results.length ? (
                 <InfiniteScroll
                     children={profileEvents.results.map((event) => (
-                        <Container className="my-5">
+                        <Container className="my-5" key={event.id}>
                             <Event 
                                 key={event.id} {...event} 
                                 setEvents={setProfileEvents} 
