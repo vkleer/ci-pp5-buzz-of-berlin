@@ -26,6 +26,8 @@ import EventPage from './pages/events/EventPage';
 import EventsFeed from './pages/events/EventsFeed';
 import ProfilePage from './pages/profiles/ProfilePage';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
+import ProfileEditUsername from './pages/profiles/ProfileEditUsername';
+import ProfileEditPassword from './pages/profiles/ProfileEditPassword';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import NotFound from './components/NotFound';
 
@@ -109,6 +111,8 @@ function App() {
             <Route exact path="/events/:id" render={() => <EventPage />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
             <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
+            <Route exact path="/profiles/:id/edit/username" render={() => <ProfileEditUsername />} />
+            <Route exact path="/profiles/:id/edit/password" render={() => <ProfileEditPassword />} />
             <Route render={() => <NotFound />} />
           </Switch>
         </Col>
