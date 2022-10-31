@@ -1,8 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import appStyles from '../App.module.css';
-import btnStyles from '../styles/Button.module.css'
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
