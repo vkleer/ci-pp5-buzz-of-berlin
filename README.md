@@ -62,14 +62,58 @@
 
 ## User Stories
 
-### Anonymous User
-1. 
+### Navigation
+1. As a user I can see the navigation bar on every page so that I can easily navigate to different parts of the application
+2. As a user I can use the navigation bar so that I can navigate to different parts of the application
+3. As a user I can see my posts/recommendations/events being loaded automatically so that I can keep scrolling instead of clicking any buttons
 
-### Registered User
-1. 
+### Authentication
+4. As a user I can create an account so that I can start use all the features of the application
+5. As a registered user I can log in so that I can start using the application
+6. As a user I can log out of the application so that I can end my session if I choose to and keep my account secure
+7. As a user I will stay logged into the application so that I can keep using the application until I decide to log out
 
-### Application Owner
-1. 
+### Posts
+8. As a user I can create posts so that I can share photos I made in Berlin with other users
+9. As a user I can edit my posts so that I can change the content if necessary
+10. As a user I can delete my posts so that I can remove them if I want to
+11. As a user I can like a post so that I can show other users that I like their content
+12. As a user I can view all the posts that I liked so that I can revisit them 
+13. As a user I can search posts so that I can quickly find posts
+14. As a user I can view a posts' individual page so that I can read the comments left on the post
+15. As a user I can browse posts of other users that I follow so that I can engage with them
+16. As a user I can view posts of all of the applications' users so that I can find new users to follow
+
+### Recommendations
+17. As a user I can create recommendations so that I can share the best places in Berlin with other users
+18. As a user I can edit my recommendations so that I can change the content if necessary
+19. As a user I can delete my recommendations so that I can remove them if I want to
+20. As a user I can like a recommendation so that I can show other users that I like their content
+21. As a user I can view all the recommendations that I liked so that I can revisit them
+22. As a user I can search recommendations so that I can quickly find recommendations
+23. As a user I can view a recommendations' individual page so that I can read the comments left on the recommendation
+24. As a user I can browse recommendations so that I can engage with them
+
+### Events
+25. As a user I can create events so that I can inform other users about event in Berlin
+26. As a user I can edit my events so that I can change the content if necessary
+27. As a user I can delete my events so that I can remove them if I want to
+28. As a user I can search events so that I can quickly find events
+29. As a user I can view a events' individual page so that I can view it in detail
+30. As a user I can browse events so that I can find events in Berlin
+
+### Comments
+31. As a user I can create a comment so that I can engage with other users
+32. As a user I can edit my comments so that I can update them if necessary
+33. As a user I can delete my comments so that I can remove them from the post or recommendation if I want to
+34. As a user I can see the date of any comment so that I can know whether a comment is new or old
+35. As a user I can read other users' comments so that I can engage better with other users
+
+### Profiles
+36. As a user I can view a profile page so that I can find more content from that user
+37. As a user I can edit my profile so that I can update my details
+38. As a user I can change my username and password so that I can keep my account safe
+39. As a user I can see who the most active and popular users are so that I can follow them for good content
 
 ## Design
 
@@ -185,7 +229,7 @@ The front end is being supplied with data from the [Buzz of Berlin DRF API](http
 The website has a total of X features:
 
 ### Feature
-- 
+- Logo and navigation bar
 
 <details><summary>Screenshot feature</summary>
     <img src="docs/features/feature.JPG">
