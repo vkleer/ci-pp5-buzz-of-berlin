@@ -1,4 +1,5 @@
-import { axiosReq } from "../api/axiosDefaults"
+import { axiosReq } from '../api/axiosDefaults';
+import jwtDecode from 'jwt-decode';
 
 /**
  * Fetches paginated data so we don't have to click on the 'next' button.
@@ -56,4 +57,21 @@ export const unfollowHelper = (profile, clickedProfile) => {
             following_count: profile.following_count - 1 
         } : 
             profile;
+}
+
+/**
+ * Sets, refreshes and removes JSON Web Tokens.
+ * The variables and logic have been created using the Moments walkthrough.
+ */
+export const setTokenTimestamp = (data) => {
+    const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp;
+    localStorage.setItem('refreshTokenTimestamp', refreshTokenTimestamp);
+};
+
+export const shouldRefreshToken = () => {
+    return !!localStorage.getItem('refreshTokenTimestamp');
+};
+
+export const removeTokenTimestamp = () => {
+    localStorage.removeItem('refreshTokenTimestamp');
 }

@@ -13,7 +13,7 @@ import logo from '../assets/logo.png';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import { Avatar } from './Avatar';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
-
+import { removeTokenTimestamp } from '../utils/utils';
 
 /**
  * Returns the navigation bar.
@@ -30,6 +30,7 @@ const NavBar = () => {
         try {
             await axios.post('dj-rest-auth/logout/');
             setCurrentUser(null);
+            removeTokenTimestamp();
         } catch(err) {
             console.log(err);
         }
