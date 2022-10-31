@@ -17,7 +17,7 @@ import Upload from '../../assets/upload.png';
 
 import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
-// import { useRedirect } from '../../hooks/useRedirect';
+import { useRedirect } from '../../hooks/useRedirect';
 
 /**
  * Renders the RecommendationCreateForm component - which is where a recommendation 
@@ -26,7 +26,7 @@ import { axiosReq } from '../../api/axiosDefaults';
  * and have been built upon/customised.
  */
 function RecommendationCreateForm() {
-    // useRedirect('loggedIn');
+    useRedirect('loggedOut');
 
     const [recommendationData, setRecommendationData] = useState({
         title: '',

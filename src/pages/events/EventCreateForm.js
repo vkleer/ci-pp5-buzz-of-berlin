@@ -17,7 +17,7 @@ import Upload from '../../assets/upload.png';
 
 import Asset from '../../components/Asset';
 import { axiosReq } from '../../api/axiosDefaults';
-// import { useRedirect } from '../../hooks/useRedirect';
+import { useRedirect } from '../../hooks/useRedirect';
 
 /**
  * Renders the EventCreateForm component - which is where an Event can be created.
@@ -25,7 +25,7 @@ import { axiosReq } from '../../api/axiosDefaults';
  * and have been built upon/customised.
  */
 function EventCreateForm() {
-    // useRedirect('loggedIn');
+    useRedirect('loggedOut');
 
     const [eventData, setEventData] = useState({
         title: '',
