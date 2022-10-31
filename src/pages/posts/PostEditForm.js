@@ -41,7 +41,7 @@ function PostEditForm() {
 
                 is_owner ? setPostData({title, district, caption, image}) : history.push('/');
             } catch(err) {
-                // // console.log(err);
+                // console.log(err);
             }
         };
         

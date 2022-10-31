@@ -45,7 +45,7 @@ function EventEditForm() {
 
                 is_owner ? setEventData({title, location_name, date, district, start_time, ticket_price, content, image}) : history.push('/');
             } catch(err) {
-                // // console.log(err);
+                // console.log(err);
             }
         };
         

@@ -44,7 +44,7 @@ function RecommendationEditForm() {
 
                 is_owner ? setRecommendationData({title, location_name, district, entry_fee, price, content, image}) : history.push('/');
             } catch(err) {
-                // // console.log(err);
+                // console.log(err);
             }
         };
         

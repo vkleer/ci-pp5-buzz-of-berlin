@@ -53,7 +53,7 @@ const Recommendation = (props) => {
             await axiosRes.delete(`/recommendations/${id}/`);
             history.goBack();
         } catch(err) {
-            // // console.log(err);
+            // console.log(err);
         }
     };
 
