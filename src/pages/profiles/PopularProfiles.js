@@ -40,7 +40,7 @@
                             ))}
                         </div>
                     ) : (
-                        popularProfiles.results.map(profile => (
+                        popularProfiles.results.slice(0, 7).map(profile => (
                             <Profile key={profile.id} profile={profile} />
                         ))
                     )}
