@@ -25,8 +25,7 @@ const NavBar = () => {
 
     const  { expanded, setExpanded, ref } = useClickOutsideToggle();
 
-    const handleSignOut = async () => {
-        // Signs out the current user
+    const handleLogOut = async () => {
         try {
             await axios.post('dj-rest-auth/logout/');
             setCurrentUser(null);
@@ -132,27 +131,6 @@ const NavBar = () => {
                 overlay={ 
                     <Tooltip 
                         className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
-                        id="posts-tooltip"
-                    >
-                        Posts
-                    </Tooltip> 
-                }
-            >
-                <NavLink 
-                    className={`py-2 py-md-0 px-md-3 ${styles.NavLink}`} 
-                    activeClassName={styles.Active} 
-                    to="/posts"
-                >
-                    <i className="fa-solid fa-fw fa-image"></i>
-                    <span className="d-sm-inline d-md-none pl-2">Posts</span>
-                </NavLink>
-            </OverlayTrigger>
-            <OverlayTrigger
-                placement="bottom"
-                delay={{ show: 100, hide: 100 }}
-                overlay={ 
-                    <Tooltip 
-                        className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
                         id="events-tooltip"
                     >
                         Events
@@ -198,19 +176,19 @@ const NavBar = () => {
                 overlay={ 
                     <Tooltip 
                         className={`d-sm-none d-md-flex ${styles.ToolTip}`}  
-                        id="sign-out-tooltip"
+                        id="log-out-tooltip"
                     >
-                        Sign out
+                        Log out
                     </Tooltip> 
                 }
             >
                 <NavLink 
                     className={`py-2 py-md-0 pl-md-1 pr-md-2 ${styles.NavLink}`} 
                     to="/" 
-                    onClick={handleSignOut}
+                    onClick={handleLogOut}
                 >
                     <i className="fas fa-fw fa-sign-out-alt"></i>
-                    <span className="d-sm-inline d-md-none pl-2">Sign out</span>
+                    <span className="d-sm-inline d-md-none pl-2">Log out</span>
                 </NavLink>
             </OverlayTrigger>
         </>
