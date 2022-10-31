@@ -106,33 +106,47 @@ The application contains the following pages:
 - [**HTML**](https://www.python.org/)
 - [**CSS**](https://www.python.org/)
 - [**JavaScript**](https://www.python.org/)
-- [**Python 3.8.11**](https://www.python.org/)
 
-### Framework
-- [**Django 3.2.15**](https://www.djangoproject.com/)
-
-### Tools & Libraries
+### Tools
 - [**Git**](https://git-scm.com/) was used for version control
 - [**GitHub**](https://github.com/) was used as a remote repository to store the all project files
 - [**Gitpod**](https://gitpod.io/) was used as the IDE to write the project code
 - [**Heroku**](https://dashboard.heroku.com/) was used to deploy the project
-- [**PostgreSQL**](https://www.postgresql.org/) was used to store the project data, specifically the 'Heroku Postgres' add-on
 - [**Google Fonts**](http://pep8online.com/) was used to supply the fonts for my project
 - [**Font Awesome**](https://fontawesome.com/) was used to supply the icons for my project
 - [**WC3's Markup Validation Service**](https://validator.w3.org/) was used to validate my HTML code
 - [**W3C's CSS Validation Service**](https://jigsaw.w3.org/css-validator/) was used to validate my CSS code
-- [**JShint**](https://jshint.com/) was used to validate my JavaScript code
-- [**PEP8**](http://pep8online.com/) was used to validate my Python code
-- [**Coverage**](https://github.com/nedbat/coveragepy) was used to produce reports on my python unit tests
-- [**Google Chrome's DevTools**](http://pep8online.com/) was used to benchmark the applications' performance, accessibility, best practices and SEO
+- [**Google Chrome's DevTools**](https://developer.chrome.com/docs/devtools/) was used to benchmark the applications' performance, accessibility, best practices and SEO
 - [**Wave WebAIM's web accessibility evaluation tool**](https://wave.webaim.org/) was used to validate my Python code
-- [**Bootstrap 5.1**](https://getbootstrap.com/docs/5.1/getting-started/download/) was used for the application layout and some of the styling
-- [**Cloudinary**](https://) was used to store static files
-- [**Crispy Forms**](https://github.com/django-crispy-forms/django-crispy-forms) was used to nicely format the forms used in my project
-- [**Crispy Bootstrap 5**](https://github.com/django-crispy-forms/crispy-bootstrap5) was used to install the Bootstrap 5 template pack for Crispy Forms
-- [**Summernote**](https://github.com/summernote/django-summernote) was used for the meal description field on the admin page, allowing me to style the preparation instructions
-- [**Allauth**](https://github.com/pennersr/django-allauth) was used to take care of the accounts in the project
+- [**Am I Responsive**](http://ami.responsivedesign.is/) was used to create the mock-up image for this project
+- [**Balsamiq**](https://balsamiq.com/) was used to create the wireframes for this project
+- [**Favicon.io**](https://favicon.io/) was used to create a favicon of my logo
 
+### Libraries
+- [**React 17.0.2**](https://17.reactjs.org/) was used to build the user interfaces
+- [**React Bootstrap 4.6**](https://react-bootstrap-v4.netlify.app/) was used for the application layout, styling and making each component responsive.
+- [**React Router**](https://v5.reactrouter.com/web/guides/quick-start) was used as for dynamic routing. I used it to allow for navigation between views of different components and to control what users see when they enter a specific URL in the browser.
+- [**Axios**](https://axios-http.com/docs/intro) was used as the promise based HTTP client for node.js and the browser. I used it specifically to send API requests to the back end and to avoid any CORS errors when sending cookies.
+- [**JWT**](https://jwt.io/) was used to create JSON Web Tokens. They were needed to prevent anonymous users from making extra network requests to refresh their access token, to remove timestamps from the browser when the users' refresh token expires or  when the user logs out.
+
+## Front end
+### React
+React is a JavaScript library that is used for building interactive user interfaces. It uses declarative views to make your code easier to read and debug. The user interfaces consist of a collection of encapsulated and reusable components, allowing for complex user interfaces that are easy to manage thanks to separating the individual components.
+
+React was used for several reasons:
+
+- Reusability
+    - Each time you write a component it can be reused in other parts of your application, or even in a completely new/different application. This saves a lot of time.
+- Userbase and documentation
+    - Since React is one of the most popular JavaScript libraries in the world, there is a plethora of of documentation and Stack Overflow questions for you to look at if you run into any errors. 
+- Flexibility
+    - Compared to other JavaScript libraries and front end frameworks, React code is easy to maintain and flexible thanks to its modular structure.
+- Performance
+    - React is already fast out of the box, but can be easily optimized by using components like the [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) to avoid rerendering components over and over again when a user doesn't need them.
+- React Bootstrap
+    - The first time I used Bootstrap was around 2013/2014 and I have been using it on and off ever since. Being able to use Bootstrap with [React Bootstrap](https://react-bootstrap.github.io/) highly sped up the overall development process by being able to make the application responsive and aesthetic by applying its classes alongside my custom classes.
+
+## Back end
 
 ## Features
 The website has a total of X features:
