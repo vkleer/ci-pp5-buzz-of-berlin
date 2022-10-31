@@ -45,23 +45,39 @@ const CreatePanel = () => {
             </NavLink>
         </>
     );
+    const loggedOutIcons = (
+        <>
+            <NavLink 
+                className={`py-1 py-md-0 d-block ${styles.PanelLink}`} 
+                activeClassName={styles.Active} 
+                to="/login"
+            >
+                <i className="fa-solid fa-key"></i>
+                Log in to create your own posts, recommendations and events
+            </NavLink>
+        </>
+    );
 
 return (
     <Container className="px-0">
         <Navbar className={styles.NavBar} expand="md" fixed="left">
             <Nav className="flex-column text-left d-none d-md-flex text-white">
-                {currentUser && loggedInIcons}
+                {currentUser ? loggedInIcons : loggedOutIcons}
             </Nav>
-            {currentUser && (
+            {currentUser ? (
                 <Dropdown className="d-flex mx-auto d-md-none">
-                <Dropdown.Toggle variant="light" id="dropdown-basic">
-                    <i className="fa-solid fa-square-plus"></i> Create
-                </Dropdown.Toggle>
+                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                        <i className="fa-solid fa-square-plus"></i> Create
+                    </Dropdown.Toggle>
 
-                <Dropdown.Menu className={styles.DropDownMenu}>
-                    {loggedInIcons}
-                </Dropdown.Menu>
-            </Dropdown>
+                    <Dropdown.Menu className={styles.DropDownMenu}>
+                        {loggedInIcons}
+                    </Dropdown.Menu>
+                </Dropdown>
+            ) : (
+                <Dropdown className="d-flex mx-auto d-md-none">
+                    {loggedOutIcons}
+                </Dropdown>
             )}
         </Navbar>
     </Container>
