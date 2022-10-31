@@ -1,10 +1,11 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Route, Switch } from 'react-router-dom';
 import './api/axiosDefaults';
 
 import styles from  './App.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import NavBar from './components/NavBar';
 import CreatePanel from './components/CreatePanel';
@@ -25,6 +26,7 @@ import EventPage from './pages/events/EventPage';
 import EventsFeed from './pages/events/EventsFeed';
 import ProfilePage from './pages/profiles/ProfilePage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
+import NotFound from './components/NotFound';
 
 function App() {
   const currentUser = useCurrentUser();
@@ -105,7 +107,7 @@ function App() {
             <Route exact path="/events/:id/edit" render={() => <EventEditForm />} />
             <Route exact path="/events/:id" render={() => <EventPage />} />
             <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-            <Route render={()=> <h1>Page not found.</h1>} />
+            <Route render={() => <NotFound />} />
           </Switch>
         </Col>
       </Row>
