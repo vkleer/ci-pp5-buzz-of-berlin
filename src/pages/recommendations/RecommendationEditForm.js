@@ -44,7 +44,7 @@ function RecommendationEditForm() {
 
                 is_owner ? setRecommendationData({title, location_name, district, entry_fee, price, content, image}) : history.push('/');
             } catch(err) {
-                // console.log(err);
+                // // console.log(err);
             }
         };
         
@@ -89,7 +89,7 @@ function RecommendationEditForm() {
             await axiosReq.put(`/recommendations/${id}/`, formData);
             history.push(`/recommendations/${id}`);
         } catch (err) {
-            console.log(err);
+            // console.log(err);
             if (err.response?.status !== 401) {
                 setErrors(err.response?.data);
             }

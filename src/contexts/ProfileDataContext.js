@@ -43,7 +43,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
           
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -83,7 +83,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
             popularProfiles: data,
           }));
         } catch (err) {
-          console.log(err);
+          // console.log(err);
         }
       };
   
