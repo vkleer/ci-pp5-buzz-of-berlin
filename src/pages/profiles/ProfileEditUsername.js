@@ -70,13 +70,13 @@ const ProfileEditUsername = () => {
                             </Alert>
                         ))}
                         <Button
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                            className={btnStyles.Button}
                             type="submit"
                         >
                         Save
                         </Button>
                         <Button
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                            className={btnStyles.Button}
                             onClick={() => history.goBack()}
                         >
                             Cancel

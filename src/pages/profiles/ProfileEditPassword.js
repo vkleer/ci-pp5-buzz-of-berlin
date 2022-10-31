@@ -90,12 +90,12 @@ const ProfileEditPassword = () => {
                         ))}
                         <Button
                             type="submit"
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                            className={btnStyles.Button}
                         >
                             Save
                         </Button>
                         <Button
-                            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                            className={btnStyles.Button}
                             onClick={() => history.goBack()}
                         >
                             Cancel

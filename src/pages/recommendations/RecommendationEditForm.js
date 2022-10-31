@@ -237,7 +237,7 @@ function RecommendationEditForm() {
                             </figure>
                             <div>
                                 <Form.Label
-                                    className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                                    className={`${btnStyles.Button} btn`}
                                     htmlFor="image-upload"
                                 >
                                     Change image

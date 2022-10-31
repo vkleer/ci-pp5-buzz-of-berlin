@@ -233,7 +233,7 @@ function EventEditForm() {
                             </figure>
                             <div>
                                 <Form.Label
-                                    className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                                    className={`${btnStyles.Button} btn`}
                                     htmlFor="image-upload"
                                 >
                                     Change image
@@ -250,7 +250,7 @@ function EventEditForm() {
                         {errors.image?.map((message, idx) => 
                             <Alert variant="warning" key={idx}>{message}</Alert>
                         )}
-                    <div className="d-md-none">{textFields}</div>
+                    <div className="d-lg-none">{textFields}</div>
                 </Container>
             </Col>
             <Col lg={4} className="d-none d-lg-block p-0 p-md-2">
