@@ -20,7 +20,8 @@
  
    return (
         <Container className={
-                `${appStyles.Content} 
+                `${appStyles.Content}
+                ${appStyles.FlatBoxBorder} 
                 ${mobile ? 
                     (
                         "d-xl-none text-center mb-4"
@@ -40,7 +41,7 @@
                             ))}
                         </div>
                     ) : (
-                        popularProfiles.results.slice(0, 7).map(profile => (
+                        popularProfiles.results.map(profile => (
                             <Profile key={profile.id} profile={profile} />
                         ))
                     )}
