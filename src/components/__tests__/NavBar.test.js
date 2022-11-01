@@ -27,23 +27,24 @@ test('Renders the NavBar and checks if all the links for logged in users are the
             </CurrentUserProvider>
         </Router>
     );
-    const homeLink = await screen.findByText('Home');
-    const exploreLink = await screen.findByText('Explore');
-    const recommendationsLink = await screen.findByText('Recommendations');
-    const EventsLink = await screen.findByText('Events');
-    const LikedLink = await screen.findByText('Liked');
-    const profileLink = await screen.findByText('Profile');
-    const logOutLink = await screen.findByText('Log out');
+    const homeLink = await screen.findByRole('link', {name: 'Home'});
+    const exploreLink = await screen.findByRole('link', {name: 'Explore'});
+    const recommendationsLink = await screen.findByRole('link', {name: 'Recommendations'});
+    const eventsLink = await screen.findByRole('link', {name: 'Events'});
+    const likedLink = await screen.findByRole('link', {name: 'Liked'});
+    const profileAvatar = await screen.findByText('Profile');
+    const logOutLink = await screen.findByRole('link', {name: 'Log out'});
+    
     expect(homeLink).toBeInTheDocument();
     expect(exploreLink).toBeInTheDocument();
     expect(recommendationsLink).toBeInTheDocument();
-    expect(EventsLink).toBeInTheDocument();
-    expect(LikedLink).toBeInTheDocument();
-    expect(profileLink).toBeInTheDocument();
+    expect(eventsLink).toBeInTheDocument();
+    expect(likedLink).toBeInTheDocument();
+    expect(profileAvatar).toBeInTheDocument();
     expect(logOutLink).toBeInTheDocument();
 });
 
-test('Renders the Log in and Sign up buttons after logging out', async () => {
+test('Renders the NavBar and checks if all the links for logged out users are there', async () => {
     render(
         <Router>
             <CurrentUserProvider>
@@ -54,10 +55,12 @@ test('Renders the Log in and Sign up buttons after logging out', async () => {
 
     const signOutLink = await screen.findByRole('link', {name: 'Log out'});
     fireEvent.click(signOutLink);
-
-    const signInLink = await screen.findByRole('link', {name: 'Log in'});
+    
+    const homeLink = await screen.findByRole('link', {name: 'Home'});
+    const logInLink = await screen.findByRole('link', {name: 'Log in'});
     const signUpLink = await screen.findByRole('link', {name: 'Sign up'});
 
-    expect(signInLink).toBeInTheDocument();
+    expect(homeLink).toBeInTheDocument();
+    expect(logInLink).toBeInTheDocument();
     expect(signUpLink).toBeInTheDocument();
 });
