@@ -28,6 +28,7 @@ import ProfilePage from './pages/profiles/ProfilePage';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
 import ProfileEditUsername from './pages/profiles/ProfileEditUsername';
 import ProfileEditPassword from './pages/profiles/ProfileEditPassword';
+import LikedPage from './pages/liked/LikedPage';
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import NotFound from './components/NotFound';
 
@@ -76,8 +77,8 @@ function App() {
               exact 
               path="/liked" 
               render={() => (
-                <PostsFeed
-                  message="Change search keyword or like a post."
+                <LikedPage
+                  message="Change search keyword, like a post or like a recommendation."
                   filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`} 
                 />
               )} 
