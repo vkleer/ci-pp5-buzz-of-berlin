@@ -46,19 +46,32 @@
 
 ## Project Goals
 
+### About
+Buzz of Berlin is a Berlin specific social media platform where Berliners can share their Berlin photos, favourite places in Berlin and favourite or personal events in Berlin. Every registered and logged in user can like other users' Posts and Recommendations, or leave a comment on them to share their thoughts and opinions. Users can also follow each other to stay up to date on their latest Posts. Posts, Recommendations and Events all contain a district field, making it easy to find your new favourite places and events to go to in Berlin. 
+
 ### User Goals
-- 
+- Be able to share photos, favourite places and events with other Berliners
+- Be able to interact with other Berliners on a Berlin specific social media platform
+- Get inspired by other Berliners' photos and favourite places
+- Find new events to go to in Berlin
 
 ### Application Owner Goals
-- 
+- Create a Berlin speficic social media platform that helps bring Berliners together
+- Provide users with the ability to share their Berlin photos with Posts, favourite places in Berlin with Recommendations and favourite or personal events in Berlin with Events
+- Deliver an aesthetically pleasing design that makes users want to come back
 
 ## User Experience
 
 ### Target Audience
--
+- People who live in Berlin
+- Berliners who want to find new places to go to
+- Berliners who want to find new events to attend
+- Berliners who want to share their Berlin photos
 
 ### User Requirements and Expectations
-- A simple, elegant application that anyone can use
+- Fast application that is easy to use
+- Responsive, aesthetic design that is responsive across all devices
+- Providing a personal touch by displaying the users' profile image in the navigation bar
 
 ## User Stories
 
