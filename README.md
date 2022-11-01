@@ -580,13 +580,393 @@ The performance of the application has been measured with Google Lighthouse with
 
 ### Manual Testing - User Stories
 
-1. story
+1. As a user I can see the navigation bar on every page so that I can easily navigate to different parts of the application
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| feature | action | expected | result |
+|  |  |  |  |
 
-<details><summary>Supporting Screenshots - User Story 1</summary>
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+2. As a user I can use the navigation bar so that I can navigate to different parts of the application
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+3. As a user I can see my posts/recommendations/events being loaded automatically so that I can keep scrolling instead of clicking any buttons
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+4. As a user I can create an account so that I can start use all the features of the application
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+5. As a registered user I can log in so that I can start using the application
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+6. As a user I can log out of the application so that I can end my session if I choose to and keep my account secure
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+7. As a user I will stay logged into the application so that I can keep using the application until I decide to log out
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+8. As a user I can create posts so that I can share photos I made in Berlin with other users
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+9. As a user I can edit my posts so that I can change the content if necessary
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+10. As a user I can delete my posts so that I can remove them if I want to
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+11. As a user I can like a post so that I can show other users that I like their content
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+12. As a user I can view all the posts that I liked so that I can revisit them
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+13. As a user I can search posts so that I can quickly find posts
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+14. As a user I can view a posts' individual page so that I can read the comments left on the post
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+15. As a user I can browse posts of other users that I follow so that I can engage with them
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+16. As a user I can view posts of all of the applications' users so that I can find new users to follow
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+17. As a user I can create recommendations so that I can share the best places in Berlin with other users
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+18. As a user I can edit my recommendations so that I can change the content if necessary
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+19. As a user I can delete my recommendations so that I can remove them if I want to
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+20. As a user I can like a recommendation so that I can show other users that I like their content
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+21. As a user I can view all the recommendations that I liked so that I can revisit them
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+22. As a user I can search recommendations so that I can quickly find recommendations
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+23. As a user I can view a recommendations' individual page so that I can read the comments left on the recommendation
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+24. As a user I can browse recommendations so that I can engage with them
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+25. As a user I can create events so that I can inform other users about event in Berlin
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+26. As a user I can edit my events so that I can change the content if necessary
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+27. As a user I can delete my events so that I can remove them if I want to
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+28. As a user I can search events so that I can quickly find events
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+29. As a user I can view a events' individual page so that I can view it in detail
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+30. As a user I can browse events so that I can find events in Berlin
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+31. As a user I can create a comment so that I can engage with other users
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+32. As a user I can edit my comments so that I can update them if necessary
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+33. As a user I can delete my comments so that I can remove them from the post or recommendation if I want to
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+34. As a user I can see the date of any comment so that I can know whether a comment is new or old
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+35. As a user I can read other users' comments so that I can engage better with other users
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+36. As a user I can view a profile page so that I can find more content from that user
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+37. As a user I can edit my profile so that I can update my details
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+38. As a user I can change my username and password so that I can keep my account safe
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
+    <img src="docs/testing/user-story-testing/user-stories-01.png">
+</details>
+
+39. As a user I can see who the most active and popular users are so that I can follow them for good content
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  |  |
+
+<details><summary>Supporting GIF - User Story 1</summary>
     <img src="docs/testing/user-story-testing/user-stories-01.png">
 </details>
 
