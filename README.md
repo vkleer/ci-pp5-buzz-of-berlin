@@ -512,10 +512,23 @@ All of the applications' module.css files have been validated using W3C's CSS Va
 </details>
 
 ### JSX Validation
-The JavaScript of the application has been validated using JSHint. It passed with no errors or warnings.
+The JSX code of the application has been validated using ESLint. It passed with no errors or warnings.
 
-<details><summary>Screenshot of meal-planner.js JSHint validation</summary>
-    <img src="docs/validation/js/meal-planner-jshint.JPG">
+<details><summary>Screenshot of components ESLint validation</summary>
+    <img src="docs/validation/eslint/components-eslint-validation.JPG">
+</details>
+
+<details><summary>Screenshot of contexts ESLint validation</summary>
+    <img src="docs/validation/eslint/contexts-eslint-validation.JPG">
+</details>
+
+<details><summary>Screenshot of hooks ESLint validation</summary>
+    <img src="docs/validation/eslint/hooks-eslint-validation.JPG">
+</details>
+
+<details><summary>Screenshots of pages ESLint validation</summary>
+    <img src="docs/validation/eslint/pages-1-eslint-validation.JPG">
+    <img src="docs/validation/eslint/pages-2-eslint-validation.JPG">
 </details>
 
 ### Accessibility (Wave WebAIM)
@@ -625,22 +638,19 @@ This application has been deployed using Heroku with the following steps:
 3. In the top-right corner, click on the 'New' button, followed by the 'Create a new app' button
 4. Enter an app name (it has to be unique) and choose your region under the 'Choose a region' dropdown menu.
 5. Click on the 'Create app' button
-6. On the next page, click on the 'Settings' tab 
-7. Under 'Config Vars', click on 'Reveal Config Vars' to add a new Config var - this is where you can store sensitive data, like your Google service account key
-8. Under 'Buildpacks' click on the 'Add buildpack' button to install additional dependencies. For this project the 'python' and 'nodejs' buildpacks were added, in that specific order
-9. Click on the 'Deploy' tab
-10. Under 'Deployment method', click on 'Github'. You can then search for your repository under 'Search for a repository to connect to'
-11. Click on the 'Connect' button to connect your repository
-12. On the next page, under 'Choose a branch to deploy' you can choose the branch you want to deploy your app from
-13. Either click on the 'Enable Automatic Deploys' button under 'Automatic deploys' to have the app deploy automatically on each push you make to the branch, or click on the 'Deploy Branch' button under 'Manual deploy'
-14. Wait for the app to build and be deployed. Once the app is ready, a message will be displayed saying 'App was successfully deployed' along with a button which takes you to your newly deployed app
+6. Click on the 'Deploy' tab
+7. Under 'Deployment method', click on 'Github'. You can then search for your repository under 'Search for a repository to connect to'
+8. Click on the 'Connect' button to connect your repository
+9. On the next page, under 'Choose a branch to deploy' you can choose the branch you want to deploy your app from
+10. Either click on the 'Enable Automatic Deploys' button under 'Automatic deploys' to have the app deploy automatically on each push you make to the branch, or click on the 'Deploy Branch' button under 'Manual deploy'
+11. Wait for the app to build and be deployed. Once the app is ready, a message will be displayed saying 'App was successfully deployed' along with a button which takes you to your newly deployed app
 
 ## Credits
 
 The logo and assets were created by the developer.
 
 ### Images
--
+- This application was created for education purposes only. All of the images used for profile images and posts were sourced from Google to test out the application. I am therefore unable to provide the sources of all the pictures found on Google.
 
 ### Code
 - 'Buzz of Berlin' is the result of building on the ['Moments'](https://github.com/Code-Institute-Solutions/moments) walkthrough that was provided by Code Institute. Though it was used as a foundation, a lot of extra functionality has been added to make this project truly my own. Code Institute has been credited throughout my code where applicable using docstrings.
