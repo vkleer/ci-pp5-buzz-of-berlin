@@ -1,7 +1,7 @@
 # Buzz of Berlin
 (Developer: Vilayat Kleer)
 
-![mockup-image.jpg](docs/design/mockup-image.jpg)
+![mockup-image.jpg](docs/design/mockup-image.JPG)
 
 [View the live application](https://ci-pp5-buzz-of-berlin.herokuapp.com/)
 
@@ -14,9 +14,7 @@
     1. [Target Audience](#target-audience)
     2. [User Requirements and Expectations](#user-requirements-and-expectations)
 3. [User Stories](#user-stories)
-    1. [User](#user)
-    1. [Returning User](#returning-user)
-    3. [Application Owner](#application-owner)
+    1. [Navigation](#navigation)
 4. [Design](#design)
     1. [Colours](#colours)
     2. [Fonts](#fonts)
@@ -607,7 +605,13 @@ In addition to the physical devices, the website has also been tested without an
 
 | **Bug** | **Fix** |
 |-------------|------------|
-| bug | fix - [link to commit](https://github.com/vkleer/) |
+| Users cannot log in | Add a missing slash '/' to the end of the login URL - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/4de930ec6370153973456a62e7acf0ecbed91631) |
+| Width of components change width on user input | Set the margin of the parent component (Row) to 0 - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/5d2d99c4b95f15f04d643f2e82abc8d597c93f2c) |
+| Create button showing up for anonymous users | Set a condition so that the component will only be displayed when a user is logged in - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/16458f19c263ee1e748aaa5959849c055f826efe) |
+| Avatar component does not render | Add the export at the end of the file - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/6c69c61f36c465f522fa7722ff8082f6b9a8a4ca) |
+| NavBar component not always at top of the page | Add the fixed attribute set to top - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/24d7b002fe3df922590032a87e033e7d2cb7c35f) |
+| Already set image is not appended when editing an event | Remove the form.append statement so only the conditional if (imageInput?.current?.files[0]) is being used - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/2aee77a2a0a73240067963159897410893d4cb23) |
+| useRedirect hook working in reverse - logged out users can access pages that logged in users can't | Pass useRedirect hook the 'loggedOut' string instead of 'loggedIn' - [link to commit](https://github.com/vkleer/ci-pp5-buzz-of-berlin/commit/8c5c47f1d8ef2b870851345b84b0cd1fb3bf4465) |
 
 ## Deployment
 
