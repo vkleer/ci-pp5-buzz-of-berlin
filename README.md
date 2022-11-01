@@ -255,7 +255,7 @@ The application has a total of 26 features:
 - Is responsive and works on all screen sizes
 - Covers user story **1**, **2** and **6**
 
-<details><summary>Screenshot of feature</summary>
+<details><summary>Screenshot of logo and navigation bar</summary>
     <img src="docs/features/feature.JPG">
 </details>
 
@@ -265,8 +265,8 @@ The application has a total of 26 features:
 - Users cannot register the same username twice
 - Covers user story **4**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of sign up form</summary>
+    <img src="docs/features/sign-up-form.JPG">
 </details>
 
 ### Login form
@@ -275,8 +275,8 @@ The application has a total of 26 features:
 - Displays errors if the username or password is wrong or the input is invalid
 - Covers user story **5**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of login form</summary>
+    <img src="docs/features/log-in-form.JPG">
 </details>
 
 ### Post create form
@@ -286,8 +286,8 @@ The application has a total of 26 features:
 - Allows users to share their Berlin photos with other users
 - Covers user story **8**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of post create form</summary>
+    <img src="docs/features/post-create-form.JPG">
 </details>
 
 ### Post edit form
@@ -295,8 +295,8 @@ The application has a total of 26 features:
 - Contains image, title, district and caption fields (caption is optional)
 - Covers user story **9**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of post edit form</summary>
+    <img src="docs/features/post-edit-form.JPG">
 </details>
 
 ### Post page
@@ -306,8 +306,8 @@ The application has a total of 26 features:
 - Contains a dropdown menu on the post to allow the owner to edit or delete the post
 - Covers user story **10**, **11**, **14**, **34** and **35**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of post page</summary>
+    <img src="docs/features/post-page.JPG">
 </details>
 
 ### Posts feed
@@ -315,8 +315,8 @@ The application has a total of 26 features:
 - Has a search bar to allow users to search by username, title or district
 - Covers user story **3**, **13** and **15**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of posts feed</summary>
+    <img src="docs/features/posts-feed.JPG">
 </details>
 
 ### Explore feed
@@ -324,8 +324,8 @@ The application has a total of 26 features:
 - Has a search bar to allow users to search by username, title or district
 - Covers user story **3**, **13** and **16**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of explore feed</summary>
+    <img src="docs/features/explore-feed.JPG">
 </details>
 
 ### Recommendation create form
@@ -335,8 +335,8 @@ The application has a total of 26 features:
 - Allows users to share their favorite places in Berlin
 - Covers user story **17**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of recommendation create form</summary>
+    <img src="docs/features/recommendation-create-form.JPG">
 </details>
 
 ### Recommendation edit form
@@ -344,8 +344,8 @@ The application has a total of 26 features:
 - Contains image, title, location name, district, entry fee, price category and content fields
 - Covers user story **18**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of recommendation edit form</summary>
+    <img src="docs/features/recommendation-edit-form.JPG">
 </details>
 
 ### Recommendation page
@@ -355,8 +355,8 @@ The application has a total of 26 features:
 - Contains a dropdown menu on the recommendation to allow the owner to edit or delete the recommendation
 - Covers user story **19**, **20**, **23**, **34** and **35**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of recommendation page</summary>
+    <img src="docs/features/recommendation-page.JPG">
 </details>
 
 ### Recommendations feed
@@ -364,8 +364,8 @@ The application has a total of 26 features:
 - Has a search bar to allow users to search by username, title, location name, district or entry fee
 - Covers user story **3**, **22** and **24**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of recommendations feed</summary>
+    <img src="docs/features/recommendations-feed.JPG">
 </details>
 
 ### Event create form
@@ -375,8 +375,8 @@ The application has a total of 26 features:
 - Allows users to share their favorite places in Berlin
 - Covers user story **25**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of event create form</summary>
+    <img src="docs/features/event-create-form.JPG">
 </details>
 
 ### Event edit form
@@ -384,8 +384,8 @@ The application has a total of 26 features:
 - Contains image, title, location name, district, entry fee, price category and content fields
 - Covers user story **26**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of event edit form</summary>
+    <img src="docs/features/event-edit-form.JPG">
 </details>
 
 ### Event page
@@ -394,8 +394,8 @@ The application has a total of 26 features:
 - Contains a dropdown menu on the event to allow the owner to edit or delete the event
 - Covers user story **27**, **29**, **34** and **35**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of event page</summary>
+    <img src="docs/features/event-page.JPG">
 </details>
 
 ### Events feed
@@ -403,8 +403,9 @@ The application has a total of 26 features:
 - Has a search bar to allow users to search by username, title, location name, district or entry fee
 - Covers user story **3**, **28** and **30**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshots of events feed</summary>
+    <img src="docs/features/events-feed.JPG">
+    <img src="docs/features/events-feed-next.JPG">
 </details>
 
 ### Liked page
@@ -412,17 +413,21 @@ The application has a total of 26 features:
 - Updates accordingly when a post or recommendation has been unliked
 - Covers user story **12** and **21**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshots of liked page</summary>
+    <img src="docs/features/liked-page.JPG">
+    <img src="docs/features/liked-page-next.JPG">
 </details>
 
 ### Likes
 - Allows users to like posts and recommendations to show they like a users' content
+- Doesn't allow users to like their own content
 - When liked, the like button will turn solid yellow and when not liked will turn outlined dark grey
 - Covers user story **12** and **21**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshots of likes</summary>
+    <img src="docs/features/likes-outline.JPG">
+    <img src="docs/features/likes-solid.JPG">
+    <img src="docs/features/likes-own.JPG">
 </details>
 
 ### Comments
@@ -432,8 +437,8 @@ The application has a total of 26 features:
 - All comments can be read by all other users, including logged out users
 - Covers user story **31**, **32**, **33**, **34** and **35**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of comments</summary>
+    <img src="docs/features/comments.JPG">
 </details>
 
 ### Popular profiles
@@ -442,8 +447,8 @@ The application has a total of 26 features:
 - Contains a follow/unfollow button next to the username on large screens
 - Covers user story **39**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of popular profile</summary>
+    <img src="docs/features/popular-profiles.JPG">
 </details>
 
 ### Profile page
@@ -452,8 +457,10 @@ The application has a total of 26 features:
 - Contains all of the users' created posts, recommendations and events
 - Covers user story **36**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshots of profile page</summary>
+    <img src="docs/features/profile-page.JPG">
+    <img src="docs/features/profile-recommendations.JPG">
+    <img src="docs/features/profile-events.JPG">
 </details>
 
 ### Profile edit page
@@ -461,41 +468,38 @@ The application has a total of 26 features:
 - Allows users to edit their bio
 - Covers user story **37**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of profile edit page</summary>
+    <img src="docs/features/profile-edit-page.JPG">
 </details>
 
 ### Profile edit username page
 - Allows users to edit their username
 - Covers user story **38**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of profile edit username page</summary>
+    <img src="docs/features/profile-edit-username-page.JPG">
 </details>
 
 ### Profile edit password page
 - Allows users to edit their password
 - Covers user story **38**
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
-</details>
-
-### Infinite scroll
-- Allows users to scroll through their feeds without pressing any navigation buttons
-- Used in the posts, recommendations and events feeds, liked page, profile page and comments
-- Covers user story **3**
-
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of profile edit password page</summary>
+    <img src="docs/features/profile-edit-password-page.JPG">
 </details>
 
 ### Not found page
 - Displays the no-results image along with a message to inform the user the page doesn't exist
 
-<details><summary>Screenshot of feature</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshot of not found page</summary>
+    <img src="docs/features/not-found-page.JPG">
 </details>
+
+### Infinite scroll
+- Allows users to scroll through their feeds without pressing any navigation buttons
+- Used in the posts, recommendations and events feeds, liked page, profile page and comments
+- No screenshot since it loads quickly, but can be seen when using the application
+- Covers user story **3**
 
 ## Validation
 
