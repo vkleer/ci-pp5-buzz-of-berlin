@@ -80,9 +80,9 @@ function PostsFeed({ message, filter = "" }) {
                         <Container className="p-0">
                             <InfiniteScroll 
                                 children={
-                                posts.results.map(post => (
-                                <Post key={post.id} {...post} setPosts={setPosts} />
-                                )) 
+                                    posts.results.map(post => (
+                                        <Post key={post.id} {...post} setPosts={setPosts} />
+                                    ))
                                 }
                                 dataLength={posts.results.length}
                                 loader={<Asset spinner />}

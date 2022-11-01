@@ -81,8 +81,8 @@ function EventsFeed({ message, filter = "" }) {
                             <InfiniteScroll 
                                 children={
                                     events.results.map(event => (
-                                <Event key={event.id} {...event} setEvents={setEvents} />
-                                )) 
+                                        <Event key={event.id} {...event} setEvents={setEvents} />
+                                    )) 
                                 }
                                 dataLength={events.results.length}
                                 loader={<Asset spinner />}

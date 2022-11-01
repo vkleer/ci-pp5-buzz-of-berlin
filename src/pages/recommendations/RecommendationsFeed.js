@@ -81,8 +81,8 @@ function RecommendationsFeed({ message, filter = "" }) {
                             <InfiniteScroll 
                                 children={
                                     recommendations.results.map(recommendation => (
-                                <Recommendation key={recommendation.id} {...recommendation} setRecommendations={setRecommendations} />
-                                )) 
+                                        <Recommendation key={recommendation.id} {...recommendation} setRecommendations={setRecommendations} />
+                                    )) 
                                 }
                                 dataLength={recommendations.results.length}
                                 loader={<Asset spinner />}
