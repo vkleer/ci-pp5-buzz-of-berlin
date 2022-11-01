@@ -22,8 +22,15 @@
     width: 215px;
 }
 
+
 @media screen and (max-width: 1200px) {
     .ProfileSignOut {
         width: 52px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ProfileSignOut {
+        width: auto !important;
     }
 }
