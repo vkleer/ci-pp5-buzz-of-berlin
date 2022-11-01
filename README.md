@@ -3,7 +3,7 @@
 
 ![mockup-image.jpg](docs/mockup-image.jpg)
 
-[View the live website](https://.herokuapp.com/)
+[View the live application](https://.herokuapp.com/)
 
 ## Table of Contents
 
@@ -226,12 +226,266 @@ The following components have been created and reused throughout the application
 The front end is being supplied with data from the [Buzz of Berlin DRF API](https://buzz-of-berlin-drf-api.herokuapp.com/), which has been created using the Django REST Framework. The repository along with a README file can be found [here](https://github.com/vkleer/Buzz_of_Berlin_DRF_API).
 
 ## Features
-The website has a total of X features:
+The application has a total of 26 features:
 
-### Feature
-- Logo and navigation bar
+### Logo and navigation bar
+- Custom logo was created for this project, placed on the left as is conventional
+- Contains the following links when logged in:
+    - Home page (posts feed)
+    - Explore feed
+    - Recommendations feed
+    - Events feed
+    - Liked page (liked posts and recommendations)
+    - Profile page
+    - Sign out
+- Contains the following links when logged out:
+    - Home page (explore feed)
+    - Events feed
+    - Log in page
+    - Sign up page
+- Is present on every page
+- Is responsive and works on all screen sizes
+- Covers user story **1**, **2** and **6**
 
-<details><summary>Screenshot feature</summary>
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Sign up form
+- Allows users to create an account
+- Users must provide a valid username and enter their preferred password twice for confirmation
+- Users cannot register the same username twice
+- Covers user story **4**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Login form
+- Allows registered users to login to their account
+- Both the username and password have to be correct to be logged in
+- Displays errors if the username or password is wrong or the input is invalid
+- Covers user story **5**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Post create form
+- Allows users to create their own posts
+- Contains image, title, district and caption fields (caption is optional)
+- The district field in particular allows users to find posts in their district easily using the search bar on other pages
+- Allows users to share their Berlin photos with other users
+- Covers user story **8**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Post edit form
+- Allows users to edit their existing posts
+- Contains image, title, district and caption fields (caption is optional)
+- Covers user story **9**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Post page
+- Displays a single post
+- Contains all of the posts details, including its comments
+- Contains a like button to like and unlike the post
+- Contains a dropdown menu on the post to allow the owner to edit or delete the post
+- Covers user story **10**, **11**, **14**, **34** and **35**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Posts feed
+- Contains all posts of users that the logged in user follows
+- Has a search bar to allow users to search by username, title or district
+- Covers user story **3**, **13** and **15**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Explore feed
+- Contains all posts of all the users on the application
+- Has a search bar to allow users to search by username, title or district
+- Covers user story **3**, **13** and **16**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Recommendation create form
+- Allows users to create their own recommendations
+- Contains image, title, location name, district, entry fee, price category and content fields
+- The location name and district fields in particular allows users to find recommendations more easily using the search bar on other pages
+- Allows users to share their favorite places in Berlin
+- Covers user story **17**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Recommendation edit form
+- Allows users to edit their existing posts
+- Contains image, title, location name, district, entry fee, price category and content fields
+- Covers user story **18**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Recommendation page
+- Displays a single recommendation
+- Contains all of the recommendations' details, including its comments
+- Contains a like button to like and unlike the recommendation
+- Contains a dropdown menu on the recommendation to allow the owner to edit or delete the recommendation
+- Covers user story **19**, **20**, **23**, **34** and **35**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Recommendations feed
+- Contains all recommendations of all the users on the application
+- Has a search bar to allow users to search by username, title, location name, district or entry fee
+- Covers user story **3**, **22** and **24**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Event create form
+- Allows users to create their own recommendations
+- Contains image, title, location name, district, entry fee, price category and content fields
+- The location name and district fields in particular allows users to find recommendations more easily using the search bar on other pages
+- Allows users to share their favorite places in Berlin
+- Covers user story **25**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Event edit form
+- Allows users to edit their existing posts
+- Contains image, title, location name, district, entry fee, price category and content fields
+- Covers user story **26**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Event page
+- Displays a single event
+- Contains all of the events' details
+- Contains a dropdown menu on the event to allow the owner to edit or delete the event
+- Covers user story **27**, **29**, **34** and **35**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Events feed
+- Contains all recommendations of all the users on the application
+- Has a search bar to allow users to search by username, title, location name, district or entry fee
+- Covers user story **3**, **28** and **30**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Liked page
+- Contains all the posts and recommendations that the logged in user has liked
+- Updates accordingly when a post or recommendation has been unliked
+- Covers user story **12** and **21**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Likes
+- Allows users to like posts and recommendations to show they like a users' content
+- When liked, the like button will turn solid yellow and when not liked will turn outlined dark grey
+- Covers user story **12** and **21**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Comments
+- Allows users to leave a comment on a post or recommendation
+- Comments can be edited or deleted
+- Displays the date the comment was posted or edited
+- All comments can be read by all other users, including logged out users
+- Covers user story **31**, **32**, **33**, **34** and **35**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Popular profiles
+- Displays the most followed users on the application
+- Displays the users profile image and username
+- Contains a follow/unfollow button next to the username on large screens
+- Covers user story **39**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Profile page
+- Any user can view any users' profile, including logged out users
+- Contains a users profile image, username, followers count and following count
+- Contains all of the users' created posts, recommendations and events
+- Covers user story **36**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Profile edit page
+- Allows users to edit their profile image
+- Allows users to edit their bio
+- Covers user story **37**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Profile edit username page
+- Allows users to edit their username
+- Covers user story **38**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Profile edit password page
+- Allows users to edit their password
+- Covers user story **38**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Infinite scroll
+- Allows users to scroll through their feeds without pressing any navigation buttons
+- Used in the posts, recommendations and events feeds, liked page, profile page and comments
+- Covers user story **3**
+
+<details><summary>Screenshot of feature</summary>
+    <img src="docs/features/feature.JPG">
+</details>
+
+### Not found page
+- Displays the no-results image along with a message to inform the user the page doesn't exist
+
+<details><summary>Screenshot of feature</summary>
     <img src="docs/features/feature.JPG">
 </details>
 
