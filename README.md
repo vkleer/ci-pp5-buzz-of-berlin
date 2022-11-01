@@ -1,9 +1,9 @@
 # Buzz of Berlin
 (Developer: Vilayat Kleer)
 
-![mockup-image.jpg](docs/mockup-image.jpg)
+![mockup-image.jpg](docs/design/mockup-image.jpg)
 
-[View the live application](https://.herokuapp.com/)
+[View the live application](https://ci-pp5-buzz-of-berlin.herokuapp.com/)
 
 ## Table of Contents
 
@@ -623,12 +623,12 @@ This website was deployed using Github Pages with the following steps:
 
 If you want to fork this repository, follow these steps:
 
-1. Go to the Github repository (https://github.com/vkleer/CI_PP4_WhatsCooking)
+1. Go to the Github repository (https://github.com/vkleer/ci-pp5-buzz-of-berlin)
 2. Click on the 'Fork' button in the top right corner under the navigation bar
 
 If you want to clone this repository, follow these steps:
 
-1. Go to the Github repository (https://github.com/vkleer/CI_PP4_WhatsCooking)
+1. Go to the Github repository (https://github.com/vkleer/ci-pp5-buzz-of-berlin)
 2. Click on the 'Code' button above the list of files
 3. Select your preferred way of cloning, I recommend using the 'GitHub CLI' option
 4. Under 'GitHub CLI', click on the copy button to copy the clone command
