@@ -167,6 +167,7 @@ const Recommendation = (props) => {
                     {likes_count}
                     <Link to={`/recommendations/${id}`}>
                         <i className="far fa-comments" />
+                        <span className="d-none">Link to comments</span>
                     </Link>
                     {comments_count}
                 </div>

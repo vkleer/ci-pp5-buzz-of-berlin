@@ -65,13 +65,16 @@ function PostsFeed({ message, filter = "" }) {
                         className={`pb-4 ${styles.SearchBar}`} 
                         onSubmit={(event) => event.preventDefault()}
                     >
-                        <Form.Control 
-                            type="text" 
-                            className="mr-sm-2" 
-                            placeholder="Search posts" 
-                            value={query}
-                            onChange={(event) => setQuery(event.target.value)}
-                        />
+                        <Form.Group controlId="search-bar">
+                            <Form.Label className="d-none">Search bar</Form.Label>
+                            <Form.Control 
+                                type="text" 
+                                className="mr-sm-2" 
+                                placeholder="Search posts" 
+                                value={query}
+                                onChange={(event) => setQuery(event.target.value)}
+                            />
+                        </Form.Group>
                     </Form>
                 </Container>
                 {hasLoaded ? (

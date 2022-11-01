@@ -62,21 +62,21 @@ function LogInForm() {
                     <h1 className={styles.Header}>Log in</h1>
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId="username">
-                        <Form.Label className="d-none">Enter username</Form.Label>
-                        <Form.Control className={styles.Input} type="text" 
-                            placeholder="Enter username" name="username" value={username}
-                            onChange={handleChange} 
-                        />
+                            <Form.Label className="d-none">Enter username</Form.Label>
+                            <Form.Control className={styles.Input} type="text" 
+                                placeholder="Enter username" name="username" value={username}
+                                onChange={handleChange} 
+                            />
                         </Form.Group>
                         {errors.username?.map((message, idx) => 
                             <Alert variant="warning" key={idx}>{message}</Alert>
                         )}
                         <Form.Group controlId="password">
-                        <Form.Label className="d-none">Password</Form.Label>
-                        <Form.Control className={styles.Input} type="password" 
-                            placeholder="Password" name="password" value={password} 
-                            onChange={handleChange}
-                        />
+                            <Form.Label className="d-none">Password</Form.Label>
+                            <Form.Control className={styles.Input} type="password" 
+                                placeholder="Password" name="password" value={password} 
+                                onChange={handleChange}
+                            />
                         </Form.Group>
                         {errors.password?.map((message, idx) => 
                             <Alert variant="warning" key={idx}>{message}</Alert>
