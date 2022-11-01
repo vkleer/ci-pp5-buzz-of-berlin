@@ -909,8 +909,7 @@ This React application has been deployed using Heroku with the following steps:
 14. Wait for the app to build and be deployed. Once the app is ready, a message will be displayed saying 'App was successfully deployed' along with a button which takes you to your newly deployed React app
 
 ## Credits
-
-The logo and assets were created by the developer.
+The logo, no-results image and upload image were created by the developer.
 
 ### Images
 - This application was created for education purposes only. All of the images used for profile images, posts, recommendations and events were sourced from Google to test out the application extensively. I am therefore unable to provide the sources of all the pictures found on Google.
