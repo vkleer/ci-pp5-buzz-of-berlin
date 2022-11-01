@@ -586,19 +586,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Go to any page of the application | The navigation bar is present on every page | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 2. As a user I can use the navigation bar so that I can navigate to different parts of the application
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on any of the navigation bars' links | Redirects to the selected link | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 3. As a user I can see my posts/recommendations/events being loaded automatically so that I can keep scrolling instead of clicking any buttons
 
@@ -606,19 +598,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Go to any page that loads posts, recommendations, events or comments | Loads more content after the bottom has been reached | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 4. As a user I can create an account so that I can start use all the features of the application
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Go to the sign up page | Be able to create an account | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 5. As a registered user I can log in so that I can start using the application
 
@@ -626,19 +610,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Go to the login page | Be able to log in | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 6. As a user I can log out of the application so that I can end my session if I choose to and keep my account secure
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the 'Sign out' icon or link in the navigation bar | Get signed out | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 7. As a user I will stay logged into the application so that I can keep using the application until I decide to log out
 
@@ -652,19 +628,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on 'Create post' in the left hand panel | Be able to create a post | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 9. As a user I can edit my posts so that I can change the content if necessary
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the 'Edit' button from the dropdown menu on a post that you own | Be able to edit your post | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 10. As a user I can delete my posts so that I can remove them if I want to
 
@@ -672,19 +640,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on the 'Delete' button from the dropdown menu on a post that you own | Be able to delete your post | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 11. As a user I can like a post so that I can show other users that I like their content
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the like button on a post that is not your own | Be able to like a post | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 12. As a user I can view all the posts that I liked so that I can revisit them
 
@@ -692,19 +652,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on the heart icon or liked page link in the navigation bar | Be able to view all the posts that I liked | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 13. As a user I can search posts so that I can quickly find posts
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the search bar on the home page, explore feed or liked page and type in a post keyword | Be able to filter down posts | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 14. As a user I can view a posts' individual page so that I can read the comments left on the post
 
@@ -712,19 +664,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on any post | Be taken to its post page | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 15. As a user I can browse posts of other users that I follow so that I can engage with them
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the house icon or home page link in the navigation bar | See all posts of the users that I follow | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 16. As a user I can view posts of all of the applications' users so that I can find new users to follow
 
@@ -732,19 +676,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on the compass icon or explore feed link in the navigation bar | See all posts of all users on the application | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 17. As a user I can create recommendations so that I can share the best places in Berlin with other users
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on 'Create recommendation' in the left hand panel | Be able to create a recommendation | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 18. As a user I can edit my recommendations so that I can change the content if necessary
 
@@ -752,19 +688,11 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on the 'Edit' button from the dropdown menu on a recommendation that you own | Be able to edit your recommendation | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 19. As a user I can delete my recommendations so that I can remove them if I want to
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the 'Delete' button from the dropdown menu on a post that you own | Be able to delete your recommendation | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
 
 20. As a user I can like a recommendation so that I can show other users that I like their content
 
@@ -772,29 +700,17 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on the like button on a post that is not your own | Be able to like a recommendation | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 21. As a user I can view all the recommendations that I liked so that I can revisit them
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the heart icon or liked page link in the navigation bar | Be able to view all the recommendations that I liked | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 22. As a user I can search recommendations so that I can quickly find recommendations
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-| Click on the search bar on the recommendations feedor liked page and type in a recommendation keyword | Be able to filter down recommendations | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the search bar on the recommendations feed or liked page and type in a recommendation keyword | Be able to filter down recommendations | Works as expected |
 
 23. As a user I can view a recommendations' individual page so that I can read the comments left on the recommendation
 
@@ -802,169 +718,101 @@ The performance of the application has been measured with Google Lighthouse with
 |-------------|------------|---------------------|
 | Click on any recommendation | Be taken to its recommendation page | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 24. As a user I can browse recommendations so that I can engage with them
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Click on the thumbs up icon or recommendations link in the navigation bar | Be able to view all recommendations | Works as expected |
 
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
-
 25. As a user I can create events so that I can inform other users about event in Berlin
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on 'Create event' in the left hand panel | Be able to create an event | Works as expected |
 
 26. As a user I can edit my events so that I can change the content if necessary
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the 'Edit' button from the dropdown menu on an event that you own | Be able to edit your event | Works as expected |
 
 27. As a user I can delete my events so that I can remove them if I want to
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the 'Delete' button from the dropdown menu on an event that you own | Be able to delete your event | Works as expected |
 
 28. As a user I can search events so that I can quickly find events
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the search bar on the events feed and type in an event keyword | Be able to filter down events | Works as expected |
 
 29. As a user I can view a events' individual page so that I can view it in detail
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on any event | Be taken to its event page | Works as expected |
 
 30. As a user I can browse events so that I can find events in Berlin
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the calendar icon or events link in the navigation bar | Be able to view all events | Works as expected |
 
 31. As a user I can create a comment so that I can engage with other users
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Go to any post or recommendation page and write a comment in the 'Add a comment...' text input field | Be able to create a comment | Works as expected |
 
 32. As a user I can edit my comments so that I can update them if necessary
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the 'Edit' button from the dropdown menu on a comment that you own | Be able to edit your comment | Works as expected |
 
 33. As a user I can delete my comments so that I can remove them from the post or recommendation if I want to
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the 'Delete' button from the dropdown menu on a comment that you own | Be able to delete your comment | Works as expected |
 
 34. As a user I can see the date of any comment so that I can know whether a comment is new or old
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Go to any post or recommendation page and look at the comment section | Be able to see the date of every comment | Works as expected |
 
 35. As a user I can read other users' comments so that I can engage better with other users
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Go to any post or recommendation page and look at the comment section | Be able to view every comment | Works as expected |
 
 36. As a user I can view a profile page so that I can find more content from that user
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on a users profile image anywhere on the application | Be redirected to the users' profile | Works as expected |
 
 37. As a user I can edit my profile so that I can update my details
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the profile image or profile link in the navigation bar, click on the 'Edit' button from the dropdown menu on your profile | Be able to edit my profile image and bio | Works as expected |
 
 38. As a user I can change my username and password so that I can keep my account safe
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Click on the profile image or profile link in the navigation bar, click on the 'Change username' or 'Change password' button from the dropdown menu on your profile | Be able to change your username or password | Works as expected |
 
 39. As a user I can see who the most active and popular users are so that I can follow them for good content
 
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
-|  |  | Works as expected |
-
-<details><summary>Supporting GIF - User Story 1</summary>
-    <img src="docs/testing/user-story-testing/user-stories-01.png">
-</details>
+| Go to any non-create page and look at the 'The true Berliners' section | Be able to see the mos followed users | Works as expected |
 
 ### Testing on Different Devices
 The website has been tested on multiple physical devices without any issues:
