@@ -255,8 +255,9 @@ The application has a total of 26 features:
 - Is responsive and works on all screen sizes
 - Covers user story **1**, **2** and **6**
 
-<details><summary>Screenshot of logo and navigation bar</summary>
-    <img src="docs/features/feature.JPG">
+<details><summary>Screenshots of logo and navigation bar</summary>
+    <img src="docs/features/logo-and-navigation-bar-logged-out.JPG">
+    <img src="docs/features/logo-and-navigation-bar-logged-in.JPG">
 </details>
 
 ### Sign up form
@@ -511,10 +512,10 @@ The HTML of the application has been validated using W3C's Markup Validation Ser
 </details>
 
 ### CSS Validation
-The CSS of the application has been validated using W3C's CSS Validation Service. It passed with no errors or warnings.
+All of the applications' module.css files have been validated using W3C's CSS Validation Service. They all passed with no errors or warnings. Since the validators' success message does not change depending on the CSS you feed it, I have included a single screenshot.
 
-<details><summary>Screenshot of x module CSS validation</summary>
-    <img src="docs/validation/css/x-module-css-validation.JPG">
+<details><summary>Screenshot of CSS validation</summary>
+    <img src="docs/validation/css/css-validation.JPG">
 </details>
 
 ### JSX Validation
