@@ -131,10 +131,10 @@ Buzz of Berlin is a Berlin specific social media platform where Berliners can sh
 ## Design
 
 ### Colours
-The colours I used for the application have been picked using the [Adobe Color Wheel](https://color.adobe.com/create/color-wheel). I first found a 'main' colour that I wanted to use (#color) before moving on to the other colours.
+The colours I used for the application are based around the logo that I created early on in Adobe Illustrator. The main colours of the application are a dark grey (#414141), gold/yellow (#F0CF36) and white (#FFFFFF), with slight variations of those colours being used for accents or active/hover states. The gold/yellow colour is the main colour I picked from the logo to base the rest of the applications' colours. The dark grey and white create a nice contrast between all the components and keep everything easy to read, while the gold/yellow colour keeps the design interesting but not too busy.
 
-<details><summary>Screenshot of Adobe Color Wheel</summary>
-    <img src="docs/design/adobe-color-wheel.JPG">
+<details><summary>Screenshot of main colours</summary>
+    <img src="docs/design/main-colours.png">
 </details>
 
 ### Fonts
@@ -177,6 +177,7 @@ The application contains the following pages:
 - [**Wave WebAIM's web accessibility evaluation tool**](https://wave.webaim.org/) was used to validate my Python code
 - [**Am I Responsive**](http://ami.responsivedesign.is/) was used to create the mock-up image for this project
 - [**Balsamiq**](https://balsamiq.com/) was used to create the wireframes for this project
+- [**Adobe Illustrator**](https://www.adobe.com/products/illustrator.html) was used to create the logo
 - [**Favicon.io**](https://favicon.io/) was used to create a favicon of my logo
 
 ### Libraries
