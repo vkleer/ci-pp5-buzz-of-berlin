@@ -138,23 +138,17 @@ The colours I used for the application are based around the logo that I created 
 </details>
 
 ### Fonts
-The fonts that I used are [Font](https://fonts.google.com/specimen/) for the logo and [Font](https://fonts.google.com/specimen/) for all other text elements. 
-
-### Structure
-The application uses common web design conventions and is structured in an intuitive, easy to use way.
-
-The navigation bar has a logo on the left and the links to the right. When the screen size is too small to display the links, the menu turns into a collapsable menu with the familiar 'hamburger' icon.
-
-The footer is at the bottom of the page and contains links to my Github and LinkedIn page.
-
-The application contains the following pages:
-
-- page with description
+The fonts that I used are [Rajdhani](https://fonts.google.com/specimen/Rajdhani) with a cursive fallback for the logo text and [Jost](https://https://fonts.google.com/specimen/Jost) with a sans-serif fallback for all other text elements.
 
 ### Wireframes
+Wireframes have been created to speed up the development and design process. The home page wireframe has been used as a reference for all the other pages and feeds (explore feed, recommendations feed, events feed, liked page) and the create page wireframe has been used as a reference for all the create/edit pages (create/edit posts, create/edit recommendations, create/edit events).
 
-<details><summary>Page</summary>
-    <img src="docs/wireframes/page-wireframe.png">
+<details><summary>Home page</summary>
+    <img src="docs/wireframes/home-page-wireframe.png">
+</details>
+
+<details><summary>Create page</summary>
+    <img src="docs/wireframes/create-page-wireframe.png">
 </details>
 
 ## Technologies Used
@@ -162,7 +156,7 @@ The application contains the following pages:
 ### Languages
 - [**HTML**](https://www.python.org/)
 - [**CSS**](https://www.python.org/)
-- [**JavaScript**](https://www.python.org/)
+- [**JavaScript**](https://www.javascript.com/)
 
 ### Tools
 - [**Git**](https://git-scm.com/) was used for version control
