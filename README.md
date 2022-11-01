@@ -178,6 +178,7 @@ Wireframes have been created to speed up the development and design process. The
 - [**React 17.0.2**](https://17.reactjs.org/) was used to build the user interfaces
 - [**React Bootstrap 4.6**](https://react-bootstrap-v4.netlify.app/) was used for the application layout, styling and making each component responsive.
 - [**React Router**](https://v5.reactrouter.com/web/guides/quick-start) was used as for dynamic routing. I used it to allow for navigation between views of different components and to control what users see when they enter a specific URL in the browser.
+- [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) was used for automated testing
 - [**Axios**](https://axios-http.com/docs/intro) was used as the promise based HTTP client for node.js and the browser. I used it specifically to send API requests to the back end and to avoid any CORS errors when sending cookies.
 - [**JWT**](https://jwt.io/) was used to create JSON Web Tokens. They were needed to prevent anonymous users from making extra network requests to refresh their access token, to remove timestamps from the browser when the users' refresh token expires or  when the user logs out.
 
@@ -815,6 +816,13 @@ The performance of the application has been measured with Google Lighthouse with
 | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|
 | Go to any non-create page and look at the 'The true Berliners' section | Be able to see the mos followed users | Works as expected |
+
+### Automated Testing - NavBar component
+Automated testing was carried out using the [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). The screenshot that I have adde below is from when I ran the tests that I wrote for the NavBar component, which runs without any errors.
+
+<details><summary>Screenshot of automated NavBar component testing</summary>
+    <img src="docs/testing/navbar-test.JPG">
+</details>
 
 ### Testing on Different Devices
 The website has been tested on multiple physical devices without any issues:
