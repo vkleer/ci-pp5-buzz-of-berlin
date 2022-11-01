@@ -3,7 +3,9 @@
 
 ![mockup-image.jpg](docs/design/mockup-image.JPG)
 
-[View the live application](https://ci-pp5-buzz-of-berlin.herokuapp.com/)
+#### [View the live front end application](https://ci-pp5-buzz-of-berlin.herokuapp.com/)
+#### [View the live back end API](https://buzz-of-berlin-drf-api.herokuapp.com/)
+#### [View the back end repository](https://github.com/vkleer/Buzz_of_Berlin_DRF_API)
 
 ## Table of Contents
 
