@@ -10,31 +10,40 @@
 ## Table of Contents
 
 1. [Project Goals](#project-goals)
-    1. [User Goals](#user-goals)
-    2. [Application Owner Goals](#application-owner-goals)
+    1. [About](#about)
+    2. [User Goals](#user-goals)
+    3. [Application Owner Goals](#application-owner-goals)
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Requirements and Expectations](#user-requirements-and-expectations)
 3. [User Stories](#user-stories)
     1. [Navigation](#navigation)
+    2. [Authentication](#authentication)
+    2. [Posts](#posts)
+    2. [Recommendations](#recommendations)
+    2. [Events](#events)
+    2. [Comments](#comments)
+    2. [Profiles](#profiles)
 4. [Design](#design)
     1. [Colours](#colours)
     2. [Fonts](#fonts)
-    3. [Structure](#structure)
+    3. [Wireframes](#wireframes)
 5. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
-    2. [Framework](#framework)
-    3. [Tools & Libraries](#tools--libraries)
+    2. [Tools](#tools)
+    3. [Libraries](#libraries)
+    4. [Front end](#front-end)
+    5. [Back end](#back-end)
 6. [Features](#features)
 7. [Validation](#validation)
-    1. [HTML Validation](#html-validation)
-    2. [CSS Validation](#css-validation)
-    3. [JSX Validation](#jsx-validation)
-    5. [Accessibility Wave WebAIM](#accessibility-wave-webaim)
-    6. [Performance Google Lighthouse](#performance-google-lighthouse)
+    1. [CSS Validation](#css-validation)
+    2. [JSX Validation](#jsx-validation)
+    3. [Accessibility Wave WebAIM](#accessibility-wave-webaim)
+    4. [Performance Google Lighthouse](#performance-google-lighthouse)
 8. [Testing](#validation)
     1. [Manual Testing - User Stories](#manual-testing---user-stories)
-    2. [Automated Testing](#automated-testing)
+    2. [Automated Testing - NavBar Component](#automated-testing---navbar-component)
+    3. [Testing on DIfferent Devices](#testing-on-different-devices)
 9. [Bugs](#Bugs)
 10. [Deployment](#deployment)
     1. [GitHub](#github)
@@ -182,8 +191,8 @@ Wireframes have been created to speed up the development and design process. The
 - [**Axios**](https://axios-http.com/docs/intro) was used as the promise based HTTP client for node.js and the browser. I used it specifically to send API requests to the back end and to avoid any CORS errors when sending cookies.
 - [**JWT**](https://jwt.io/) was used to create JSON Web Tokens. They were needed to prevent anonymous users from making extra network requests to refresh their access token, to remove timestamps from the browser when the users' refresh token expires or  when the user logs out.
 
-## Front end
-### React
+### Front end
+#### React
 React is a JavaScript library that is used for building interactive user interfaces. It uses declarative views to make your code easier to read and debug. The user interfaces consist of a collection of encapsulated and reusable components, allowing for complex user interfaces that are easy to manage thanks to separating the individual components.
 
 React was used for several reasons:
@@ -230,8 +239,8 @@ The following components have been created and reused throughout the application
 - `<NotFound />`
     - A reusable component that renders the [no-results](link here) image along with a message to inform the user the page doesn't exist.
 
-## Back end
-## Django REST Framework
+### Back end
+#### Django REST Framework
 The front end is being supplied with data from the [Buzz of Berlin DRF API](https://buzz-of-berlin-drf-api.herokuapp.com/), which has been created using the Django REST Framework. The repository along with a README file can be found [here](https://github.com/vkleer/Buzz_of_Berlin_DRF_API).
 
 ## Features
@@ -904,10 +913,12 @@ This React application has been deployed using Heroku with the following steps:
 The logo and assets were created by the developer.
 
 ### Images
-- This application was created for education purposes only. All of the images used for profile images and posts were sourced from Google to test out the application. I am therefore unable to provide the sources of all the pictures found on Google.
+- This application was created for education purposes only. All of the images used for profile images, posts, recommendations and events were sourced from Google to test out the application extensively. I am therefore unable to provide the sources of all the pictures found on Google.
 
 ### Code
 - 'Buzz of Berlin' is the result of building on the ['Moments'](https://github.com/Code-Institute-Solutions/moments) walkthrough that was provided by Code Institute. Though it was used as a foundation, a lot of extra functionality has been added to make this project truly my own. Code Institute has been credited throughout my code where applicable using docstrings.
+- I kept receiving a type error that I could not get rid of, but I was able to solve it thanks to [this post on Stack Overflow](https://stackoverflow.com/questions/70468853/typeerror-intermediate-valueintermediate-valueintermediate-value-is-not-i)
+- While fetching data in one of my components, I kept receiving a memory leak indication. [This post on Stack Overflow](https://stackoverflow.com/questions/54954385/react-useeffect-causing-cant-perform-a-react-state-update-on-an-unmounted-comp) really helped me understand how to fix it
 
 ## Acknowledgements
 I would like to thank my partner Lauren Baker for helping me with the name of the application.
