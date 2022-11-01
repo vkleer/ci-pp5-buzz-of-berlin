@@ -504,13 +504,6 @@ The application has a total of 26 features:
 
 ## Validation
 
-### HTML Validation
-The HTML of the application has been validated using W3C's Markup Validation Service. all of the pages pass with no errors or warnings.
-
-<details><summary>Screenshot of x page HTML validation</summary>
-    <img src="docs/validation/html/x-page-html-validation.JPG">
-</details>
-
 ### CSS Validation
 All of the applications' module.css files have been validated using W3C's CSS Validation Service. They all passed with no errors or warnings. Since the validators' success message does not change depending on the CSS you feed it, I have included a single screenshot.
 
@@ -528,15 +521,47 @@ The JavaScript of the application has been validated using JSHint. It passed wit
 ### Accessibility (Wave WebAIM)
 The accessibility of the application has been measured using the Wave WebAIM web accessibility evaluation tool - all pages pass without errors.
 
-<details><summary>Screenshot of x page accessibility evaluation</summary>
-    <img src="docs/validation/wave/x-wave.JPG">
+<details><summary>Screenshot of home page accessibility evaluation</summary>
+    <img src="docs/validation/wave/home-page-wave.JPG">
+</details>
+
+<details><summary>Screenshot of explore page accessibility evaluation</summary>
+    <img src="docs/validation/wave/explore-page-wave.JPG">
+</details>
+
+<details><summary>Screenshot of recommendations feed accessibility evaluation</summary>
+    <img src="docs/validation/wave/recommendations-feed-wave.JPG">
+</details>
+
+<details><summary>Screenshot of events feed accessibility evaluation</summary>
+    <img src="docs/validation/wave/events-feed-wave.JPG">
+</details>
+
+<details><summary>Screenshot of liked page accessibility evaluation</summary>
+    <img src="docs/validation/wave/liked-page-wave.JPG">
+</details>
+
+<details><summary>Screenshot of profile page accessibility evaluation</summary>
+    <img src="docs/validation/wave/profile-page-wave.JPG">
+</details>
+
+<details><summary>Screenshot of create post page accessibility evaluation</summary>
+    <img src="docs/validation/wave/create-post-page-wave.JPG">
+</details>
+
+<details><summary>Screenshot of create recommendation page accessibility evaluation</summary>
+    <img src="docs/validation/wave/create-recommendation-page-wave.JPG">
+</details>
+
+<details><summary>Screenshot of create event page accessibility evaluation</summary>
+    <img src="docs/validation/wave/create-event-page-wave.JPG">
 </details>
 
 ### Performance (Google Lighthouse)
-The performance of the application has been measured with Google Lighthouse with either a perfect or near perfect score on each page.
+The performance of the application has been measured with Google Lighthouse with a near perfect score.
 
-<details><summary>Screenshot of x page Lighthouse performance</summary>
-    <img src="docs/validation/lighthouse/x-lighthouse.JPG">
+<details><summary>Screenshot of Lighthouse performance</summary>
+    <img src="docs/validation/lighthouse/lighthouse.JPG">
 </details>
 
 
