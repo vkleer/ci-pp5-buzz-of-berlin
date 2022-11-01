@@ -592,16 +592,22 @@ The performance of the application has been measured with Google Lighthouse with
     <img src="docs/testing/user-story-testing/user-stories-01.png">
 </details>
 
-### Automated Testing
+### Testing on Different Devices
+The website has been tested on multiple physical devices without any issues:
 
+- Desktop PC
+- MacBook Pro 15"
+- Google Pixel 6 Pro
+- Samsung Galaxy S10
+- Samsung Galaxy Note 10+
+
+In addition to the physical devices, the website has also been tested without any issues by toggling all the different device options in Google Chrome's Developer Tools under the Device Toggling section.
 
 ## Bugs
 
 | **Bug** | **Fix** |
 |-------------|------------|
 | bug | fix - [link to commit](https://github.com/vkleer/) |
-
-
 
 ## Deployment
 
@@ -631,19 +637,28 @@ If you want to clone this repository, follow these steps:
 7. Paste in the clone command you copied and press the 'enter' key to create the clone
 
 ### Heroku
-This application has been deployed using Heroku with the following steps:
+This React application has been deployed using Heroku with the following steps:
 
 1. Login to [Heroku](https://id.heroku.com/login)
 1. Go to your Heroku dashboard
 3. In the top-right corner, click on the 'New' button, followed by the 'Create a new app' button
 4. Enter an app name (it has to be unique) and choose your region under the 'Choose a region' dropdown menu.
 5. Click on the 'Create app' button
-6. Click on the 'Deploy' tab
-7. Under 'Deployment method', click on 'Github'. You can then search for your repository under 'Search for a repository to connect to'
-8. Click on the 'Connect' button to connect your repository
-9. On the next page, under 'Choose a branch to deploy' you can choose the branch you want to deploy your app from
-10. Either click on the 'Enable Automatic Deploys' button under 'Automatic deploys' to have the app deploy automatically on each push you make to the branch, or click on the 'Deploy Branch' button under 'Manual deploy'
-11. Wait for the app to build and be deployed. Once the app is ready, a message will be displayed saying 'App was successfully deployed' along with a button which takes you to your newly deployed app
+6. In your projects package.json file, under scripts, add the following prebuild command:
+    ```
+    "heroku-prebuild": "npm install -g serve",
+    ```
+7. Create a Profile file at the root of your project and add the following web command to it:
+    ```
+    web: serve -s build
+    ```
+8. Make sure that the config vars in your back end app on Heroku are correct! The 'CLIENT_ORIGIN' should be set to the URL of the front end app Heroku app and the 'CLIENT_ORIGIN_DEV' should be set to the front end workspace URL.
+9. Click on the 'Deploy' tab
+10. Under 'Deployment method', click on 'Github'. You can then search for your repository under 'Search for a repository to connect to'
+11. Click on the 'Connect' button to connect your repository
+12. On the next page, under 'Choose a branch to deploy' you can choose the branch you want to deploy your app from
+13. Either click on the 'Enable Automatic Deploys' button under 'Automatic deploys' to have the app deploy automatically on each push you make to the branch, or click on the 'Deploy Branch' button under 'Manual deploy'
+14. Wait for the app to build and be deployed. Once the app is ready, a message will be displayed saying 'App was successfully deployed' along with a button which takes you to your newly deployed React app
 
 ## Credits
 
